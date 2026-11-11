@@ -1,1 +1,64 @@
-ipt
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project BIG6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: system-ui, sans-serif;
+      color: #edf2ff;
+      background: radial-gradient(ellipse at top, #27396a, #101525 70%);
+    }
+    main {
+      width: min(100%, 640px);
+      padding: clamp(24px, 6vw, 56px);
+      border: 1px solid #ffffff24;
+      border-radius: 24px;
+      background: #ffffff08;
+      box-shadow: 0 24px 80px #00000030;
+    }
+    .label { color: #9ebaff; font-size: 13px; letter-spacing: .16em; }
+    h1 { margin: 16px 0; font-size: clamp(32px, 7vw, 52px); line-height: 1.2; }
+    p { color: #bdc8e0; line-height: 1.9; }
+    button {
+      margin-top: 16px;
+      padding: 14px 24px;
+      border: 0;
+      border-radius: 12px;
+      background: #a9c1ff;
+      color: #101525;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #c5d5ff; }
+    button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+    #message { min-height: 2em; margin-bottom: 0; }
+    footer { margin-top: 36px; color: #8d9ab6; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="label">PROJECT BIG6</span>
+    <h1>小さく始めて、<br>大きく育てよう。</h1>
+    <p>ここは Project BIG6 のスタートページ。<br>アイデアをひとつずつ、形にしていきます。</p>
+    <button id="hello" type="button">クリックしてみる</button>
+    <p id="message" role="status"></p>
+    <footer>つくりながら、考える。</footer>
+  </main>
+  <script>
+    const button = document.getElementById('hello');
+    const message = document.getElementById('message');
+    button.addEventListener('click', () => {
+      message.textContent = 'こんにちは！ Project BIG6 へようこそ。';
+    });
+  </script>
+</body>
+</html>
