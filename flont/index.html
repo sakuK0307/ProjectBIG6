@@ -9,14 +9,46 @@
 </head>
 <body>
   <main class="container">
-    <header>
-      <h1>履修下書き</h1>
-      <p>時間割を作成しましょう</p>
-    </header>
+    <div class="page-layout">
+      <section class="draft-section">
+        <header>
+          <h1>履修下書き</h1>
+          <p>時間割を作成しましょう</p>
+        </header>
+        <div class="timetable">
+          <div class="timetable-grid" id="timetable"></div>
+        </div>
+      </section>
+      
+      <aside class="requirements-card">
+        <h2>卒業要件</h2>
 
-    <section class="timetable">
-      <div class="timetable-grid" id="timetable"></div>
-    </section>
+        <div class="credit-summary">
+          <p>取得済み単位</p>
+          <strong>78 <small>/ 124 単位</small></strong>
+          <progress value="78" max="124"></progress>
+          <p>卒業まであと46単位</p>
+        </div>
+
+        <h3>区分別の単位</h3>
+
+        <div class="credit-item">
+          <span>必修</span>
+          <span>30 / 40</span>
+        </div>
+
+        <div class="credit-item">
+          <span>選択必修</span>
+          <span>18 / 24</span>
+        </div>
+
+        <div class="credit-item">
+          <span>その他</span>
+          <span>30 / 60</span>
+        </div>
+      </aside>
+
+    </div>
   </main>
 </body>
 </html>

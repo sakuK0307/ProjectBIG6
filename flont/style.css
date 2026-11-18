@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 48px auto;
   padding: 0 24px;
 }
@@ -86,8 +86,67 @@ button.cell:focus-visible {
   outline: 3px solid #2563eb;
   outline-offset: 2px;
 }
+/* ページレイアウト*/
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.draft-section {
+  min-width: 0;
+}
+
+.requirements-card {
+  padding: 24px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px #0000000d;
+}
+
+.requirements-card h2 {
+  margin-top: 0;
+}
+
+.credit-summary strong {
+  display: block;
+  margin: 12px 0;
+  font-size: 28px;
+}
+
+.credit-summary small {
+  font-size: 14px;
+  font-weight: normal;
+  color: #64748b;
+}
+
+.credit-summary progress {
+  width: 100%;
+  height: 10px;
+  accent-color: #3b82f6;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
 
 
+/* タブレット・スマホ */
+@media (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements-card {
+    width: 100%;
+  }
+}
 /* タブレット */
 @media (max-width: 768px) {
   .container {
