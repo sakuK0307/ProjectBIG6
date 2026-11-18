@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 48px auto;
   padding: 0 24px;
 }
@@ -86,8 +86,232 @@ button.cell:focus-visible {
   outline: 3px solid #2563eb;
   outline-offset: 2px;
 }
+/* ページレイアウト*/
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.draft-section {
+  min-width: 0;
+}
+
+.requirements-card {
+  padding: 24px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px #0000000d;
+}
+
+.requirements-card h2 {
+  margin-top: 0;
+}
+
+.credit-summary strong {
+  display: block;
+  margin: 12px 0;
+  font-size: 28px;
+}
+
+.credit-summary small {
+  font-size: 14px;
+  font-weight: normal;
+  color: #64748b;
+}
+
+.credit-summary progress {
+  width: 100%;
+  height: 10px;
+  accent-color: #3b82f6;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ===== 2カラムレイアウト ===== */
+
+.container {
+  max-width: 1440px;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.draft-section {
+  min-width: 0;
+}
+
+/* ===== 卒業要件カード ===== */
+
+.requirements-card {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #0000000d;
+}
+
+.requirements-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.requirements-header p {
+  margin: 8px 0 20px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.requirements-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #fff3dc;
+  color: #a16207;
+  font-size: 12px;
+}
+
+.requirements-card h3 {
+  margin: 24px 0 16px;
+  font-size: 15px;
+}
+
+/* ===== 単位進捗 ===== */
+
+.credit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.credit-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.credit-label span:last-child {
+  flex-shrink: 0;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.credit-item progress {
+  display: block;
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.credit-item progress::-webkit-progress-bar {
+  background: #e2e8f0;
+  border-radius: 3px;
+}
+
+.credit-item progress::-webkit-progress-value {
+  background: #279c75;
+  border-radius: 3px;
+}
+
+.credit-item.is-short progress::-webkit-progress-value {
+  background: #d58a30;
+}
+
+/* ===== 不足単位数 ===== */
+
+.requirements-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+
+.requirements-footer p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.missing-credits {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.sample-note {
+  margin: 20px 0 0;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ===== レスポンシブ対応 ===== */
+
+/* タブレット・スマホでは縦並び */
+@media (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .requirements-card {
+    width: 100%;
+  }
+}
+
+/* スマホでは余白を縮小 */
+@media (max-width: 480px) {
+  .requirements-card {
+    padding: 16px;
+  }
+
+  .requirements-header h2 {
+    font-size: 18px;
+  }
+}
 
 
+
+/* タブレット・スマホ */
+@media (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements-card {
+    width: 100%;
+  }
+}
 /* タブレット */
 @media (max-width: 768px) {
   .container {
