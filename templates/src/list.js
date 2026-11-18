@@ -9,10 +9,11 @@
   const PASS = 60; // 卒業判定Excelと同じく 60点以上で修得
   const STORAGE_KEY = "big6.listPlan.v2";
   const OLD_STORAGE_KEY = "big6.listPlan.v1";
-  // シラバス詳細URL。semekikn(1=前期? 2=後期?) と crclumcd は未確認の推測値（シラバス取得/README.md 参照）
-  const SYLLABUS_URL = (code, half) =>
+  // 名城大学シラバス（Campusmate-J）の詳細ページ。
+  // semekikn・crclumcd は前期・後期とも 1・12205 で開ける（卒業判定アプリ側で確認済み）
+  const SYLLABUS_URL = (code) =>
     "https://gkmsyllabus.meijo-u.ac.jp/camweb/slbssbdr.do" +
-    `?value(risyunen)=${YEAR}&value(semekikn)=${half === "前" ? 1 : 2}` +
+    `?value(risyunen)=${YEAR}&value(semekikn)=1` +
     `&value(kougicd)=${encodeURIComponent(code)}&value(crclumcd)=12205`;
 
   const byId = new Map(COURSES.map((c) => [c.id, c]));
@@ -205,7 +206,7 @@
       o.retake ? "再履修" : o.cls ? `${o.cls}クラス` : "",
       o.biweekly ? `隔週${o.biweekly}` : "",
     ].filter(Boolean).join("・");
-    return `<li><a href="${SYLLABUS_URL(o.code, o.sem === "後期" ? "後" : "前")}" target="_blank" rel="noopener">
+    return `<li><a href="${SYLLABUS_URL(o.code)}" target="_blank" rel="noopener">
         <strong>${esc(slots)}</strong> ${esc(o.room || "")}
         <small>${tags ? esc(tags) + " ／ " : ""}${esc(o.teacher || "")}（${esc(o.code)}）${o.note ? "<br>" + esc(o.note) : ""}</small>
       </a></li>`;
@@ -251,7 +252,7 @@
   $("sheetScroll").addEventListener("scroll", hidePopover);
 
   // ---- 上部バー・絞り込み ----
-  // 共通ヘッダー（src/header.js）からのイベント
+  // 上部バーの学年・学期
   const termSel = $("headerTerm");
   termSel.value = state.term;
   termSel.addEventListener("change", () => { state.term = termSel.value; save(); render(); });

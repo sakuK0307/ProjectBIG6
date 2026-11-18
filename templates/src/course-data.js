@@ -1,5 +1,5 @@
-// 自動生成ファイル（手で編集しない）: python scripts/build_list_data.py
-// 元データ: templates/data/curriculum.json, templates/data/syllabus_links.json
+// 科目データ（自動生成）。curriculum.json（科目・単位・区分・必要単位数）と
+// syllabus_links.json（2026年度の時間割表の開講クラス）から作ったもの。元データと生成スクリプトはリポジトリに入れていない
 window.LIST_YEAR = 2026;
 window.LIST_REQUIREMENTS = {"PC": [10, 20, 8, 12, 21, 14, 9, 15, 104], "DE": [10, 20, 8, 12, 21, 14, 9, 15, 104], "HM": [10, 20, 8, 12, 21, 14, 9, 15, 104], "NS": [10, 20, 8, 12, 21, 14, 9, 15, 104]};
 window.LIST_COURSES = [
