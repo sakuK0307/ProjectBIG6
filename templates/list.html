@@ -5,27 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProjectBIG6 | 履修リスト</title>
   <link rel="stylesheet" href="./css/list.css">
-  <script src="./src/list-data.js" defer></script>
+  <script src="./src/course-data.js" defer></script>
   <script src="./src/list.js" defer></script>
 </head>
 <body>
   <div class="app" id="app">
-    <!-- 上部バー：表示切替・送信・読込・学年 -->
+    <!-- 上部バー：表示切替・送信・読込・学年学期・サイドバー -->
     <header class="topbar">
-      <nav class="view-tabs" role="tablist">
-        <button class="view-tab is-active" role="tab" aria-selected="true" data-view="A">表示A</button>
-        <button class="view-tab" role="tab" aria-selected="false" data-view="B">表示B</button>
-        <button class="view-tab" role="tab" aria-selected="false" data-stub="表示C">表示C</button>
+      <nav class="view-tabs">
+        <button class="view-tab is-active" aria-current="page">表示A</button>
+        <button class="view-tab" data-stub="表示B">表示B</button>
+        <button class="view-tab" data-stub="表示C">表示C</button>
       </nav>
       <div class="topbar-actions">
         <button class="pill" data-stub="送信">送信</button>
         <button class="pill" data-stub="PDF読み込み">PDF読込</button>
         <button class="pill" data-stub="Excel読み込み">Excel読込</button>
-        <select id="grade" class="grade-select" aria-label="学年">
-          <option value="1">1年</option>
-          <option value="2">2年</option>
-          <option value="3" selected>3年</option>
-          <option value="4">4年</option>
+        <select class="grade-select" id="headerTerm" aria-label="現在の学年・学期">
+          <option value="1前">1年前期</option>
+          <option value="1後">1年後期</option>
+          <option value="2前">2年前期</option>
+          <option value="2後">2年後期</option>
+          <option value="3前" selected>3年前期</option>
+          <option value="3後">3年後期</option>
+          <option value="4前">4年前期</option>
+          <option value="4後">4年後期</option>
         </select>
         <button class="sidebar-toggle" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" title="卒業判定を表示">
           <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
@@ -36,10 +40,7 @@
       </div>
     </header>
 
-    <!-- 表示B：既存の時間割画面（index.html）をそのまま埋め込む -->
-    <iframe class="view-b" id="viewB" title="表示B 時間割" hidden></iframe>
-
-    <!-- 表示A：履修リスト（学期プルダウン＋点数入力） -->
+    <!-- 履修リスト（学期プルダウン＋点数入力） -->
     <section class="pane pane-list">
       <div class="list-toolbar">
         <input type="search" id="search" placeholder="科目名で検索">
@@ -57,7 +58,7 @@
           <option value="">すべて表示</option>
           <option value="planned">登録済みのみ</option>
           <option value="unplanned">未登録のみ</option>
-          <option value="grade">選択学年の標準科目</option>
+          <option value="grade">選択学期の標準科目</option>
         </select>
         <span class="list-total" id="sheetTotal"></span>
       </div>
@@ -79,6 +80,6 @@
   </div>
 
   <div class="popover" id="popover" hidden></div>
-  <div class="toast" id="toast" hidden></div>
+  <div class="toast" id="toast" role="status" hidden></div>
 </body>
 </html>

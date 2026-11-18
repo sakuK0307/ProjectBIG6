@@ -1,6 +1,9 @@
-// 履修リスト：表示A＝科目リスト（学期プルダウン＋点数）、表示B＝既存の時間割（index.html）、右上＝卒業判定サイドバー
+// 履修リスト：科目リスト（学期プルダウン＋点数）と、右上ボタンで開く卒業判定サイドバー
+// 予定・点数はブラウザ（localStorage）に保存し、別のタブで変わったら storage イベントで読み直す
 (() => {
-  const COURSES = window.LIST_COURSES || [];
+  // hidden の科目（先進コースと総合コースで重複する行の片方）は出さない・数えない
+  const COURSES = (window.LIST_COURSES || []).filter((c) => !c.hidden);
+  const YEAR = window.LIST_YEAR || 2026;
   const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
   const TERM_LABEL = (t) => `${t[0]}年${t[1]}期`;
   const PASS = 60; // 卒業判定Excelと同じく 60点以上で修得
@@ -9,30 +12,39 @@
   // シラバス詳細URL。semekikn(1=前期? 2=後期?) と crclumcd は未確認の推測値（シラバス取得/README.md 参照）
   const SYLLABUS_URL = (code, half) =>
     "https://gkmsyllabus.meijo-u.ac.jp/camweb/slbssbdr.do" +
-    `?value(risyunen)=2026&value(semekikn)=${half === "前" ? 1 : 2}` +
+    `?value(risyunen)=${YEAR}&value(semekikn)=${half === "前" ? 1 : 2}` +
     `&value(kougicd)=${encodeURIComponent(code)}&value(crclumcd)=12205`;
 
   const byId = new Map(COURSES.map((c) => [c.id, c]));
 
   // ---- 状態 ----
-  // plan: { courseId: { term: "3前", score: 85 | null } }  score が null なら「予定」（Excelの "60" 扱い）
-  const state = { grade: 3, plan: {}, search: "", dept: "", prog: "", show: "" };
-  try {
+  // plan: { courseId: { term: "3前", score: 85 | null, code?: "642809" } }
+  //   score が null なら「予定」（Excelの "60" 扱い）。code は選んだクラスの講義コード（時間割画面で使う予定）
+  const state = { term: "3前", plan: {}, search: "", dept: "", prog: "", show: "" };
+  function loadState() {
+   state.plan = {};
+   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
     const old = saved ? null : JSON.parse(localStorage.getItem(OLD_STORAGE_KEY) || "null");
     const src = saved || old;
     if (src && typeof src === "object") {
-      if (src.grade) state.grade = src.grade;
+      if (TERMS.includes(src.term)) state.term = src.term;
+      else if (src.grade) state.term = `${src.grade}前`; // 学年だけ保存していた旧形式
       for (const [id, v] of Object.entries(src.plan || {})) {
         if (!byId.has(id)) continue;
         if (typeof v === "string") state.plan[id] = { term: v, score: null }; // v1 からの移行
-        else if (v && TERMS.includes(v.term)) state.plan[id] = { term: v.term, score: v.score ?? null };
+        else if (v && TERMS.includes(v.term)) {
+          state.plan[id] = { term: v.term, score: v.score ?? null };
+          if (v.code) state.plan[id].code = v.code;
+        }
       }
     }
-  } catch { /* 保存領域が使えなくても動く */ }
+   } catch { /* 保存領域が使えなくても動く */ }
+  }
+  loadState();
   const save = () => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ grade: state.grade, plan: state.plan }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ term: state.term, plan: state.plan }));
     } catch { /* noop */ }
   };
 
@@ -49,7 +61,6 @@
   const app = $("app");
   const list = $("sheetBody");
   const popover = $("popover");
-  const toast = $("toast");
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (ch) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
@@ -59,13 +70,6 @@
     const o = document.createElement("option");
     o.value = d; o.textContent = d;
     $("deptFilter").appendChild(o);
-  }
-
-  // 指定学期（前/後）の開講情報。時限が分かっているものを優先
-  function offeringFor(course, half) {
-    const sem = half === "前" ? "前期" : "後期";
-    const offers = (course.offers || []).filter((o) => o.sem === sem);
-    return offers.find((o) => o.period) || offers[0] || null;
   }
 
   // ---- リスト ----
@@ -80,7 +84,7 @@
       if (m && m !== "必") tags.push(`<span class="tag p-${esc(m)}">${p}${esc(m)}</span>`);
     }
     for (const t of c.terms) {
-      const now = t[0] === String(state.grade) ? " is-now" : "";
+      const now = t === state.term ? " is-now" : "";
       tags.push(`<span class="tag std${now}">標準 ${TERM_LABEL(t)}</span>`);
     }
     return tags.join("");
@@ -110,7 +114,7 @@
     if (state.prog && !c.prog[state.prog]) return false;
     if (state.show === "planned" && !state.plan[c.id]) return false;
     if (state.show === "unplanned" && state.plan[c.id]) return false;
-    if (state.show === "grade" && !c.terms.some((t) => t[0] === String(state.grade))) return false;
+    if (state.show === "grade" && !c.terms.includes(state.term)) return false;
     return true;
   }
 
@@ -164,6 +168,7 @@
     const id = row.dataset.id;
     if (e.target.classList.contains("term-sel")) {
       const term = e.target.value;
+      // 学期を変えたらクラスの選択（code）は選び直し
       if (term) state.plan[id] = { term, score: state.plan[id]?.score ?? null };
       else delete state.plan[id];
     } else if (e.target.classList.contains("score")) {
@@ -191,21 +196,41 @@
   });
 
   // ---- 科目の詳細（科目名をタッチ → シラバスへ） ----
+  // 開講枠1つを「A 水3・4限 隔週A N-324 担当」のような1行にする
+  function offerLine(o) {
+    const slots = (o.slots || []).length
+      ? `${o.slots[0].day}${o.slots.map((x) => x.period).join("・")}限`
+      : `${o.day || ""}${o.period ? o.period + "限" : "（時限未定）"}`;
+    const tags = [
+      o.retake ? "再履修" : o.cls ? `${o.cls}クラス` : "",
+      o.biweekly ? `隔週${o.biweekly}` : "",
+    ].filter(Boolean).join("・");
+    return `<li><a href="${SYLLABUS_URL(o.code, o.sem === "後期" ? "後" : "前")}" target="_blank" rel="noopener">
+        <strong>${esc(slots)}</strong> ${esc(o.room || "")}
+        <small>${tags ? esc(tags) + " ／ " : ""}${esc(o.teacher || "")}（${esc(o.code)}）${o.note ? "<br>" + esc(o.note) : ""}</small>
+      </a></li>`;
+  }
+
+  // ---- 科目の詳細（科目名をタッチ → 開講クラスとシラバス） ----
   function openCourseDetail(c, anchor) {
     const p = state.plan[c.id];
-    const half = p ? p.term[1] : (c.terms[0] || "1前")[1];
-    const o = offeringFor(c, half) || offeringFor(c, half === "前" ? "後" : "前");
+    const term = p ? p.term : c.terms[0];
     const progs = Object.entries(c.prog).filter(([, v]) => v).map(([k, v]) => `${k}:${v}`).join(" ");
-    const syl = o?.code
-      ? `<a href="${SYLLABUS_URL(o.code, o.sem === "前期" ? "前" : "後")}" target="_blank" rel="noopener">シラバスを開く</a>`
-      : `<button disabled>シラバス情報なし</button>`;
+    const bySem = { 前期: [], 後期: [], 通年: [] };
+    for (const o of c.offers || []) (bySem[o.sem] ||= []).push(o);
+    // 履修予定（なければ標準）の学期を先に出す
+    const first = term && term[1] === "後" ? "後期" : "前期";
+    const order = [first, first === "前期" ? "後期" : "前期", "通年"];
+    const sections = order.filter((sem) => bySem[sem]?.length).map((sem) =>
+      `<p class="meta sem">${sem}の開講クラス（タッチでシラバス）</p><ul class="offers">${bySem[sem].map(offerLine).join("")}</ul>`
+    ).join("");
     showPopover(`
       <h3>${esc(c.name)}</h3>
-      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.map(TERM_LABEL).join("・") || "—"}</p>
+      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.map(TERM_LABEL).join("・") || "—"}${p ? ` ／ 予定：${TERM_LABEL(p.term)}` : ""}</p>
       ${progs ? `<p class="meta">プログラム指定 ${esc(progs)}</p>` : ""}
-      ${o ? `<p class="meta">${esc(o.sem)} ${esc(o.day || "")}${o.period ? o.period + "限" : ""} ${esc(o.room || "")} ${esc(o.teacher || "")}（${esc(o.code)}）</p>` : ""}
-      <div class="actions">${syl}</div>`, anchor);
+      ${sections || `<p class="empty">${window.LIST_YEAR || ""}年度の時間割表に開講情報がありません</p>`}`, anchor);
   }
+
 
   function showPopover(html, anchor) {
     popover.innerHTML = html;
@@ -226,13 +251,17 @@
   $("sheetScroll").addEventListener("scroll", hidePopover);
 
   // ---- 上部バー・絞り込み ----
-  $("grade").value = String(state.grade);
-  $("grade").addEventListener("change", (e) => { state.grade = Number(e.target.value); save(); render(); });
+  // 共通ヘッダー（src/header.js）からのイベント
+  const termSel = $("headerTerm");
+  termSel.value = state.term;
+  termSel.addEventListener("change", () => { state.term = termSel.value; save(); render(); });
   $("search").addEventListener("input", (e) => { state.search = e.target.value; renderList(); });
   $("deptFilter").addEventListener("change", (e) => { state.dept = e.target.value; renderList(); });
   $("progFilter").addEventListener("change", (e) => { state.prog = e.target.value; renderList(); });
   $("showFilter").addEventListener("change", (e) => { state.show = e.target.value; renderList(); });
 
+  // 未実装のボタン（表示B・C、送信、読込）はトーストで知らせる
+  const toast = $("toast");
   let toastTimer;
   document.querySelectorAll("[data-stub]").forEach((b) => b.addEventListener("click", () => {
     toast.textContent = `「${b.dataset.stub}」はまだ実装されていません`;
@@ -241,33 +270,20 @@
     toastTimer = setTimeout(() => { toast.hidden = true; }, 1800);
   }));
 
-  // ---- 表示切替（A＝このリスト画面、B＝既存の index.html 時間割） ----
-  const viewB = $("viewB");
-  document.querySelectorAll(".view-tab[data-view]").forEach((tab) => tab.addEventListener("click", () => {
-    const v = tab.dataset.view;
-    document.querySelectorAll(".view-tab[data-view]").forEach((t) => {
-      t.classList.toggle("is-active", t === tab);
-      t.setAttribute("aria-selected", String(t === tab));
-    });
-    if (v === "B" && !viewB.src) viewB.src = "./index.html";
-    viewB.hidden = v !== "B";
-    app.classList.toggle("is-view-b", v === "B");
-    hidePopover();
-  }));
-
   // ---- 卒業判定サイドバー ----
-  // 必要単位数は卒業判定Excelの各プログラムシート B19:B27（4プログラム共通、先進プロジェクトコース）
+  // 必要単位数は curriculum.json の requirements（プログラムごとに下の9項目の順）
   const REQS = [
-    ["総合基礎 選択必修", "総選", 10],
-    ["総合基礎 合計", "総計", 20],
-    ["理工基礎 指定", "理指", 8],
-    ["理工基礎 選択必修", "理選", 12],
-    ["専門 必修", "必", 21],
-    ["プログラム指定 ◎", "◎", 14],
-    ["プログラム指定 ※", "※", 9],
-    ["プログラム指定 ○（※含む）", "○", 15],
-    ["専門 合計", "専計", 104],
+    ["総合基礎 選択必修", "総選"],
+    ["総合基礎 合計", "総計"],
+    ["理工基礎 指定", "理指"],
+    ["理工基礎 選択必修", "理選"],
+    ["専門 必修", "必"],
+    ["プログラム指定 ◎", "◎"],
+    ["プログラム指定 ※", "※"],
+    ["プログラム指定 ○（※含む）", "○"],
+    ["専門 合計", "専計"],
   ];
+  const REQUIREMENTS = window.LIST_REQUIREMENTS || {};
   const PROGRAMS = [
     ["PC", "フィジカルコンピューティング"],
     ["DE", "データエンジニアリング"],
@@ -283,19 +299,27 @@
       .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => x.c && counts(x.p));
     const sumTerms = (terms) => counted.filter((x) => terms.includes(x.p.term))
       .reduce((s, x) => s + x.c.credits, 0);
-    const years = [
-      ["1年", ["1前", "1後"]], ["2年", ["2前", "2後"]],
-      ["3年前期", ["3前"]], ["3年後期", ["3後"]], ["4年", ["4前", "4後"]],
-    ];
+    // 学年ごとに 前期・後期 の2行。左の学年セルに年間の小計を出す
     const total = counted.reduce((s, x) => s + x.c.credits, 0);
-    $("yearTable").innerHTML =
-      years.map(([label, ts]) => `<tr><th>${label}</th><td>${fmtCredit(sumTerms(ts))} 単位</td></tr>`).join("") +
-      `<tr class="total"><th>合計</th><td>${fmtCredit(total)} 単位</td></tr>`;
+    let rows = `<tr><th>学年</th><th>学期</th><th class="num">単位</th></tr>`;
+    for (const y of ["1", "2", "3", "4"]) {
+      ["前", "後"].forEach((h, i) => {
+        const t = y + h;
+        const cur = t === state.term ? ' class="is-current"' : "";
+        const yearCell = i === 0
+          ? `<th rowspan="2" class="year">${y}年<small>${fmtCredit(sumTerms([y + "前", y + "後"]))} 単位</small></th>`
+          : "";
+        rows += `<tr${cur}>${yearCell}<td class="half">${h}期</td><td>${fmtCredit(sumTerms([t]))} 単位</td></tr>`;
+      });
+    }
+    rows += `<tr class="total"><th colspan="2">合計</th><td>${fmtCredit(total)} 単位</td></tr>`;
+    $("yearTable").innerHTML = rows;
 
     const sumReq = (key) => counted.filter((x) => x.c.req.includes(key))
       .reduce((s, x) => s + x.c.credits, 0);
     $("progList").innerHTML = PROGRAMS.map(([p, name]) => {
-      const rows = REQS.map(([label, key, need]) => {
+      const rows = REQS.map(([label, key], i) => {
+        const need = REQUIREMENTS[p]?.[i] ?? 0;
         const got = sumReq(["◎", "※", "○"].includes(key) ? p + key : key);
         return { label, got, need };
       });
@@ -317,11 +341,20 @@
 
   const setSidebar = (open) => {
     sidebar.hidden = !open;
+    app.classList.toggle("has-sidebar", open);
     sidebarToggle.setAttribute("aria-expanded", String(open));
     if (open) renderSidebar();
   };
   sidebarToggle.addEventListener("click", (e) => { e.stopPropagation(); setSidebar(sidebar.hidden); });
   $("sidebarClose").addEventListener("click", () => setSidebar(false));
+
+  // 別のタブ・画面が保存データを変えたら読み直す
+  window.addEventListener("storage", (e) => {
+    if (e.key !== STORAGE_KEY) return;
+    loadState();
+    termSel.value = state.term;
+    render();
+  });
 
   function render() {
     renderList();
