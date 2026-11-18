@@ -87,16 +87,32 @@ button.cell:hover {
 }
 
 #course-picker {
-  width: min(420px, calc(100% - 24px));
-  max-height: calc(100% - 24px);
-  padding: 20px;
+  position: fixed;
+  z-index: 1;
+  top: var(--picker-top, 8px);
+  left: var(--picker-left, 8px);
+  display: flex;
+  flex-direction: column;
+  width: min(320px, calc(100% - 16px));
+  max-height: min(360px, calc(100dvh - 16px));
+  padding: 12px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  color: inherit;
+  background: #fff;
+  box-shadow: 0 4px 16px #0002;
 }
 
-#course-picker::backdrop {
-  background: #26324866;
+#course-picker[hidden] {
+  display: none;
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  #course-picker {
+    inset: auto 0 0;
+    width: 100%;
+    max-height: 50dvh;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
 }
 
 #course-picker-title {
@@ -105,10 +121,13 @@ button.cell:hover {
 }
 
 #course-options {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
   padding: 0;
   list-style: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 #course-picker button {

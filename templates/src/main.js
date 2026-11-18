@@ -17,13 +17,19 @@ const courseData = {
       "id": "course-002",
       "name": "講義B",
       "credits": 2,
-      "schedules": [{ "day": "mon", "period": 1 }, { "day": "wed", "period": 2 }]
+      "schedules": [{ "day": "mon", "period": 1 }]
     },
     {
       "id": "course-003",
       "name": "講義C",
       "credits": 2,
       "schedules": [{ "day": "wed", "period": 2 }]
+    },
+    {
+      "id": "course-004",
+      "name": "講義D",
+      "credits": 2,
+      "schedules": [{ "day": "mon", "period": 3 }, { "day": "mon", "period": 4 }]
     }
   ]
 };
@@ -36,6 +42,8 @@ if (timetable) {
   const pickerTitle = document.getElementById("course-picker-title");
   const options = document.getElementById("course-options");
   const removeButton = document.getElementById("remove-course");
+  const closeButton = document.getElementById("close-course-picker");
+  const bottomPanel = window.matchMedia("(max-width: 768px), (pointer: coarse)");
   const courses = new Map(courseData.courses.map((course) => [course.id, course]));
   const candidatesBySlot = new Map();
   // 登録済みの枠には講義IDだけを保存する。
@@ -72,6 +80,8 @@ if (timetable) {
       cell.dataset.dayCode = day;
       cell.dataset.period = String(period);
       cell.setAttribute("aria-label", slotLabel({ day, period }));
+      cell.setAttribute("aria-controls", picker.id);
+      cell.setAttribute("aria-expanded", "false");
       cells.set(slotKey({ day, period }), cell);
 
       timetable.appendChild(cell);
@@ -108,13 +118,36 @@ if (timetable) {
     return { day: selectedCell.dataset.dayCode, period: selectedCell.dataset.period };
   }
 
+  function positionPicker() {
+    if (!selectedCell || bottomPanel.matches) return;
+
+    const cell = selectedCell.getBoundingClientRect();
+    const gap = 8;
+    const right = document.documentElement.clientWidth - picker.offsetWidth - gap;
+    const bottom = document.documentElement.clientHeight - picker.offsetHeight - gap;
+    const side = cell.right + gap <= right ? cell.right + gap : cell.left - picker.offsetWidth - gap;
+    // セルの右に収まらないときは左を使い、画面内に収める。
+    picker.style.setProperty("--picker-left", `${Math.max(gap, Math.min(side, right))}px`);
+    picker.style.setProperty("--picker-top", `${Math.max(gap, Math.min(cell.top, bottom))}px`);
+  }
+
+  function closePicker(restoreFocus) {
+    const cell = selectedCell;
+    picker.hidden = true;
+    cell.classList.remove("selected");
+    cell.setAttribute("aria-expanded", "false");
+    selectedCell = undefined;
+    if (restoreFocus) cell.focus({ preventScroll: true });
+  }
+
   timetable.addEventListener("click", (event) => {
     const cell = event.target.closest("button.cell");
     if (!cell) return;
 
-    selectedCell?.classList.remove("selected");
+    if (selectedCell) closePicker(false);
     selectedCell = cell;
     cell.classList.add("selected");
+    cell.setAttribute("aria-expanded", "true");
     const slot = selectedSlot();
     const key = slotKey(slot);
     const currentId = draftBySlot.get(key);
@@ -139,11 +172,15 @@ if (timetable) {
 
     if (candidates.length === 0) {
       const item = document.createElement("li");
-      item.textContent = "この時間帯に講義候補はありません。";
+      item.textContent = "該当する講義がありません";
       options.appendChild(item);
     }
 
-    picker.showModal();
+    picker.hidden = false;
+    options.scrollTop = 0;
+    positionPicker();
+    const firstAction = options.querySelector("button:not(:disabled)") ?? closeButton;
+    firstAction.focus({ preventScroll: true });
   });
 
   options.addEventListener("click", (event) => {
@@ -154,16 +191,31 @@ if (timetable) {
     const currentId = draftBySlot.get(slotKey(selectedSlot()));
     if (currentId !== undefined) updateCourseSlots(courses.get(currentId));
     updateCourseSlots(course, course.id);
-    picker.close();
+    closePicker(true);
   });
 
   removeButton.addEventListener("click", () => {
     const currentId = draftBySlot.get(slotKey(selectedSlot()));
     updateCourseSlots(courses.get(currentId));
-    picker.close();
+    closePicker(true);
   });
 
-  picker.addEventListener("close", () => {
-    if (!picker.open) selectedCell.classList.remove("selected");
+  closeButton.addEventListener("click", () => closePicker(true));
+
+  document.addEventListener("click", (event) => {
+    if (selectedCell && !picker.contains(event.target) && !selectedCell.contains(event.target)) {
+      closePicker(false);
+    }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && selectedCell) {
+      event.preventDefault();
+      closePicker(true);
+    }
+  });
+
+  window.addEventListener("resize", positionPicker);
+  window.addEventListener("scroll", positionPicker, { capture: true, passive: true });
+  bottomPanel.addEventListener("change", positionPicker);
 }

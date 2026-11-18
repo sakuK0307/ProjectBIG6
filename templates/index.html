@@ -124,13 +124,13 @@
     </div>
   </main>
 
-  <dialog id="course-picker" aria-labelledby="course-picker-title">
+  <section id="course-picker" aria-labelledby="course-picker-title" hidden>
     <h2 id="course-picker-title"></h2>
     <ul id="course-options"></ul>
-    <form method="dialog" class="course-picker-actions">
-      <button type="submit" value="cancel" autofocus>キャンセル</button>
+    <div class="course-picker-actions">
+      <button type="button" id="close-course-picker">閉じる</button>
       <button type="button" id="remove-course" hidden>登録を削除</button>
-    </form>
-  </dialog>
+    </div>
+  </section>
 </body>
 </html>
