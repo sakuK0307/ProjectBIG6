@@ -66,7 +66,8 @@ button.cell {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* マウスを重ねたとき */
@@ -79,6 +80,54 @@ button.cell:hover {
 .cell.selected {
   background: #dbeafe;
   border: 2px solid #3b82f6;
+}
+
+.cell.registered:not(.selected) {
+  background: #edf2ff;
+}
+
+#course-picker {
+  width: min(420px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: inherit;
+}
+
+#course-picker::backdrop {
+  background: #26324866;
+}
+
+#course-picker-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+#course-options {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+#course-picker button {
+  min-height: 44px;
+  padding: 8px 12px;
+  font: inherit;
+  overflow-wrap: anywhere;
+}
+
+#course-options button {
+  width: 100%;
+  text-align: left;
+}
+
+.course-picker-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* キーボード操作時 */
