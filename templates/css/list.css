@@ -70,50 +70,62 @@ button, select, input { font: inherit; color: inherit; }
 /* ---- ペイン共通 ---- */
 .pane { display: flex; flex-direction: column; min-height: 0; background: var(--surface); }
 
-/* ---- 成績表 ---- */
-.sheet-toolbar {
-  display: flex; align-items: center; gap: 8px; padding: 6px 12px;
+/* ---- 履修リスト ---- */
+.list-toolbar {
+  display: flex; align-items: center; gap: 8px; padding: 8px 12px;
   border-bottom: 1px solid var(--line); flex-wrap: wrap;
+  max-width: 760px; width: 100%; margin: 0 auto;
 }
-.sheet-toolbar input[type=search] {
-  padding: 4px 8px; border: 1px solid var(--line-strong); border-radius: 6px;
-  background: var(--surface); width: 180px;
+.list-toolbar input[type=search] {
+  padding: 5px 8px; border: 1px solid var(--line-strong); border-radius: 6px;
+  background: var(--surface); flex: 1 1 160px; min-width: 0;
 }
-.sheet-toolbar select { padding: 4px 6px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface); }
-.check { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); }
-.sheet-total { margin-left: auto; color: var(--muted); }
-.sheet-total strong { color: var(--text); }
+.list-toolbar select { padding: 5px 6px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface); }
+.list-total { color: var(--muted); white-space: nowrap; }
+.list-total strong { color: var(--text); }
 
-.sheet-scroll { overflow: auto; flex: 1; min-height: 0; }
-.sheet { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; }
-.sheet th, .sheet td {
-  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  padding: 2px 6px; white-space: nowrap; text-align: center; height: 23px;
+.list-scroll { overflow-y: auto; flex: 1; min-height: 0; background: var(--bg); }
+.course-list { max-width: 760px; margin: 0 auto; padding: 8px 12px 24px; }
+.group-head {
+  position: sticky; top: 0; z-index: 1; margin: 10px 0 4px; padding: 4px 2px;
+  background: var(--bg); color: var(--muted); font-weight: 600; font-size: 12px;
 }
-.sheet thead th { position: sticky; background: var(--head); font-weight: 600; z-index: 2; }
-.sheet thead tr:first-child th { top: 0; }
-.sheet thead tr:nth-child(2) th { top: 23px; }
-.sheet .c-name { text-align: left; min-width: 220px; }
-.sheet .c-num { width: 42px; }
-.sheet .c-prog { width: 34px; }
-.sheet .c-term { width: 44px; }
-.sheet th.c-term.is-current { background: var(--accent); color: #fff; }
+.course {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 8px 10px; margin-bottom: 4px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); border-left: 4px solid transparent;
+}
+.course.is-plan { border-left-color: var(--plan-text); }
+.course.is-pass { border-left-color: #16a34a; }
+.course.is-fail { border-left-color: var(--mark-req); }
+.course-main { flex: 1 1 240px; min-width: 0; }
+.course-main .name-btn { font-weight: 600; font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.tag {
+  font-size: 11px; line-height: 1; padding: 3px 7px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted); background: var(--surface); white-space: nowrap;
+}
+.tag.kind-必修 { border-color: var(--mark-req); color: var(--mark-req); }
+.tag.kind-選必 { border-color: var(--accent); color: var(--accent); }
+.tag.p-◎ { background: var(--accent-soft); border-color: transparent; color: var(--mark-dbl); font-weight: 600; }
+.tag.p-※ { background: color-mix(in srgb, var(--mark-star) 14%, transparent); border-color: transparent; color: var(--mark-star); font-weight: 600; }
+.tag.p-○ { border-style: dashed; }
+.tag.std { background: var(--std); border-color: transparent; }
+.tag.std.is-now { background: var(--accent); color: #fff; }
 
-.sheet .group-row td { background: var(--group); text-align: left; font-weight: 600; color: var(--muted); }
-.sheet td.name { text-align: left; }
-.sheet tbody tr:not(.group-row):hover td { background-color: var(--accent-soft); }
-.sheet tr.is-hl td.name { background: var(--hl); }
-.mark { font-weight: 700; }
-.mark-必 { color: var(--mark-req); }
-.mark-◎ { color: var(--mark-dbl); }
-.mark-※ { color: var(--mark-star); }
-
-.term-cell { cursor: pointer; font-variant-numeric: tabular-nums; }
-.term-cell.is-std { background: var(--std); color: var(--line-strong); }
-.term-cell.is-current-col { box-shadow: inset 2px 0 0 var(--accent), inset -2px 0 0 var(--accent); }
-.sheet tbody tr:not(.group-row):hover td.term-cell.is-plan,
-.term-cell.is-plan { background: var(--plan); color: var(--plan-text); font-weight: 700; }
-.term-cell:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.course-input { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+.term-sel, .score {
+  height: 32px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface);
+}
+.term-sel { padding: 0 6px; width: 108px; }
+.score { width: 72px; padding: 0 8px; text-align: right; font-variant-numeric: tabular-nums; }
+.score:disabled { background: var(--std); border-color: var(--line); }
+.score:invalid { border-color: var(--mark-req); }
+.status { width: 40px; font-size: 12px; font-weight: 700; text-align: center; }
+.course.is-plan .status { color: var(--plan-text); }
+.course.is-pass .status { color: #16a34a; }
+.course.is-fail .status { color: var(--mark-req); }
+.empty { color: var(--muted); text-align: center; padding: 24px; }
 
 /* ---- ポップオーバー ---- */
 .popover {
@@ -143,8 +155,10 @@ button, select, input { font: inherit; color: inherit; }
 }
 
 @media (max-width: 640px) {
-  .topbar, .sheet-toolbar { padding-left: 8px; padding-right: 8px; }
-  .sheet-toolbar input[type=search] { width: 100%; }
+  .topbar, .list-toolbar { padding-left: 8px; padding-right: 8px; }
+  .course-list { padding-left: 8px; padding-right: 8px; }
+  .course-input { width: 100%; }
+  .term-sel { flex: 1; }
 }
 
 /* ---- 表示B（index.html 埋め込み） ---- */

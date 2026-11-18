@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProjectBIG6 | 履修リスト</title>
-  <link rel="stylesheet" href="./list.css">
+  <link rel="stylesheet" href="./css/list.css">
   <script src="./src/list-data.js" defer></script>
   <script src="./src/list.js" defer></script>
 </head>
@@ -39,46 +39,30 @@
     <!-- 表示B：既存の時間割画面（index.html）をそのまま埋め込む -->
     <iframe class="view-b" id="viewB" title="表示B 時間割" hidden></iframe>
 
-    <!-- 表示A：成績表風リスト -->
-    <section class="pane pane-sheet">
-      <div class="sheet-toolbar">
+    <!-- 表示A：履修リスト（学期プルダウン＋点数入力） -->
+    <section class="pane pane-list">
+      <div class="list-toolbar">
         <input type="search" id="search" placeholder="科目名で検索">
         <select id="deptFilter" aria-label="部門">
           <option value="">すべての部門</option>
         </select>
-        <select id="progHighlight" aria-label="プログラム">
-          <option value="">プログラム指定：なし</option>
+        <select id="progFilter" aria-label="プログラム">
+          <option value="">プログラム：すべて</option>
           <option value="PC">PC</option>
           <option value="DE">DE</option>
           <option value="HM">HM</option>
           <option value="NS">NS</option>
         </select>
-        <label class="check"><input type="checkbox" id="onlyPlanned"> 予定のみ</label>
-        <span class="sheet-total" id="sheetTotal"></span>
+        <select id="showFilter" aria-label="表示">
+          <option value="">すべて表示</option>
+          <option value="planned">登録済みのみ</option>
+          <option value="unplanned">未登録のみ</option>
+          <option value="grade">選択学年の標準科目</option>
+        </select>
+        <span class="list-total" id="sheetTotal"></span>
       </div>
-      <div class="sheet-scroll" id="sheetScroll">
-        <table class="sheet" id="sheet">
-          <thead>
-            <tr>
-              <th rowspan="2" class="c-name">授業科目名</th>
-              <th colspan="3">単位数</th>
-              <th colspan="4">プログラム指定</th>
-              <th colspan="2">1年</th>
-              <th colspan="2">2年</th>
-              <th colspan="2">3年</th>
-              <th colspan="2">4年</th>
-            </tr>
-            <tr>
-              <th class="c-num">必修</th><th class="c-num">選必</th><th class="c-num">選択</th>
-              <th class="c-prog">PC</th><th class="c-prog">DE</th><th class="c-prog">HM</th><th class="c-prog">NS</th>
-              <th class="c-term" data-term="1前">前</th><th class="c-term" data-term="1後">後</th>
-              <th class="c-term" data-term="2前">前</th><th class="c-term" data-term="2後">後</th>
-              <th class="c-term" data-term="3前">前</th><th class="c-term" data-term="3後">後</th>
-              <th class="c-term" data-term="4前">前</th><th class="c-term" data-term="4後">後</th>
-            </tr>
-          </thead>
-          <tbody id="sheetBody"></tbody>
-        </table>
+      <div class="list-scroll" id="sheetScroll">
+        <div class="course-list" id="sheetBody"></div>
       </div>
     </section>
 
@@ -90,7 +74,7 @@
       </div>
       <table class="year-table" id="yearTable"></table>
       <div id="progList"></div>
-      <p class="sidebar-note">※ 表示Aで「履」を付けた科目だけで計算します（成績は見ていません）</p>
+      <p class="sidebar-note">※ 学期を選んだ科目のうち、60点以上と点数未入力（予定）を数えます。59点以下は数えません</p>
     </aside>
   </div>
 

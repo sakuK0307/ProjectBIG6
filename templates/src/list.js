@@ -1,8 +1,11 @@
-// 履修リスト：表示A＝成績表風リスト、表示B＝既存の時間割（index.html）、右上＝卒業判定サイドバー
+// 履修リスト：表示A＝科目リスト（学期プルダウン＋点数）、表示B＝既存の時間割（index.html）、右上＝卒業判定サイドバー
 (() => {
   const COURSES = window.LIST_COURSES || [];
   const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
-  const STORAGE_KEY = "big6.listPlan.v1";
+  const TERM_LABEL = (t) => `${t[0]}年${t[1]}期`;
+  const PASS = 60; // 卒業判定Excelと同じく 60点以上で修得
+  const STORAGE_KEY = "big6.listPlan.v2";
+  const OLD_STORAGE_KEY = "big6.listPlan.v1";
   // シラバス詳細URL。semekikn(1=前期? 2=後期?) と crclumcd は未確認の推測値（シラバス取得/README.md 参照）
   const SYLLABUS_URL = (code, half) =>
     "https://gkmsyllabus.meijo-u.ac.jp/camweb/slbssbdr.do" +
@@ -12,19 +15,19 @@
   const byId = new Map(COURSES.map((c) => [c.id, c]));
 
   // ---- 状態 ----
-  const state = {
-    grade: 3,
-    plan: {}, // { courseId: "3前" }
-    search: "",
-    dept: "",
-    prog: "",
-    onlyPlanned: false,
-  };
+  // plan: { courseId: { term: "3前", score: 85 | null } }  score が null なら「予定」（Excelの "60" 扱い）
+  const state = { grade: 3, plan: {}, search: "", dept: "", prog: "", show: "" };
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-    if (saved && typeof saved === "object") {
-      if (saved.grade) state.grade = saved.grade;
-      if (saved.plan && typeof saved.plan === "object") state.plan = saved.plan;
+    const old = saved ? null : JSON.parse(localStorage.getItem(OLD_STORAGE_KEY) || "null");
+    const src = saved || old;
+    if (src && typeof src === "object") {
+      if (src.grade) state.grade = src.grade;
+      for (const [id, v] of Object.entries(src.plan || {})) {
+        if (!byId.has(id)) continue;
+        if (typeof v === "string") state.plan[id] = { term: v, score: null }; // v1 からの移行
+        else if (v && TERMS.includes(v.term)) state.plan[id] = { term: v.term, score: v.score ?? null };
+      }
     }
   } catch { /* 保存領域が使えなくても動く */ }
   const save = () => {
@@ -32,12 +35,19 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ grade: state.grade, plan: state.plan }));
     } catch { /* noop */ }
   };
-  const isCurrentTerm = (t) => t[0] === String(state.grade);
+
+  // 状態の判定
+  const statusOf = (p) => {
+    if (!p) return { key: "", label: "" };
+    if (p.score == null) return { key: "is-plan", label: "予定" };
+    return p.score >= PASS ? { key: "is-pass", label: "修得" } : { key: "is-fail", label: "不可" };
+  };
+  const counts = (p) => p && (p.score == null || p.score >= PASS);
 
   // ---- DOM ----
   const $ = (id) => document.getElementById(id);
   const app = $("app");
-  const sheetBody = $("sheetBody");
+  const list = $("sheetBody");
   const popover = $("popover");
   const toast = $("toast");
 
@@ -45,18 +55,10 @@
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
   const fmtCredit = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
 
-  // 部門フィルタの選択肢
   for (const d of new Set(COURSES.map((c) => c.dept))) {
     const o = document.createElement("option");
     o.value = d; o.textContent = d;
     $("deptFilter").appendChild(o);
-  }
-
-  function setPlan(courseId, term) {
-    if (term) state.plan[courseId] = term;
-    else delete state.plan[courseId];
-    save();
-    render();
   }
 
   // 指定学期（前/後）の開講情報。時限が分かっているものを優先
@@ -66,91 +68,143 @@
     return offers.find((o) => o.period) || offers[0] || null;
   }
 
-  // ---- 成績表 ----
-  function renderSheet() {
-    const q = state.search.trim();
-    document.querySelectorAll(".sheet th.c-term").forEach((th) => {
-      th.classList.toggle("is-current", isCurrentTerm(th.dataset.term));
-    });
+  // ---- リスト ----
+  const termOptions = `<option value="">未登録</option>` +
+    TERMS.map((t) => `<option value="${t}">${TERM_LABEL(t)}</option>`).join("");
 
-    const rows = [];
-    let lastGroup = null;
-    for (const c of COURSES) {
-      if (state.dept && c.dept !== state.dept) continue;
-      if (q && !c.name.includes(q)) continue;
-      if (state.onlyPlanned && !state.plan[c.id]) continue;
-
-      const groupLabel = c.group ? `${c.dept}　${c.group}` : c.dept;
-      if (groupLabel !== lastGroup) {
-        rows.push(`<tr class="group-row"><td colspan="16">${esc(groupLabel)}</td></tr>`);
-        lastGroup = groupLabel;
-      }
-      const credit = (k) => (c.kind === k ? fmtCredit(c.credits) : "");
-      const mark = (p) => {
-        const m = c.prog[p];
-        return m ? `<span class="mark mark-${esc(m)}">${esc(m)}</span>` : "";
-      };
-      const planned = state.plan[c.id];
-      const hl = state.prog && c.prog[state.prog] ? "is-hl" : "";
-      const termCells = TERMS.map((t) => {
-        const cls = ["term-cell"];
-        if (c.terms.includes(t)) cls.push("is-std");
-        if (planned === t) cls.push("is-plan");
-        if (isCurrentTerm(t)) cls.push("is-current-col");
-        return `<td class="${cls.join(" ")}" data-id="${c.id}" data-term="${t}" tabindex="0"` +
-          ` title="${esc(c.name)}：${t}に履修予定にする">${planned === t ? "履" : ""}</td>`;
-      }).join("");
-      rows.push(
-        `<tr class="${hl}">` +
-        `<td class="name"><button class="name-btn" data-detail="${c.id}">${esc(c.name)}</button></td>` +
-        `<td>${credit("必修")}</td><td>${credit("選必")}</td><td>${credit("選択") || credit("自由")}</td>` +
-        `<td>${mark("PC")}</td><td>${mark("DE")}</td><td>${mark("HM")}</td><td>${mark("NS")}</td>` +
-        termCells + `</tr>`
-      );
+  function tagsHtml(c) {
+    const tags = [`<span class="tag kind-${esc(c.kind)}">${esc(c.kind)} ${fmtCredit(c.credits)}単位</span>`];
+    const progs = state.prog ? [state.prog] : ["PC", "DE", "HM", "NS"];
+    for (const p of progs) {
+      const m = c.prog[p];
+      if (m && m !== "必") tags.push(`<span class="tag p-${esc(m)}">${p}${esc(m)}</span>`);
     }
-    sheetBody.innerHTML = rows.join("") ||
-      `<tr><td colspan="16" class="empty">該当する科目がありません</td></tr>`;
-
-    const all = Object.keys(state.plan).map((id) => byId.get(id)).filter(Boolean);
-    const total = all.reduce((s, c) => s + c.credits, 0);
-    $("sheetTotal").innerHTML = `予定 <strong>${all.length}</strong> 科目 / <strong>${fmtCredit(total)}</strong> 単位`;
+    for (const t of c.terms) {
+      const now = t[0] === String(state.grade) ? " is-now" : "";
+      tags.push(`<span class="tag std${now}">標準 ${TERM_LABEL(t)}</span>`);
+    }
+    return tags.join("");
   }
 
-  sheetBody.addEventListener("click", (e) => {
+  function rowHtml(c) {
+    const p = state.plan[c.id];
+    const st = statusOf(p);
+    return `<div class="course ${st.key}" data-id="${c.id}">
+      <div class="course-main">
+        <button class="name-btn" data-detail="${c.id}">${esc(c.name)}</button>
+        <div class="tags">${tagsHtml(c)}</div>
+      </div>
+      <div class="course-input">
+        <select class="term-sel" aria-label="${esc(c.name)}の履修学期">${termOptions}</select>
+        <input class="score" type="number" min="0" max="100" step="1" inputmode="numeric"
+          placeholder="点数" aria-label="${esc(c.name)}の点数" ${p ? "" : "disabled"}
+          value="${p && p.score != null ? p.score : ""}">
+        <span class="status">${st.label}</span>
+      </div>
+    </div>`;
+  }
+
+  function visible(c) {
+    if (state.dept && c.dept !== state.dept) return false;
+    if (state.search.trim() && !c.name.includes(state.search.trim())) return false;
+    if (state.prog && !c.prog[state.prog]) return false;
+    if (state.show === "planned" && !state.plan[c.id]) return false;
+    if (state.show === "unplanned" && state.plan[c.id]) return false;
+    if (state.show === "grade" && !c.terms.some((t) => t[0] === String(state.grade))) return false;
+    return true;
+  }
+
+  function renderList() {
+    const html = [];
+    let lastGroup = null;
+    for (const c of COURSES) {
+      if (!visible(c)) continue;
+      const group = c.group ? `${c.dept}　${c.group}` : c.dept;
+      if (group !== lastGroup) {
+        html.push(`<div class="group-head">${esc(group)}</div>`);
+        lastGroup = group;
+      }
+      html.push(rowHtml(c));
+    }
+    list.innerHTML = html.join("") || `<p class="empty">該当する科目がありません</p>`;
+    // select の値は innerHTML 後に入れる
+    list.querySelectorAll(".course").forEach((row) => {
+      const p = state.plan[row.dataset.id];
+      row.querySelector(".term-sel").value = p ? p.term : "";
+    });
+    renderTotal();
+  }
+
+  function renderTotal() {
+    const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => x.c);
+    const sum = (f) => entries.filter(f).reduce((s, x) => s + x.c.credits, 0);
+    const passed = sum((x) => x.p.score != null && x.p.score >= PASS);
+    const planned = sum((x) => x.p.score == null);
+    $("sheetTotal").innerHTML = `修得 <strong>${fmtCredit(passed)}</strong> ＋ 予定 <strong>${fmtCredit(planned)}</strong> 単位`;
+  }
+
+  // 1行だけ更新（入力中のフォーカスを失わないように全体は描き直さない）
+  function updateRow(id) {
+    const row = list.querySelector(`.course[data-id="${id}"]`);
+    if (!row) return;
+    const p = state.plan[id];
+    const st = statusOf(p);
+    row.className = `course ${st.key}`;
+    row.querySelector(".status").textContent = st.label;
+    const score = row.querySelector(".score");
+    score.disabled = !p;
+    if (!p) score.value = "";
+    renderTotal();
+    if (!sidebar.hidden) renderSidebar();
+  }
+
+  list.addEventListener("change", (e) => {
+    const row = e.target.closest(".course");
+    if (!row) return;
+    const id = row.dataset.id;
+    if (e.target.classList.contains("term-sel")) {
+      const term = e.target.value;
+      if (term) state.plan[id] = { term, score: state.plan[id]?.score ?? null };
+      else delete state.plan[id];
+    } else if (e.target.classList.contains("score")) {
+      if (!state.plan[id]) return;
+      const raw = e.target.value.trim();
+      const n = Math.round(Number(raw));
+      if (raw === "" || Number.isNaN(n)) state.plan[id].score = null;
+      else state.plan[id].score = Math.max(0, Math.min(100, n));
+      e.target.value = state.plan[id].score ?? "";
+    }
+    save();
+    // 絞り込み中に条件から外れる変更なら全体を描き直す
+    if (state.show === "planned" || state.show === "unplanned") renderList();
+    else updateRow(id);
+  });
+  list.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.classList.contains("score")) e.target.blur();
+  });
+  list.addEventListener("click", (e) => {
     const nameBtn = e.target.closest("[data-detail]");
     if (nameBtn) {
       e.stopPropagation();
       openCourseDetail(byId.get(nameBtn.dataset.detail), nameBtn);
-      return;
-    }
-    const cell = e.target.closest(".term-cell");
-    if (!cell) return;
-    const { id, term } = cell.dataset;
-    setPlan(id, state.plan[id] === term ? null : term);
-  });
-  sheetBody.addEventListener("keydown", (e) => {
-    if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("term-cell")) {
-      e.preventDefault();
-      e.target.click();
     }
   });
 
   // ---- 科目の詳細（科目名をタッチ → シラバスへ） ----
   function openCourseDetail(c, anchor) {
-    const term = state.plan[c.id];
-    const half = term ? term[1] : (c.terms[0] || "前")[1] || "前";
+    const p = state.plan[c.id];
+    const half = p ? p.term[1] : (c.terms[0] || "1前")[1];
     const o = offeringFor(c, half) || offeringFor(c, half === "前" ? "後" : "前");
     const progs = Object.entries(c.prog).filter(([, v]) => v).map(([k, v]) => `${k}:${v}`).join(" ");
     const syl = o?.code
       ? `<a href="${SYLLABUS_URL(o.code, o.sem === "前期" ? "前" : "後")}" target="_blank" rel="noopener">シラバスを開く</a>`
       : `<button disabled>シラバス情報なし</button>`;
-    const rm = term ? `<button class="danger" data-remove="${c.id}">予定を取り消す</button>` : "";
     showPopover(`
       <h3>${esc(c.name)}</h3>
-      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.join("・") || "—"}${term ? ` ／ 予定：${term}` : ""}</p>
+      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.map(TERM_LABEL).join("・") || "—"}</p>
       ${progs ? `<p class="meta">プログラム指定 ${esc(progs)}</p>` : ""}
       ${o ? `<p class="meta">${esc(o.sem)} ${esc(o.day || "")}${o.period ? o.period + "限" : ""} ${esc(o.room || "")} ${esc(o.teacher || "")}（${esc(o.code)}）</p>` : ""}
-      <div class="actions">${syl}${rm}</div>`, anchor);
+      <div class="actions">${syl}</div>`, anchor);
   }
 
   function showPopover(html, anchor) {
@@ -165,27 +219,19 @@
     popover.style.top = `${top}px`;
   }
   const hidePopover = () => { popover.hidden = true; };
-
-  popover.addEventListener("click", (e) => {
-    const rm = e.target.closest("[data-remove]");
-    if (rm) {
-      setPlan(rm.dataset.remove, null);
-      hidePopover();
-    }
-  });
   document.addEventListener("click", (e) => {
     if (!popover.hidden && !popover.contains(e.target)) hidePopover();
   });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") hidePopover(); });
   $("sheetScroll").addEventListener("scroll", hidePopover);
 
-  // ---- 上部バー ----
+  // ---- 上部バー・絞り込み ----
   $("grade").value = String(state.grade);
   $("grade").addEventListener("change", (e) => { state.grade = Number(e.target.value); save(); render(); });
-  $("search").addEventListener("input", (e) => { state.search = e.target.value; renderSheet(); });
-  $("deptFilter").addEventListener("change", (e) => { state.dept = e.target.value; renderSheet(); });
-  $("progHighlight").addEventListener("change", (e) => { state.prog = e.target.value; renderSheet(); });
-  $("onlyPlanned").addEventListener("change", (e) => { state.onlyPlanned = e.target.checked; renderSheet(); });
+  $("search").addEventListener("input", (e) => { state.search = e.target.value; renderList(); });
+  $("deptFilter").addEventListener("change", (e) => { state.dept = e.target.value; renderList(); });
+  $("progFilter").addEventListener("change", (e) => { state.prog = e.target.value; renderList(); });
+  $("showFilter").addEventListener("change", (e) => { state.show = e.target.value; renderList(); });
 
   let toastTimer;
   document.querySelectorAll("[data-stub]").forEach((b) => b.addEventListener("click", () => {
@@ -233,20 +279,20 @@
   const openProgs = new Set(["DE"]);
 
   function renderSidebar() {
-    const planned = Object.entries(state.plan)
-      .map(([id, term]) => ({ c: byId.get(id), term })).filter((x) => x.c);
-    const sumTerms = (terms) => planned.filter((x) => terms.includes(x.term))
+    const counted = Object.entries(state.plan)
+      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => x.c && counts(x.p));
+    const sumTerms = (terms) => counted.filter((x) => terms.includes(x.p.term))
       .reduce((s, x) => s + x.c.credits, 0);
     const years = [
       ["1年", ["1前", "1後"]], ["2年", ["2前", "2後"]],
       ["3年前期", ["3前"]], ["3年後期", ["3後"]], ["4年", ["4前", "4後"]],
     ];
-    const total = planned.reduce((s, x) => s + x.c.credits, 0);
+    const total = counted.reduce((s, x) => s + x.c.credits, 0);
     $("yearTable").innerHTML =
       years.map(([label, ts]) => `<tr><th>${label}</th><td>${fmtCredit(sumTerms(ts))} 単位</td></tr>`).join("") +
       `<tr class="total"><th>合計</th><td>${fmtCredit(total)} 単位</td></tr>`;
 
-    const sumReq = (key) => planned.filter((x) => x.c.req.includes(key))
+    const sumReq = (key) => counted.filter((x) => x.c.req.includes(key))
       .reduce((s, x) => s + x.c.credits, 0);
     $("progList").innerHTML = PROGRAMS.map(([p, name]) => {
       const rows = REQS.map(([label, key, need]) => {
@@ -278,7 +324,7 @@
   $("sidebarClose").addEventListener("click", () => setSidebar(false));
 
   function render() {
-    renderSheet();
+    renderList();
     if (!sidebar.hidden) renderSidebar();
   }
   render();
