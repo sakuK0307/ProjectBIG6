@@ -14,6 +14,14 @@
     .filter((c) => !c.hidden && (hiddenNames.has(c.name) || c.name.startsWith("先進プロジェクト")))
     .map((c) => c.id));
   const inCourseType = (c, type) => (type === "general" ? !ADVANCED_ONLY.has(c.id) : !GENERAL_ONLY.has(c.id));
+
+  // ---- 入学年度 ----
+  // 2023〜2026年度の学生便覧を比べると、卒業に必要な単位数と科目はほぼ同じ。違いは次の1つだけ：
+  // 2023年度入学の先進プロジェクトコースでは「情報技術の応用と職業」は総合コースのみの開講で、
+  // 教職課程として履修はできるが、進級・卒業研究着手・卒業の単位には算入されない（2023年度便覧 2-24）
+  const ENTRANCE_YEARS = [2023, 2024, 2025, 2026];
+  const notCountedFor = (c, year, type) =>
+    year === 2023 && type === "advanced" && !c.hidden && c.name === "情報技術の応用と職業";
   const YEAR = window.LIST_YEAR || 2026;
   const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
   const TERM_LABEL = (t) => `${t[0]}年${t[1]}期`;
@@ -34,10 +42,12 @@
   // plan: { courseId: { attempts: [{ term: "1前", score: 45 }, { term: "2前", score: null }], code?: "642809" } }
   //   attempts は履修した回（再履修を含む）。学期順に並べる
   //   score が null の回は「予定」（Excelの "60" 扱い）。code は選んだクラスの講義コード（時間割画面で使う予定）
-  const state = { term: "3前", courseType: "advanced", plan: {}, search: "", dept: "", prog: "", show: "" };
+  const state = { term: "3前", entrance: 2025, courseType: "advanced", plan: {}, search: "", dept: "", prog: "", show: "" };
   // 今のコースで表示・集計する科目
   const courses = () => ALL_COURSES.filter((c) => inCourseType(c, state.courseType));
   const inCurrent = (c) => c && inCourseType(c, state.courseType);
+  // 卒業判定・単位の集計に数えるか（今のコースの科目で、入学年度の決まりで除かれていないもの）
+  const isCounted = (c) => inCurrent(c) && !notCountedFor(c, state.entrance, state.courseType);
   const termIndex = (t) => TERMS.indexOf(t);
   const sortAttempts = (list) => list.sort((x, y) => termIndex(x.term) - termIndex(y.term));
   const cleanScore = (v) => (v == null || v === "" || Number.isNaN(Number(v))
@@ -68,6 +78,7 @@
       if (TERMS.includes(src.term)) state.term = src.term;
       else if (src.grade) state.term = `${src.grade}前`; // 学年だけ保存していた旧形式
       if (COURSE_TYPES[src.courseType]) state.courseType = src.courseType;
+      if (ENTRANCE_YEARS.includes(src.entrance)) state.entrance = src.entrance;
       for (const [id, v] of Object.entries(src.plan || {})) {
         if (!byId.has(id)) continue;
         const p = normalizePlan(v);
@@ -78,7 +89,7 @@
   loadState();
   const save = () => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ term: state.term, courseType: state.courseType, plan: state.plan }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ term: state.term, entrance: state.entrance, courseType: state.courseType, plan: state.plan }));
     } catch { /* noop */ }
   };
 
@@ -138,6 +149,9 @@
     for (const t of c.terms) {
       const now = t === state.term ? " is-now" : "";
       tags.push(`<span class="tag std${now}">標準 ${TERM_LABEL(t)}</span>`);
+    }
+    if (notCountedFor(c, state.entrance, state.courseType)) {
+      tags.push(`<span class="tag not-counted">卒業要件に数えない（${state.entrance}年度入学）</span>`);
     }
     return tags.join("");
   }
@@ -206,7 +220,7 @@
   }
 
   function renderTotal() {
-    const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c));
+    const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => isCounted(x.c));
     const sum = (f) => entries.filter(f).reduce((s, x) => s + x.c.credits, 0);
     const passed = sum((x) => summaryOf(x.p).earned);
     const planned = sum((x) => { const s = summaryOf(x.p); return !s.earned && s.planned; });
@@ -344,6 +358,14 @@
   const termSel = $("headerTerm");
   termSel.value = state.term;
   termSel.addEventListener("change", () => { state.term = termSel.value; save(); render(); });
+  const entranceSel = $("entranceYear");
+  entranceSel.value = String(state.entrance);
+  entranceSel.addEventListener("change", () => {
+    state.entrance = Number(entranceSel.value);
+    save();
+    hidePopover();
+    render();
+  });
   const courseSel = $("courseType");
   courseSel.value = state.courseType;
   courseSel.addEventListener("change", () => {
@@ -397,9 +419,9 @@
   const openProgs = new Set(["DE"]);
 
   function renderSidebar() {
-    $("sidebarCourse").textContent = COURSE_TYPES[state.courseType];
+    $("sidebarCourse").textContent = `${state.entrance}年度入学・${COURSE_TYPES[state.courseType]}`;
     const counted = Object.entries(state.plan)
-      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c) && counts(x.p));
+      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => isCounted(x.c) && counts(x.p));
     const sumTerms = (terms) => counted.filter((x) => terms.includes(summaryOf(x.p).countTerm))
       .reduce((s, x) => s + x.c.credits, 0);
     // 学年ごとに 前期・後期 の2行。左の学年セルに年間の小計を出す
@@ -457,6 +479,7 @@
     loadState();
     termSel.value = state.term;
     courseSel.value = state.courseType;
+    entranceSel.value = String(state.entrance);
     render();
   });
 
