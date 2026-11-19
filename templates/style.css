@@ -66,7 +66,8 @@ button.cell {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* マウスを重ねたとき */
@@ -79,6 +80,73 @@ button.cell:hover {
 .cell.selected {
   background: #dbeafe;
   border: 2px solid #3b82f6;
+}
+
+.cell.registered:not(.selected) {
+  background: #edf2ff;
+}
+
+#course-picker {
+  position: fixed;
+  z-index: 1;
+  top: var(--picker-top, 8px);
+  left: var(--picker-left, 8px);
+  display: flex;
+  flex-direction: column;
+  width: min(320px, calc(100% - 16px));
+  max-height: min(360px, calc(100dvh - 16px));
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 16px #0002;
+}
+
+#course-picker[hidden] {
+  display: none;
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  #course-picker {
+    inset: auto 0 0;
+    width: 100%;
+    max-height: 50dvh;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}
+
+#course-picker-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+#course-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#course-picker button {
+  min-height: 44px;
+  padding: 8px 12px;
+  font: inherit;
+  overflow-wrap: anywhere;
+}
+
+#course-options button {
+  width: 100%;
+  text-align: left;
+}
+
+.course-picker-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* キーボード操作時 */
