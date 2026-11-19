@@ -273,3 +273,25 @@ button, select, input { font: inherit; color: inherit; }
 /* 入力の注意（開講していない学期・上の学年の授業） */
 .attempt-warn { margin: 0; font-size: 11px; color: var(--mark-req); text-align: right; }
 .tag.free { border-style: dashed; }
+
+/* ---- PDF の読み取り結果 ---- */
+.import-dialog {
+  width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+  padding: 0; border: 1px solid var(--line-strong); border-radius: 12px;
+  background: var(--surface); color: var(--text);
+}
+.import-dialog::backdrop { background: rgba(0, 0, 0, .35); }
+.import-body { display: flex; flex-direction: column; gap: 8px; padding: 16px; max-height: calc(100vh - 48px); }
+.import-body h2 { margin: 0; font-size: 16px; }
+.import-meta { margin: 0; color: var(--muted); font-size: 12px; }
+.import-check { font-size: 13px; display: flex; gap: 6px; align-items: center; }
+.import-table-wrap { overflow: auto; min-height: 0; flex: 1; border: 1px solid var(--line); border-radius: 8px; }
+.import-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.import-table th, .import-table td { padding: 4px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+.import-table thead th { position: sticky; top: 0; background: var(--head); }
+.import-table tr.is-ng td { color: var(--mark-req); }
+.import-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.import-actions button {
+  padding: 6px 16px; border-radius: 6px; border: 1px solid var(--line-strong); background: var(--surface); cursor: pointer;
+}
+.import-actions .primary { background: var(--accent); border-color: var(--accent); color: #fff; }

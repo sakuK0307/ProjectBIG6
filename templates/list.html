@@ -6,6 +6,7 @@
   <title>ProjectBIG6 | 履修リスト</title>
   <link rel="stylesheet" href="./css/list.css">
   <script src="./src/course-data.js" defer></script>
+  <script src="./src/pdf-import.js" defer></script>
   <script src="./src/list.js" defer></script>
 </head>
 <body>
@@ -19,7 +20,8 @@
       </nav>
       <div class="topbar-actions">
         <button class="pill" data-stub="送信">送信</button>
-        <button class="pill" data-stub="PDF読み込み">PDF読込</button>
+        <button class="pill" id="pdfImportBtn" title="成績通知書・履修登録科目確認通知書の PDF を読み取る">PDF読込</button>
+        <input type="file" id="pdfInput" accept="application/pdf,.pdf" hidden>
         <button class="pill" data-stub="Excel読み込み">Excel読込</button>
         <select class="grade-select" id="entranceYear" aria-label="入学年度">
           <option value="2023">2023年度入学</option>
@@ -93,5 +95,10 @@
 
   <div class="popover" id="popover" hidden></div>
   <div class="toast" id="toast" role="status" hidden></div>
+
+  <!-- PDF の読み取り結果を確かめてから取り込む -->
+  <dialog class="import-dialog" id="importDialog" aria-labelledby="importTitle">
+    <form method="dialog" class="import-body" id="importBody"></form>
+  </dialog>
 </body>
 </html>

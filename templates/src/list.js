@@ -639,6 +639,108 @@
     render();
   });
 
+  // ---- PDF の読み取り（成績通知書・履修登録科目確認通知書） ----
+  // 読み取りは src/pdf-import.js。PDF はブラウザの中だけで読み、どこにも送らない
+  const importDialog = $("importDialog");
+  const importBody = $("importBody");
+  let importResult = null;
+
+  $("pdfImportBtn").addEventListener("click", () => $("pdfInput").click());
+  $("pdfInput").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    e.target.value = ""; // 同じファイルをもう一度選べるように
+    if (!file) return;
+    importBody.innerHTML = `<h2 id="importTitle">PDF を読み取っています…</h2><p class="import-meta">${esc(file.name)}</p>`;
+    importDialog.showModal();
+    try {
+      importResult = await window.PdfImport.read(file, {
+        courses: ALL_COURSES, inCourseType, fallbackType: state.courseType,
+      });
+      renderImport();
+    } catch (err) {
+      importBody.innerHTML = `<h2 id="importTitle">読み取れませんでした</h2>
+        <p class="import-meta">${esc(err.message || String(err))}</p>
+        <div class="import-actions"><button value="cancel">閉じる</button></div>`;
+    }
+  });
+
+  function renderImport() {
+    const r = importResult;
+    if (!r.kind || !r.rows.length) {
+      importBody.innerHTML = `<h2 id="importTitle">取り込める内容が見つかりませんでした</h2>
+        <p class="import-meta">名城大学の「試験成績一覧表」または「履修登録科目確認通知書」の PDF を選んでください。</p>
+        <div class="import-actions"><button value="cancel">閉じる</button></div>`;
+      return;
+    }
+    const meta = [
+      r.issued && `発行日 ${r.issued}`,
+      r.entrance && `${r.entrance}年度入学`,
+      r.courseType && COURSE_TYPES[r.courseType],
+    ].filter(Boolean).join("・");
+    const changeMeta = (r.entrance && r.entrance !== state.entrance) || (r.courseType && r.courseType !== state.courseType);
+    const ok = r.rows.filter((x) => !x.problem).length;
+    importBody.innerHTML = `
+      <h2 id="importTitle">${esc(r.title)}の読み取り結果</h2>
+      <p class="import-meta">${esc(meta)} ／ ${r.rows.length}行のうち ${ok}行を取り込めます</p>
+      <p class="import-meta">${r.kind === "grades"
+        ? "点数のある科目は、その学期の点数として入れます（同じ学期の回があれば上書き）。「履修中」は予定として入れます。"
+        : "登録した科目を、その学期の予定として入れます（点数が入っている回はそのまま）。"}</p>
+      ${changeMeta ? `<label class="import-check"><input type="checkbox" id="importMeta" checked>
+        入学年度とコースを PDF に合わせる（今：${state.entrance}年度入学・${COURSE_TYPES[state.courseType]}）</label>` : ""}
+      <div class="import-table-wrap"><table class="import-table">
+        <thead><tr><th></th><th>PDF の科目名</th><th>このアプリの科目</th><th>学期</th><th>結果</th></tr></thead>
+        <tbody>${r.rows.map((x, i) => `
+          <tr class="${x.problem ? "is-ng" : ""}">
+            <td><input type="checkbox" data-row="${i}" ${x.problem ? "disabled" : "checked"} aria-label="${esc(x.pdfName)}を取り込む"></td>
+            <td>${esc(x.pdfName)}</td>
+            <td>${x.course ? esc(x.course.name) : "—"}</td>
+            <td>${x.term ? TERM_LABEL(x.term) : "—"}</td>
+            <td>${esc(x.problem || x.note || (x.score != null ? `${x.score}点` : x.result))}</td>
+          </tr>`).join("")}</tbody>
+      </table></div>
+      <div class="import-actions">
+        <button value="cancel">やめる</button>
+        <button value="apply" class="primary" id="importApply">取り込む</button>
+      </div>`;
+  }
+
+  // 「取り込む」「やめる」はどちらもフォームの送信（method="dialog"）でダイアログを閉じる。
+  // 閉じたあとの close イベントは環境によって届かないことがあるので、送信の時点で取り込む
+  importBody.addEventListener("submit", (e) => {
+    if (e.submitter?.value === "apply" && importResult) applyImport();
+    importResult = null;
+  });
+
+  function applyImport() {
+    const r = importResult;
+    if ($("importMeta")?.checked) {
+      if (r.entrance && ENTRANCE_YEARS.includes(r.entrance)) state.entrance = r.entrance;
+      if (r.courseType) state.courseType = r.courseType;
+      entranceSel.value = String(state.entrance);
+      courseSel.value = state.courseType;
+    }
+    let count = 0;
+    importBody.querySelectorAll("input[data-row]:checked").forEach((box) => {
+      const x = r.rows[Number(box.dataset.row)];
+      if (!x || x.problem) return;
+      const p = (state.plan[x.course.id] ||= { attempts: [] });
+      const same = p.attempts.find((a) => a.term === x.term);
+      if (r.kind === "grades") {
+        // 点数はその学期の回に入れる（履修中なら予定のまま）
+        if (same) { if (x.score != null) same.score = x.score; }
+        else p.attempts.push({ term: x.term, score: x.score });
+      } else if (!same) {
+        p.attempts.push({ term: x.term, score: null });
+      }
+      if (x.code) p.code = x.code;
+      sortAttempts(p.attempts);
+      count++;
+    });
+    save();
+    render();
+    showToast(`${count}科目を取り込みました`);
+  }
+
   function render() {
     renderList();
     if (!sidebar.hidden) renderSidebar();
