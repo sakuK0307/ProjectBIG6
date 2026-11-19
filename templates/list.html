@@ -21,6 +21,10 @@
         <button class="pill" data-stub="送信">送信</button>
         <button class="pill" data-stub="PDF読み込み">PDF読込</button>
         <button class="pill" data-stub="Excel読み込み">Excel読込</button>
+        <select class="grade-select" id="courseType" aria-label="コース">
+          <option value="advanced" selected>先進プロジェクトコース</option>
+          <option value="general">総合コース</option>
+        </select>
         <select class="grade-select" id="headerTerm" aria-label="現在の学年・学期">
           <option value="1前">1年前期</option>
           <option value="1後">1年後期</option>
@@ -70,7 +74,7 @@
     <!-- 右上ボタンで開く卒業判定サイドバー -->
     <aside class="sidebar" id="sidebar" hidden aria-label="卒業判定">
       <div class="sidebar-head">
-        <h2>卒業判定</h2>
+        <h2>卒業判定 <small id="sidebarCourse"></small></h2>
         <button class="sidebar-close" id="sidebarClose" aria-label="閉じる">×</button>
       </div>
       <table class="year-table" id="yearTable"></table>

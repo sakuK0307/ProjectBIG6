@@ -241,3 +241,6 @@ button, select, input { font: inherit; color: inherit; }
 }
 .popover ul.offers a:hover { background: var(--accent-soft); }
 .popover ul.offers small { display: block; color: var(--muted); }
+
+/* サイドバー見出しのコース名 */
+.sidebar-head h2 small { font-size: 11px; font-weight: 400; color: var(--muted); }

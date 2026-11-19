@@ -1,8 +1,19 @@
 // 履修リスト：科目リスト（学期プルダウン＋点数）と、右上ボタンで開く卒業判定サイドバー
 // 予定・点数はブラウザ（localStorage）に保存し、別のタブで変わったら storage イベントで読み直す
 (() => {
-  // hidden の科目（先進コースと総合コースで重複する行の片方）は出さない・数えない
-  const COURSES = (window.LIST_COURSES || []).filter((c) => !c.hidden);
+  const ALL_COURSES = window.LIST_COURSES || [];
+
+  // ---- 先進プロジェクトコース／総合コース ----
+  // curriculum.json の hidden の行は、卒業判定 Excel で隠されている総合コース用の行
+  //（創造的思考法・PBL概論などは、先進では必修、総合では選必・選択になる）
+  const COURSE_TYPES = { advanced: "先進プロジェクトコース", general: "総合コース" };
+  const GENERAL_ONLY = new Set(ALL_COURSES.filter((c) => c.hidden).map((c) => c.id));
+  // 先進コースだけの行：総合用の行と同じ名前の行と、「先進プロジェクト」で始まる科目
+  const hiddenNames = new Set(ALL_COURSES.filter((c) => c.hidden).map((c) => c.name));
+  const ADVANCED_ONLY = new Set(ALL_COURSES
+    .filter((c) => !c.hidden && (hiddenNames.has(c.name) || c.name.startsWith("先進プロジェクト")))
+    .map((c) => c.id));
+  const inCourseType = (c, type) => (type === "general" ? !ADVANCED_ONLY.has(c.id) : !GENERAL_ONLY.has(c.id));
   const YEAR = window.LIST_YEAR || 2026;
   const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
   const TERM_LABEL = (t) => `${t[0]}年${t[1]}期`;
@@ -16,12 +27,16 @@
     `?value(risyunen)=${YEAR}&value(semekikn)=1` +
     `&value(kougicd)=${encodeURIComponent(code)}&value(crclumcd)=12205`;
 
-  const byId = new Map(COURSES.map((c) => [c.id, c]));
+  // byId は両コースの全科目（コースを切り替えても予定・点数を残すため）
+  const byId = new Map(ALL_COURSES.map((c) => [c.id, c]));
 
   // ---- 状態 ----
   // plan: { courseId: { term: "3前", score: 85 | null, code?: "642809" } }
   //   score が null なら「予定」（Excelの "60" 扱い）。code は選んだクラスの講義コード（時間割画面で使う予定）
-  const state = { term: "3前", plan: {}, search: "", dept: "", prog: "", show: "" };
+  const state = { term: "3前", courseType: "advanced", plan: {}, search: "", dept: "", prog: "", show: "" };
+  // 今のコースで表示・集計する科目
+  const courses = () => ALL_COURSES.filter((c) => inCourseType(c, state.courseType));
+  const inCurrent = (c) => c && inCourseType(c, state.courseType);
   function loadState() {
    state.plan = {};
    try {
@@ -30,6 +45,7 @@
     const src = saved || old;
     if (src && typeof src === "object") {
       if (TERMS.includes(src.term)) state.term = src.term;
+      if (COURSE_TYPES[src.courseType]) state.courseType = src.courseType;
       else if (src.grade) state.term = `${src.grade}前`; // 学年だけ保存していた旧形式
       for (const [id, v] of Object.entries(src.plan || {})) {
         if (!byId.has(id)) continue;
@@ -45,7 +61,7 @@
   loadState();
   const save = () => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ term: state.term, plan: state.plan }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ term: state.term, courseType: state.courseType, plan: state.plan }));
     } catch { /* noop */ }
   };
 
@@ -67,7 +83,7 @@
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
   const fmtCredit = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
 
-  for (const d of new Set(COURSES.map((c) => c.dept))) {
+  for (const d of new Set(ALL_COURSES.map((c) => c.dept))) {
     const o = document.createElement("option");
     o.value = d; o.textContent = d;
     $("deptFilter").appendChild(o);
@@ -122,7 +138,7 @@
   function renderList() {
     const html = [];
     let lastGroup = null;
-    for (const c of COURSES) {
+    for (const c of courses()) {
       if (!visible(c)) continue;
       const group = c.group ? `${c.dept}　${c.group}` : c.dept;
       if (group !== lastGroup) {
@@ -141,7 +157,7 @@
   }
 
   function renderTotal() {
-    const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => x.c);
+    const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c));
     const sum = (f) => entries.filter(f).reduce((s, x) => s + x.c.credits, 0);
     const passed = sum((x) => x.p.score != null && x.p.score >= PASS);
     const planned = sum((x) => x.p.score == null);
@@ -256,6 +272,14 @@
   const termSel = $("headerTerm");
   termSel.value = state.term;
   termSel.addEventListener("change", () => { state.term = termSel.value; save(); render(); });
+  const courseSel = $("courseType");
+  courseSel.value = state.courseType;
+  courseSel.addEventListener("change", () => {
+    state.courseType = courseSel.value;
+    save();
+    hidePopover();
+    render();
+  });
   $("search").addEventListener("input", (e) => { state.search = e.target.value; renderList(); });
   $("deptFilter").addEventListener("change", (e) => { state.dept = e.target.value; renderList(); });
   $("progFilter").addEventListener("change", (e) => { state.prog = e.target.value; renderList(); });
@@ -284,7 +308,12 @@
     ["プログラム指定 ○（※含む）", "○"],
     ["専門 合計", "専計"],
   ];
-  const REQUIREMENTS = window.LIST_REQUIREMENTS || {};
+  // 先進：curriculum.json の requirements。総合：卒業判定 Excel の各プログラムシート O列「総合コース用」
+  //（専門必修 21→10、◎ 14→16、○ 15→20。4プログラムとも同じ）
+  const REQUIREMENTS = {
+    advanced: window.LIST_REQUIREMENTS || {},
+    general: Object.fromEntries(["PC", "DE", "HM", "NS"].map((p) => [p, [10, 20, 8, 12, 10, 16, 9, 20, 104]])),
+  };
   const PROGRAMS = [
     ["PC", "フィジカルコンピューティング"],
     ["DE", "データエンジニアリング"],
@@ -296,8 +325,9 @@
   const openProgs = new Set(["DE"]);
 
   function renderSidebar() {
+    $("sidebarCourse").textContent = COURSE_TYPES[state.courseType];
     const counted = Object.entries(state.plan)
-      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => x.c && counts(x.p));
+      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c) && counts(x.p));
     const sumTerms = (terms) => counted.filter((x) => terms.includes(x.p.term))
       .reduce((s, x) => s + x.c.credits, 0);
     // 学年ごとに 前期・後期 の2行。左の学年セルに年間の小計を出す
@@ -320,7 +350,7 @@
       .reduce((s, x) => s + x.c.credits, 0);
     $("progList").innerHTML = PROGRAMS.map(([p, name]) => {
       const rows = REQS.map(([label, key], i) => {
-        const need = REQUIREMENTS[p]?.[i] ?? 0;
+        const need = REQUIREMENTS[state.courseType][p]?.[i] ?? 0;
         const got = sumReq(["◎", "※", "○"].includes(key) ? p + key : key);
         return { label, got, need };
       });
@@ -354,6 +384,7 @@
     if (e.key !== STORAGE_KEY) return;
     loadState();
     termSel.value = state.term;
+    courseSel.value = state.courseType;
     render();
   });
 
