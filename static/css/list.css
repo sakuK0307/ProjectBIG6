@@ -103,20 +103,21 @@ button, select, input { font: inherit; color: inherit; }
 .list-scroll { overflow-y: auto; flex: 1; min-height: 0; background: var(--bg); }
 .course-list { max-width: 760px; margin: 0 auto; padding: 8px 12px 24px; }
 .group-head {
-  position: sticky; top: 0; z-index: 1; margin: 10px 0 4px; padding: 4px 2px;
+  position: sticky; top: 0; z-index: 1; margin: 6px 0 2px; padding: 3px 2px;
   background: var(--bg); color: var(--muted); font-weight: 600; font-size: 12px;
 }
+/* 1科目を1行に収めて、スクロールを減らす（科目名・タグ・入力欄を横に並べる） */
 .course {
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  padding: 8px 10px; margin-bottom: 4px; border: 1px solid var(--line); border-radius: 8px;
+  display: flex; align-items: center; gap: 4px 10px; flex-wrap: wrap;
+  padding: 3px 8px; margin-bottom: 2px; border: 1px solid var(--line); border-radius: 6px;
   background: var(--surface); border-left: 4px solid transparent;
 }
 .course.is-plan { border-left-color: var(--plan-text); }
 .course.is-pass { border-left-color: #16a34a; }
 .course.is-fail { border-left-color: var(--mark-req); }
-.course-main { flex: 1 1 240px; min-width: 0; }
-.course-main .name-btn { font-weight: 600; font-size: 14px; }
-.tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.course-main { flex: 1 1 240px; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; }
+.course-main .name-btn { font-weight: 600; font-size: 13px; }
+.tags { display: flex; flex-wrap: wrap; gap: 3px; }
 .tag {
   font-size: 11px; line-height: 1; padding: 3px 7px; border-radius: 999px;
   border: 1px solid var(--line); color: var(--muted); background: var(--surface); white-space: nowrap;
@@ -129,7 +130,7 @@ button, select, input { font: inherit; color: inherit; }
 .tag.std { background: var(--std); border-color: transparent; }
 .tag.std.is-now { background: var(--accent); color: #fff; }
 
-.course-input { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex: 0 0 auto; }
+.course-input { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex: 0 0 auto; }
 /* 1回分（初回・再履修）の入力欄 */
 .attempt { display: flex; align-items: center; gap: 6px; }
 .attempt-no { font-size: 11px; color: var(--muted); white-space: nowrap; }
@@ -139,7 +140,7 @@ button, select, input { font: inherit; color: inherit; }
 }
 .retake-btn:hover { background: color-mix(in srgb, var(--mark-req) 10%, transparent); }
 .term-sel, .score {
-  height: 32px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface);
+  height: 26px; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--surface);
 }
 .term-sel { padding: 0 6px; width: 108px; }
 .score { width: 72px; padding: 0 8px; text-align: right; font-variant-numeric: tabular-nums; }
