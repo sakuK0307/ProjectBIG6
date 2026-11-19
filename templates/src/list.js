@@ -1,4 +1,4 @@
-// 履修リスト：科目リスト（学期プルダウン＋点数）と、右上ボタンで開く卒業判定サイドバー
+// 履修リスト：科目リスト（学期プルダウン＋点数、再履修あり）と、右上ボタンで開く卒業判定サイドバー
 // 予定・点数はブラウザ（localStorage）に保存し、別のタブで変わったら storage イベントで読み直す
 (() => {
   const ALL_COURSES = window.LIST_COURSES || [];
@@ -18,8 +18,8 @@
   const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
   const TERM_LABEL = (t) => `${t[0]}年${t[1]}期`;
   const PASS = 60; // 卒業判定Excelと同じく 60点以上で修得
-  const STORAGE_KEY = "big6.listPlan.v2";
-  const OLD_STORAGE_KEY = "big6.listPlan.v1";
+  const STORAGE_KEY = "big6.listPlan.v3";
+  const OLD_STORAGE_KEYS = ["big6.listPlan.v2", "big6.listPlan.v1"]; // 自動で v3 に移す
   // 名城大学シラバス（Campusmate-J）の詳細ページ。
   // semekikn・crclumcd は前期・後期とも 1・12205 で開ける（卒業判定アプリ側で確認済み）
   const SYLLABUS_URL = (code) =>
@@ -31,32 +31,49 @@
   const byId = new Map(ALL_COURSES.map((c) => [c.id, c]));
 
   // ---- 状態 ----
-  // plan: { courseId: { term: "3前", score: 85 | null, code?: "642809" } }
-  //   score が null なら「予定」（Excelの "60" 扱い）。code は選んだクラスの講義コード（時間割画面で使う予定）
+  // plan: { courseId: { attempts: [{ term: "1前", score: 45 }, { term: "2前", score: null }], code?: "642809" } }
+  //   attempts は履修した回（再履修を含む）。学期順に並べる
+  //   score が null の回は「予定」（Excelの "60" 扱い）。code は選んだクラスの講義コード（時間割画面で使う予定）
   const state = { term: "3前", courseType: "advanced", plan: {}, search: "", dept: "", prog: "", show: "" };
   // 今のコースで表示・集計する科目
   const courses = () => ALL_COURSES.filter((c) => inCourseType(c, state.courseType));
   const inCurrent = (c) => c && inCourseType(c, state.courseType);
+  const termIndex = (t) => TERMS.indexOf(t);
+  const sortAttempts = (list) => list.sort((x, y) => termIndex(x.term) - termIndex(y.term));
+  const cleanScore = (v) => (v == null || v === "" || Number.isNaN(Number(v))
+    ? null : Math.max(0, Math.min(100, Math.round(Number(v)))));
+
+  // 保存データ1件を新しい形にする（v1：学期だけ、v2：学期と点数1つ、v3：複数回）
+  function normalizePlan(v) {
+    if (typeof v === "string") return TERMS.includes(v) ? { attempts: [{ term: v, score: null }] } : null;
+    if (!v || typeof v !== "object") return null;
+    const raw = Array.isArray(v.attempts) ? v.attempts : [{ term: v.term, score: v.score }];
+    const attempts = sortAttempts(raw.filter((a) => a && TERMS.includes(a.term))
+      .map((a) => ({ term: a.term, score: cleanScore(a.score) })));
+    if (!attempts.length) return null;
+    const p = { attempts };
+    if (v.code) p.code = v.code;
+    return p;
+  }
+
   function loadState() {
-   state.plan = {};
-   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-    const old = saved ? null : JSON.parse(localStorage.getItem(OLD_STORAGE_KEY) || "null");
-    const src = saved || old;
-    if (src && typeof src === "object") {
+    state.plan = {};
+    try {
+      let src = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+      for (const key of OLD_STORAGE_KEYS) {
+        if (src) break;
+        src = JSON.parse(localStorage.getItem(key) || "null");
+      }
+      if (!src || typeof src !== "object") return;
       if (TERMS.includes(src.term)) state.term = src.term;
-      if (COURSE_TYPES[src.courseType]) state.courseType = src.courseType;
       else if (src.grade) state.term = `${src.grade}前`; // 学年だけ保存していた旧形式
+      if (COURSE_TYPES[src.courseType]) state.courseType = src.courseType;
       for (const [id, v] of Object.entries(src.plan || {})) {
         if (!byId.has(id)) continue;
-        if (typeof v === "string") state.plan[id] = { term: v, score: null }; // v1 からの移行
-        else if (v && TERMS.includes(v.term)) {
-          state.plan[id] = { term: v.term, score: v.score ?? null };
-          if (v.code) state.plan[id].code = v.code;
-        }
+        const p = normalizePlan(v);
+        if (p) state.plan[id] = p;
       }
-    }
-   } catch { /* 保存領域が使えなくても動く */ }
+    } catch { /* 保存領域が使えなくても動く */ }
   }
   loadState();
   const save = () => {
@@ -65,13 +82,31 @@
     } catch { /* noop */ }
   };
 
-  // 状態の判定
-  const statusOf = (p) => {
-    if (!p) return { key: "", label: "" };
-    if (p.score == null) return { key: "is-plan", label: "予定" };
-    return p.score >= PASS ? { key: "is-pass", label: "修得" } : { key: "is-fail", label: "不可" };
+  // ---- 判定（Excel と同じく、再履修したら最高点で修得を判定する） ----
+  const attemptStatus = (a) => {
+    if (a.score == null) return { key: "is-plan", label: "予定" };
+    return a.score >= PASS ? { key: "is-pass", label: "修得" } : { key: "is-fail", label: "不可" };
   };
-  const counts = (p) => p && (p.score == null || p.score >= PASS);
+  function summaryOf(p) {
+    const attempts = p?.attempts || [];
+    const scores = attempts.map((a) => a.score).filter((x) => x != null);
+    const best = scores.length ? Math.max(...scores) : null;
+    const earned = best != null && best >= PASS;
+    const plannedAttempt = attempts.find((a) => a.score == null);
+    // 単位を数える学期：修得した最初の回、まだなら予定の回
+    const countTerm = earned ? attempts.find((a) => a.score != null && a.score >= PASS).term
+      : plannedAttempt ? plannedAttempt.term : null;
+    const status = !attempts.length ? { key: "", label: "" }
+      : earned ? { key: "is-pass", label: "修得" }
+      : plannedAttempt ? { key: "is-plan", label: "予定" }
+      : { key: "is-fail", label: "不可" };
+    const last = attempts[attempts.length - 1];
+    // 最後の回が不可で、まだ修得していなければ再履修を追加できる
+    const canRetake = !earned && !!last && last.score != null && last.score < PASS;
+    return { attempts, best, earned, planned: !!plannedAttempt, countTerm, status, canRetake };
+  }
+  // 卒業判定に数えるか：修得済み、または予定がある（点数未入力の回がある）
+  const counts = (p) => { const s = summaryOf(p); return s.earned || s.planned; };
 
   // ---- DOM ----
   const $ = (id) => document.getElementById(id);
@@ -107,22 +142,40 @@
     return tags.join("");
   }
 
+  function attemptHtml(c, a, i, total) {
+    const st = a ? attemptStatus(a) : { key: "", label: "" };
+    const no = total > 1 ? `<span class="attempt-no">${i === 0 ? "初回" : `再履修${total > 2 ? i : ""}`}</span>` : "";
+    return `<div class="attempt ${st.key}" data-i="${i}">
+        ${no}
+        <select class="term-sel" data-i="${i}" aria-label="${esc(c.name)}の履修学期（${i + 1}回目）">${termOptions}</select>
+        <input class="score" type="number" min="0" max="100" step="1" inputmode="numeric" data-i="${i}"
+          placeholder="点数" aria-label="${esc(c.name)}の点数（${i + 1}回目）" ${a ? "" : "disabled"}
+          value="${a && a.score != null ? a.score : ""}">
+        <span class="status">${st.label}</span>
+      </div>`;
+  }
+
   function rowHtml(c) {
-    const p = state.plan[c.id];
-    const st = statusOf(p);
-    return `<div class="course ${st.key}" data-id="${c.id}">
+    const s = summaryOf(state.plan[c.id]);
+    const attempts = s.attempts.length ? s.attempts : [null];
+    return `<div class="course ${s.status.key}" data-id="${c.id}">
       <div class="course-main">
         <button class="name-btn" data-detail="${c.id}">${esc(c.name)}</button>
         <div class="tags">${tagsHtml(c)}</div>
       </div>
       <div class="course-input">
-        <select class="term-sel" aria-label="${esc(c.name)}の履修学期">${termOptions}</select>
-        <input class="score" type="number" min="0" max="100" step="1" inputmode="numeric"
-          placeholder="点数" aria-label="${esc(c.name)}の点数" ${p ? "" : "disabled"}
-          value="${p && p.score != null ? p.score : ""}">
-        <span class="status">${st.label}</span>
+        ${attempts.map((a, i) => attemptHtml(c, a, i, s.attempts.length)).join("")}
+        ${s.canRetake ? `<button class="retake-btn" data-retake="${c.id}">＋ 再履修を追加</button>` : ""}
       </div>
     </div>`;
+  }
+
+  // innerHTML のあとに、各回の学期を select に入れる
+  function fillSelects(row) {
+    const attempts = state.plan[row.dataset.id]?.attempts || [];
+    row.querySelectorAll(".term-sel").forEach((sel) => {
+      sel.value = attempts[Number(sel.dataset.i)]?.term || "";
+    });
   }
 
   function visible(c) {
@@ -148,53 +201,57 @@
       html.push(rowHtml(c));
     }
     list.innerHTML = html.join("") || `<p class="empty">該当する科目がありません</p>`;
-    // select の値は innerHTML 後に入れる
-    list.querySelectorAll(".course").forEach((row) => {
-      const p = state.plan[row.dataset.id];
-      row.querySelector(".term-sel").value = p ? p.term : "";
-    });
+    list.querySelectorAll(".course").forEach(fillSelects);
     renderTotal();
   }
 
   function renderTotal() {
     const entries = Object.entries(state.plan).map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c));
     const sum = (f) => entries.filter(f).reduce((s, x) => s + x.c.credits, 0);
-    const passed = sum((x) => x.p.score != null && x.p.score >= PASS);
-    const planned = sum((x) => x.p.score == null);
+    const passed = sum((x) => summaryOf(x.p).earned);
+    const planned = sum((x) => { const s = summaryOf(x.p); return !s.earned && s.planned; });
     $("sheetTotal").innerHTML = `修得 <strong>${fmtCredit(passed)}</strong> ＋ 予定 <strong>${fmtCredit(planned)}</strong> 単位`;
   }
 
-  // 1行だけ更新（入力中のフォーカスを失わないように全体は描き直さない）
+  // 1科目分だけ描き直す（全体は描き直さない）。入力中の欄にフォーカスを戻す
   function updateRow(id) {
     const row = list.querySelector(`.course[data-id="${id}"]`);
-    if (!row) return;
-    const p = state.plan[id];
-    const st = statusOf(p);
-    row.className = `course ${st.key}`;
-    row.querySelector(".status").textContent = st.label;
-    const score = row.querySelector(".score");
-    score.disabled = !p;
-    if (!p) score.value = "";
+    if (row) {
+      const f = document.activeElement;
+      const focus = row.contains(f) && f.dataset.i != null ? { cls: f.classList[0], i: f.dataset.i } : null;
+      const tmp = document.createElement("div");
+      tmp.innerHTML = rowHtml(byId.get(id));
+      const fresh = tmp.firstElementChild;
+      row.replaceWith(fresh);
+      fillSelects(fresh);
+      if (focus) fresh.querySelector(`.${focus.cls}[data-i="${focus.i}"]`)?.focus();
+    }
     renderTotal();
     if (!sidebar.hidden) renderSidebar();
   }
 
   list.addEventListener("change", (e) => {
     const row = e.target.closest(".course");
-    if (!row) return;
+    if (!row || e.target.dataset.i == null) return;
     const id = row.dataset.id;
+    const i = Number(e.target.dataset.i);
+    const p = state.plan[id];
     if (e.target.classList.contains("term-sel")) {
       const term = e.target.value;
-      // 学期を変えたらクラスの選択（code）は選び直し
-      if (term) state.plan[id] = { term, score: state.plan[id]?.score ?? null };
-      else delete state.plan[id];
+      if (!term) {
+        // 「未登録」にした回を消す。全部なくなれば科目ごと消す
+        if (p) p.attempts.splice(i, 1);
+        if (!p || !p.attempts.length) delete state.plan[id];
+      } else if (!p) {
+        state.plan[id] = { attempts: [{ term, score: null }] };
+      } else {
+        p.attempts[i] = { term, score: p.attempts[i]?.score ?? null };
+        sortAttempts(p.attempts);
+        delete p.code; // 学期を変えたらクラスの選択は選び直し
+      }
     } else if (e.target.classList.contains("score")) {
-      if (!state.plan[id]) return;
-      const raw = e.target.value.trim();
-      const n = Math.round(Number(raw));
-      if (raw === "" || Number.isNaN(n)) state.plan[id].score = null;
-      else state.plan[id].score = Math.max(0, Math.min(100, n));
-      e.target.value = state.plan[id].score ?? "";
+      if (!p?.attempts[i]) return;
+      p.attempts[i].score = cleanScore(e.target.value.trim());
     }
     save();
     // 絞り込み中に条件から外れる変更なら全体を描き直す
@@ -205,6 +262,19 @@
     if (e.key === "Enter" && e.target.classList.contains("score")) e.target.blur();
   });
   list.addEventListener("click", (e) => {
+    const retake = e.target.closest("[data-retake]");
+    if (retake) {
+      // 再履修：最後の回の次の学期を初期値にして、1回分足す
+      const id = retake.dataset.retake;
+      const attempts = state.plan[id].attempts;
+      const next = TERMS[Math.min(termIndex(attempts[attempts.length - 1].term) + 1, TERMS.length - 1)];
+      attempts.push({ term: next, score: null });
+      sortAttempts(attempts);
+      save();
+      updateRow(id);
+      list.querySelector(`.course[data-id="${id}"] .term-sel[data-i="${attempts.length - 1}"]`)?.focus();
+      return;
+    }
     const nameBtn = e.target.closest("[data-detail]");
     if (nameBtn) {
       e.stopPropagation();
@@ -230,8 +300,9 @@
 
   // ---- 科目の詳細（科目名をタッチ → 開講クラスとシラバス） ----
   function openCourseDetail(c, anchor) {
-    const p = state.plan[c.id];
-    const term = p ? p.term : c.terms[0];
+    const s = summaryOf(state.plan[c.id]);
+    const term = s.attempts.length ? s.attempts[s.attempts.length - 1].term : c.terms[0];
+    const history = s.attempts.map((a) => `${TERM_LABEL(a.term)} ${a.score == null ? "予定" : `${a.score}点`}`).join("、");
     const progs = Object.entries(c.prog).filter(([, v]) => v).map(([k, v]) => `${k}:${v}`).join(" ");
     const bySem = { 前期: [], 後期: [], 通年: [] };
     for (const o of c.offers || []) (bySem[o.sem] ||= []).push(o);
@@ -243,7 +314,8 @@
     ).join("");
     showPopover(`
       <h3>${esc(c.name)}</h3>
-      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.map(TERM_LABEL).join("・") || "—"}${p ? ` ／ 予定：${TERM_LABEL(p.term)}` : ""}</p>
+      <p class="meta">${esc(c.kind)} ${fmtCredit(c.credits)}単位 ／ 標準：${c.terms.map(TERM_LABEL).join("・") || "—"}</p>
+      ${history ? `<p class="meta">履修：${esc(history)}</p>` : ""}
       ${progs ? `<p class="meta">プログラム指定 ${esc(progs)}</p>` : ""}
       ${sections || `<p class="empty">${window.LIST_YEAR || ""}年度の時間割表に開講情報がありません</p>`}`, anchor);
   }
@@ -328,7 +400,7 @@
     $("sidebarCourse").textContent = COURSE_TYPES[state.courseType];
     const counted = Object.entries(state.plan)
       .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => inCurrent(x.c) && counts(x.p));
-    const sumTerms = (terms) => counted.filter((x) => terms.includes(x.p.term))
+    const sumTerms = (terms) => counted.filter((x) => terms.includes(summaryOf(x.p).countTerm))
       .reduce((s, x) => s + x.c.credits, 0);
     // 学年ごとに 前期・後期 の2行。左の学年セルに年間の小計を出す
     const total = counted.reduce((s, x) => s + x.c.credits, 0);

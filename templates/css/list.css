@@ -129,7 +129,15 @@ button, select, input { font: inherit; color: inherit; }
 .tag.std { background: var(--std); border-color: transparent; }
 .tag.std.is-now { background: var(--accent); color: #fff; }
 
-.course-input { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+.course-input { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex: 0 0 auto; }
+/* 1回分（初回・再履修）の入力欄 */
+.attempt { display: flex; align-items: center; gap: 6px; }
+.attempt-no { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.retake-btn {
+  border: 1px dashed var(--mark-req); background: none; color: var(--mark-req);
+  border-radius: 6px; padding: 3px 10px; font-size: 12px; cursor: pointer;
+}
+.retake-btn:hover { background: color-mix(in srgb, var(--mark-req) 10%, transparent); }
 .term-sel, .score {
   height: 32px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface);
 }
@@ -138,9 +146,9 @@ button, select, input { font: inherit; color: inherit; }
 .score:disabled { background: var(--std); border-color: var(--line); }
 .score:invalid { border-color: var(--mark-req); }
 .status { width: 40px; font-size: 12px; font-weight: 700; text-align: center; }
-.course.is-plan .status { color: var(--plan-text); }
-.course.is-pass .status { color: #16a34a; }
-.course.is-fail .status { color: var(--mark-req); }
+.attempt.is-plan .status { color: var(--plan-text); }
+.attempt.is-pass .status { color: #16a34a; }
+.attempt.is-fail .status { color: var(--mark-req); }
 .empty { color: var(--muted); text-align: center; padding: 24px; }
 
 /* ---- ポップオーバー ---- */
@@ -169,8 +177,9 @@ button, select, input { font: inherit; color: inherit; }
 @media (max-width: 640px) {
   .topbar, .list-toolbar { padding-left: 8px; padding-right: 8px; }
   .course-list { padding-left: 8px; padding-right: 8px; }
-  .course-input { width: 100%; }
-  .term-sel { flex: 1; }
+  .course-input { width: 100%; align-items: stretch; }
+  .attempt .term-sel { flex: 1; }
+  .retake-btn { align-self: flex-start; }
 }
 
 
