@@ -256,3 +256,20 @@ button, select, input { font: inherit; color: inherit; }
 
 /* 入学年度の決まりで卒業要件に数えない科目 */
 .tag.not-counted { border-color: var(--mark-req); color: var(--mark-req); background: none; }
+
+/* 進級・研究ゼミ・卒研着手・卒業などの判定 */
+.judge-list { list-style: none; margin: 0 0 10px; padding: 0; }
+.judge-head { margin: 12px 0 6px; font-size: 13px; }
+.judge-list > li {
+  padding: 6px 10px 8px; margin-bottom: 6px; border: 1px solid var(--line); border-radius: 8px;
+}
+.judge-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.judge-list .judge-title { font-weight: 600; font-size: 13px; }
+.judge-list .req-list { padding: 4px 0 0; }
+.judge-list small { display: block; color: var(--muted); font-size: 11px; }
+.judge-list .badge { font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--plan); color: var(--plan-text); }
+.judge-list .badge.ok { background: var(--hl); color: var(--text); }
+
+/* 入力の注意（開講していない学期・上の学年の授業） */
+.attempt-warn { margin: 0; font-size: 11px; color: var(--mark-req); text-align: right; }
+.tag.free { border-style: dashed; }

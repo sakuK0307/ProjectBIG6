@@ -1,7 +1,36 @@
 // 履修リスト：科目リスト（学期プルダウン＋点数、再履修あり）と、右上ボタンで開く卒業判定サイドバー
 // 予定・点数はブラウザ（localStorage）に保存し、別のタブで変わったら storage イベントで読み直す
 (() => {
-  const ALL_COURSES = window.LIST_COURSES || [];
+  // 学生便覧（2023〜2026年度）にあって、卒業判定 Excel（course-data.js）に無い自由科目。
+  // 自由科目は卒業に必要な単位数に入らないので、記録用（req は空）
+  const NO_PROG = { PC: "", DE: "", HM: "", NS: "" };
+  const free = (id, name, group, term, extra = {}) => ({
+    id, name, dept: "専門教育部門", group, kind: "自由", credits: 1, terms: [term],
+    prog: NO_PROG, req: [], hidden: false, dsai: false, offers: [], extra: true, ...extra,
+  });
+  const EXTRA_COURSES = [
+    free("x_math1", "数学基礎演習Ⅰ", "理工学基礎科目", "1前"),
+    free("x_math2", "数学基礎演習Ⅱ", "理工学基礎科目", "1後"),
+    free("x_phys1", "物理学基礎演習Ⅰ", "理工学基礎科目", "1前"),
+    free("x_phys2", "物理学基礎演習Ⅱ", "理工学基礎科目", "1後"),
+    free("x_chem1", "化学基礎演習Ⅰ", "理工学基礎科目", "1前"),
+    free("x_chem2", "化学基礎演習Ⅱ", "理工学基礎科目", "1後"),
+    free("x_eng1", "英語基礎演習Ⅰ", "理工学基礎科目", "1前"),
+    free("x_eng2", "英語基礎演習Ⅱ", "理工学基礎科目", "1後"),
+    free("x_mobileA", "モバイルアプリ開発A", "情報工学専門科目", "2後", { note: "夏期集中" }),
+    // 2023年度入学は 2年後期、2024年度以降は 2年前期（便覧の教育課程一覧表）
+    free("x_mobileB", "モバイルアプリ開発B", "情報工学専門科目", "2前", { note: "夏期集中", termsByYear: { 2023: ["2後"] } }),
+  ];
+  // 同じ系の最後の科目のうしろに差し込む（一覧の見出しが分かれないように）
+  const ALL_COURSES = (() => {
+    const list = [...(window.LIST_COURSES || [])];
+    for (const x of EXTRA_COURSES) {
+      let at = -1;
+      list.forEach((c, i) => { if (c.dept === x.dept && c.group === x.group) at = i; });
+      list.splice(at < 0 ? list.length : at + 1, 0, x);
+    }
+    return list;
+  })();
 
   // ---- 先進プロジェクトコース／総合コース ----
   // curriculum.json の hidden の行は、卒業判定 Excel で隠されている総合コース用の行
@@ -20,6 +49,7 @@
   // 2023年度入学の先進プロジェクトコースでは「情報技術の応用と職業」は総合コースのみの開講で、
   // 教職課程として履修はできるが、進級・卒業研究着手・卒業の単位には算入されない（2023年度便覧 2-24）
   const ENTRANCE_YEARS = [2023, 2024, 2025, 2026];
+  const termsOf = (c) => c.termsByYear?.[state.entrance] || c.terms;
   const notCountedFor = (c, year, type) =>
     year === 2023 && type === "advanced" && !c.hidden && c.name === "情報技術の応用と職業";
   const YEAR = window.LIST_YEAR || 2026;
@@ -47,7 +77,7 @@
   const courses = () => ALL_COURSES.filter((c) => inCourseType(c, state.courseType));
   const inCurrent = (c) => c && inCourseType(c, state.courseType);
   // 卒業判定・単位の集計に数えるか（今のコースの科目で、入学年度の決まりで除かれていないもの）
-  const isCounted = (c) => inCurrent(c) && !notCountedFor(c, state.entrance, state.courseType);
+  const isCounted = (c) => inCurrent(c) && c.kind !== "自由" && !notCountedFor(c, state.entrance, state.courseType);
   const termIndex = (t) => TERMS.indexOf(t);
   const sortAttempts = (list) => list.sort((x, y) => termIndex(x.term) - termIndex(y.term));
   const cleanScore = (v) => (v == null || v === "" || Number.isNaN(Number(v))
@@ -146,19 +176,39 @@
       const m = c.prog[p];
       if (m && m !== "必") tags.push(`<span class="tag p-${esc(m)}">${p}${esc(m)}</span>`);
     }
-    for (const t of c.terms) {
+    for (const t of termsOf(c)) {
       const now = t === state.term ? " is-now" : "";
       tags.push(`<span class="tag std${now}">標準 ${TERM_LABEL(t)}</span>`);
     }
+    if (c.kind === "自由") tags.push(`<span class="tag free">卒業要件に数えない（自由科目）</span>`);
+    if (c.note) tags.push(`<span class="tag">${esc(c.note)}</span>`);
     if (notCountedFor(c, state.entrance, state.courseType)) {
       tags.push(`<span class="tag not-counted">卒業要件に数えない（${state.entrance}年度入学）</span>`);
     }
     return tags.join("");
   }
 
+  // その回の学期についての注意（開講していない学期・上の学年の授業）
+  // 点数を入れた回は「実際に取った」記録なので出さない（時間割表は今年度のものだけで、過去の年度と違うことがある）
+  function attemptWarning(c, a) {
+    if (!a || a.score != null) return "";
+    const sem = a.term[1] === "前" ? "前期" : "後期";
+    const year = Number(a.term[0]);
+    const offers = (c.offers || []).filter((o) => o.sem === sem || o.sem === "通年");
+    if (c.offers?.length && !offers.length) {
+      return `${sem}は開講していません（${YEAR}年度の時間割表）`;
+    }
+    // 上の学年の授業は履修できない（時間割表の学年。無ければ標準の学期の学年）
+    const grades = offers.map((o) => o.grade).filter(Boolean);
+    const minYear = grades.length ? Math.min(...grades) : Math.min(...termsOf(c).map((t) => Number(t[0])), 9);
+    if (minYear !== 9 && year < minYear) return `${minYear}年次の科目です（上の学年の授業は履修できません）`;
+    return "";
+  }
+
   function attemptHtml(c, a, i, total) {
     const st = a ? attemptStatus(a) : { key: "", label: "" };
     const no = total > 1 ? `<span class="attempt-no">${i === 0 ? "初回" : `再履修${total > 2 ? i : ""}`}</span>` : "";
+    const warn = attemptWarning(c, a);
     return `<div class="attempt ${st.key}" data-i="${i}">
         ${no}
         <select class="term-sel" data-i="${i}" aria-label="${esc(c.name)}の履修学期（${i + 1}回目）">${termOptions}</select>
@@ -166,7 +216,7 @@
           placeholder="点数" aria-label="${esc(c.name)}の点数（${i + 1}回目）" ${a ? "" : "disabled"}
           value="${a && a.score != null ? a.score : ""}">
         <span class="status">${st.label}</span>
-      </div>`;
+      </div>${warn ? `<p class="attempt-warn">⚠ ${esc(warn)}</p>` : ""}`;
   }
 
   function rowHtml(c) {
@@ -198,7 +248,7 @@
     if (state.prog && !c.prog[state.prog]) return false;
     if (state.show === "planned" && !state.plan[c.id]) return false;
     if (state.show === "unplanned" && state.plan[c.id]) return false;
-    if (state.show === "grade" && !c.terms.includes(state.term)) return false;
+    if (state.show === "grade" && !termsOf(c).includes(state.term)) return false;
     return true;
   }
 
@@ -258,6 +308,11 @@
         if (!p || !p.attempts.length) delete state.plan[id];
       } else if (!p) {
         state.plan[id] = { attempts: [{ term, score: null }] };
+      } else if (p.attempts.some((a, j) => j !== i && a.term === term)) {
+        // 同じ科目で同じ学期の回は作らない
+        e.target.value = p.attempts[i]?.term || "";
+        showToast(`${TERM_LABEL(term)}の回はすでにあります`);
+        return;
       } else {
         p.attempts[i] = { term, score: p.attempts[i]?.score ?? null };
         sortAttempts(p.attempts);
@@ -382,11 +437,14 @@
   // 未実装のボタン（表示B・C、送信、読込）はトーストで知らせる
   const toast = $("toast");
   let toastTimer;
-  document.querySelectorAll("[data-stub]").forEach((b) => b.addEventListener("click", () => {
-    toast.textContent = `「${b.dataset.stub}」はまだ実装されていません`;
+  function showToast(text) {
+    toast.textContent = text;
     toast.hidden = false;
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => { toast.hidden = true; }, 1800);
+  }
+  document.querySelectorAll("[data-stub]").forEach((b) => b.addEventListener("click", () => {
+    showToast(`「${b.dataset.stub}」はまだ実装されていません`);
   }));
 
   // ---- 卒業判定サイドバー ----
@@ -440,25 +498,123 @@
     rows += `<tr class="total"><th colspan="2">合計</th><td>${fmtCredit(total)} 単位</td></tr>`;
     $("yearTable").innerHTML = rows;
 
-    const sumReq = (key) => counted.filter((x) => x.c.req.includes(key))
-      .reduce((s, x) => s + x.c.credits, 0);
-    $("progList").innerHTML = PROGRAMS.map(([p, name]) => {
-      const rows = REQS.map(([label, key], i) => {
-        const need = REQUIREMENTS[state.courseType][p]?.[i] ?? 0;
-        const got = sumReq(["◎", "※", "○"].includes(key) ? p + key : key);
-        return { label, got, need };
-      });
-      const done = rows.every((r) => r.got >= r.need);
-      return `<details class="prog" data-prog="${p}" ${openProgs.has(p) ? "open" : ""}>
+    const all = evaluate(null);
+    $("judgeList").innerHTML = judgmentsHtml(all);
+    $("progList").innerHTML = all.programs.map(({ p, name, rows, done, needed }) => `
+      <details class="prog" data-prog="${p}" ${openProgs.has(p) ? "open" : ""}>
         <summary>${p}<small class="prog-name">${name}</small>
-          <span class="badge ${done ? "ok" : ""}">${done ? "修了" : "未充足"}</span></summary>
+          <span class="badge ${done ? "ok" : ""}">${done ? "修了" : `残り最低${fmtCredit(needed)}科目`}</span></summary>
         <ul class="req-list">${rows.map((r) => `
           <li class="${r.got < r.need ? "short" : ""}"><span>${r.label}</span>
             <span class="val">${fmtCredit(r.got)} / ${r.need}</span>
             <progress value="${Math.min(r.got, r.need)}" max="${r.need}"></progress></li>`).join("")}
-        </ul></details>`;
-    }).join("");
+        </ul></details>`).join("");
   }
+
+  // ---- 判定の計算（卒業判定 Excel「総合判定」「PC/DE/HM/NS」シートと同じ式） ----
+  // upto：この学期までに修得・予定の科目だけで数える（null なら全部）
+  function evaluate(upto) {
+    const limit = upto ? termIndex(upto) : Infinity;
+    const within = (p) => { const t = summaryOf(p).countTerm; return t != null && termIndex(t) <= limit; };
+    const counted = Object.entries(state.plan)
+      .map(([id, p]) => ({ c: byId.get(id), p })).filter((x) => isCounted(x.c) && counts(x.p) && within(x.p));
+    const countedIds = new Set(counted.map((x) => x.c.id));
+    const sumReq = (key) => counted.filter((x) => x.c.req.includes(key)).reduce((s, x) => s + x.c.credits, 0);
+    // まだ数えられない必修科目の数（Excel の M23：必修科目の不足科目数）
+    const requiredMissing = courses().filter((c) => c.req.includes("必") && !countedIds.has(c.id)).length;
+    const programs = PROGRAMS.map(([p, name]) => {
+      const rows = REQS.map(([label, key], i) => ({
+        label,
+        need: REQUIREMENTS[state.courseType][p]?.[i] ?? 0,
+        got: sumReq(["◎", "※", "○"].includes(key) ? p + key : key),
+      }));
+      const b = rows.map((r) => r.need), c = rows.map((r) => r.got);
+      const l = b.map((v, i) => Math.max(v - c[i], 0));
+      const up = Math.ceil;
+      // 不足科目数の推定（Excel M19〜M27。1科目＝2単位として計算）
+      const m = [];
+      m[0] = l[0];
+      m[1] = l[0] === 0 ? up(Math.max((b[1] - c[1]) / 2, 0)) : up(Math.max(0, (10 + c[0] - c[1]) / 2));
+      m[2] = l[2] / 2;
+      m[3] = l[2] >= l[3] ? 0 : up((l[3] - l[2]) / 2);
+      m[4] = requiredMissing;
+      m[5] = l[5] / 2;
+      m[6] = up(l[6] / 2);
+      m[7] = up(Math.max(0, (l[7] - m[6] * 2) / 2));
+      m[8] = up(Math.max(0, (l[8] - l[2] - m[3] * 2 - l[4] - l[5] - m[6] * 2 - m[7] * 2) / 2));
+      return { p, name, rows, done: rows.every((r) => r.got >= r.need), needed: m.reduce((a, v) => a + v, 0) };
+    });
+    return {
+      programs,
+      totalUnits: sumReq("総計") + sumReq("専計"),
+      infoBasic: counted.filter((x) => x.c.req.includes("基礎")).length,
+      dsai: counted.filter((x) => x.c.dsai).length,
+      minNeeded: Math.min(...programs.map((x) => x.needed)),
+    };
+  }
+
+  // 進級・研究ゼミナール・卒業研究着手・卒業・DS・AI（Excel「総合判定」シート、学生便覧の条件）
+  // metrics：プログレスバーにする値。less: true は「need 以下なら充足」（残り科目数など）
+  function judgmentsHtml(all) {
+    const adv = evaluate("2後");    // 3年次への進級：2年次終了まで
+    const semi = evaluate("3前");   // 研究ゼミナール（3年後期）：履修開始時まで
+    const thesis = evaluate("3後"); // 卒業研究（4年）：着手時まで
+    const items = [];
+    items.push({
+      title: "3年次への進級", ok: adv.infoBasic >= 3 && adv.totalUnits >= 62, note: "2年後期までの修得で判定",
+      metrics: [
+        { label: "情報工学基礎科目", got: adv.infoBasic, need: 3, unit: "科目" },
+        { label: "修得単位数", got: adv.totalUnits, need: 62, unit: "単位" },
+      ],
+    });
+    // 2024年度入学以降：卒業研究を履修中・修得済みなら研究ゼミナールは履修できない
+    const semiCourse = courses().find((c) => c.name === "研究ゼミナール");
+    const thesisCourse = courses().find((c) => c.name === "卒業研究");
+    const semiTerm = semiCourse && state.plan[semiCourse.id]?.attempts[0]?.term;
+    const thesisTerm = thesisCourse && state.plan[thesisCourse.id]?.attempts[0]?.term;
+    const blocked = state.entrance >= 2024 && semiTerm && thesisTerm && termIndex(thesisTerm) <= termIndex(semiTerm);
+    items.push({
+      title: "研究ゼミナールの履修", ok: semi.totalUnits >= 85 && !blocked,
+      note: "3年前期までの修得で判定" + (blocked ? "。卒業研究を履修中・修得済みの学期には履修できません" : ""),
+      metrics: [{ label: "修得単位数", got: semi.totalUnits, need: 85, unit: "単位" }],
+    });
+    items.push({
+      title: "卒業研究の着手", ok: thesis.minNeeded <= 10, note: "3年後期までの修得で判定",
+      metrics: [{ label: "卒業まで残り最低", got: thesis.minNeeded, need: 10, unit: "科目", less: true }],
+    });
+    // 卒業：どれか1つのプログラムを修了すればよいので、4プログラムの9項目の充足数を並べる
+    const doneProgs = all.programs.filter((x) => x.done).map((x) => x.p);
+    items.push({
+      title: "卒業", ok: doneProgs.length > 0,
+      note: doneProgs.length ? `${doneProgs.join("・")} プログラム修了` : `いずれか1つのプログラムの修了が必要（残り最低 ${fmtCredit(all.minNeeded)} 科目）`,
+      metrics: all.programs.map((x) => ({
+        label: `${x.p} 修了要件`, got: x.rows.filter((r) => r.got >= r.need).length, need: 9, unit: "項目",
+      })),
+    });
+    items.push({
+      title: "DS・AI サブカリキュラム", ok: all.dsai >= 7, optional: true, note: "登録者のみ",
+      metrics: [{ label: "対象科目", got: all.dsai, need: 7, unit: "科目" }],
+    });
+
+    const bar = (m) => {
+      // 「以下なら充足」の値は、need を超えた分だけ短くする（例：残り20科目なら 10/20）
+      const ok = m.less ? m.got <= m.need : m.got >= m.need;
+      const value = m.less ? (m.got <= m.need ? 1 : m.need / m.got) : Math.min(m.got / m.need, 1);
+      return `<li class="${ok ? "" : "short"}"><span>${m.label}</span>
+          <span class="val">${fmtCredit(m.got)}${m.less ? `（${m.need}以内）` : ` / ${m.need}`} ${m.unit}</span>
+          <progress value="${value}" max="1"></progress></li>`;
+    };
+    return items.map((x) => `
+      <li class="${x.ok ? "ok" : "ng"}">
+        <div class="judge-top">
+          <span class="judge-title">${x.title}</span>
+          <span class="badge ${x.ok ? "ok" : ""}">${x.ok ? (x.optional ? "認定" : "可") : (x.optional ? "未認定" : "未充足")}</span>
+        </div>
+        <ul class="req-list">${x.metrics.map(bar).join("")}</ul>
+        <small>${esc(x.note)}</small>
+      </li>`).join("");
+  }
+
   $("progList").addEventListener("toggle", (e) => {
     const d = e.target.closest("details");
     if (d) d.open ? openProgs.add(d.dataset.prog) : openProgs.delete(d.dataset.prog);
