@@ -1,0 +1,5857 @@
+{
+ "year": 2026,
+ "links": {
+  "r6": [
+   {
+    "code": "641101",
+    "label": "A：英語コミュニケーションⅠ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "S-413",
+    "teacher": "松本(望)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641102",
+    "label": "A：英語コミュニケーションⅠ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "N-203",
+    "teacher": "(寺西)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641103",
+    "label": "A：英語コミュニケーションⅠ③",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "12-402",
+    "teacher": "(安藤)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641104",
+    "label": "A：英語コミュニケーションⅠ④",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "E-202",
+    "teacher": "松村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641105",
+    "label": "B：英語コミュニケーションⅠ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "E-402",
+    "teacher": "(松林)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641106",
+    "label": "B：英語コミュニケーションⅠ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "N-203",
+    "teacher": "(寺西)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641107",
+    "label": "B：英語コミュニケーションⅠ③",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "Ｓ-405",
+    "teacher": "（萩）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641108",
+    "label": "B：英語コミュニケーションⅠ④",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "E-403",
+    "teacher": "(尾野)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641191",
+    "label": "英語コミュニケーションⅠ（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 5,
+    "room": "T-607",
+    "teacher": "（尾関）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r7": [
+   {
+    "code": "641501",
+    "label": "A：英語コミュニケーションⅡ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "R4-102",
+    "teacher": "松本(望)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641502",
+    "label": "A：英語コミュニケーションⅡ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "N-203",
+    "teacher": "(寺西)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641503",
+    "label": "A：英語コミュニケーションⅡ③",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "12-402",
+    "teacher": "(安藤)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641504",
+    "label": "A：英語コミュニケーションⅡ④",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "E-202",
+    "teacher": "松村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641505",
+    "label": "B：英語コミュニケーションⅡ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "E-402",
+    "teacher": "（松林）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641506",
+    "label": "B：英語コミュニケーションⅡ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "N-203",
+    "teacher": "(寺西)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641507",
+    "label": "B：英語コミュニケーションⅡ③",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "S-405",
+    "teacher": "(萩)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641508",
+    "label": "B：英語コミュニケーションⅡ④",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "E-403",
+    "teacher": "(尾野)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641591",
+    "label": "英語コミュニケーションⅡ（再）",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 5,
+    "room": "T-707",
+    "teacher": "（尾関）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r8": [
+   {
+    "code": "642101",
+    "label": "A：英語コミュニケーションⅢ①",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "S-404",
+    "teacher": "中村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642102",
+    "label": "A：英語コミュニケーションⅢ②",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "S-303",
+    "teacher": "榎本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642103",
+    "label": "A：英語コミュニケーションⅢ③",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "N-102",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642104",
+    "label": "A：英語コミュニケーションⅢ④",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "N-302",
+    "teacher": "(平野(尚))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642105",
+    "label": "B：英語コミュニケーションⅢ①",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "N-102",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642106",
+    "label": "B：英語コミュニケーションⅢ②",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "S-406",
+    "teacher": "(久米)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642107",
+    "label": "B：英語コミュニケーションⅢ③",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "E-202",
+    "teacher": "松村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642108",
+    "label": "B：英語コミュニケーションⅢ④",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "N-302",
+    "teacher": "(平野(尚))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r9": [
+   {
+    "code": "642501",
+    "label": "A：英語コミュニケーションⅣ①",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "S-404",
+    "teacher": "中村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642502",
+    "label": "A：英語コミュニケーションⅣ②",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "S-303",
+    "teacher": "榎本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642503",
+    "label": "A：英語コミュニケーションⅣ③",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "N-102",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642504",
+    "label": "A：英語コミュニケーションⅣ④",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "N-302",
+    "teacher": "(平野(尚))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642505",
+    "label": "B：英語コミュニケーションⅣ①",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "N-102",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642506",
+    "label": "B：英語コミュニケーションⅣ②",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "S-406",
+    "teacher": "(久米)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642507",
+    "label": "B：英語コミュニケーションⅣ③",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "E-202",
+    "teacher": "松村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642508",
+    "label": "B：英語コミュニケーションⅣ④",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "N-302",
+    "teacher": "(平野(尚))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r10": [
+   {
+    "code": "643101",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-516",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643102",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-508",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643103",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-516",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643104",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-508",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643105",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 3,
+    "room": "N-502",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643106",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 3,
+    "room": "N-221",
+    "teacher": "(M.Marshall)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643107",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "N-502",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643108",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "N-221",
+    "teacher": "(M.Marshall)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643109",
+    "label": "プラクティカルイングリッシュI",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "E-603",
+    "teacher": "(R.Harris)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r11": [
+   {
+    "code": "643501",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-516",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643502",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-403",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643503",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-516",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643504",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-403",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643505",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 3,
+    "room": "N-502",
+    "teacher": "(C.G.Wood)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643506",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 3,
+    "room": "N-221",
+    "teacher": "(M.Marshall)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643507",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "N-502",
+    "teacher": "(G.VanHorn)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643508",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "N-221",
+    "teacher": "(M.Marshall)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643509",
+    "label": "プラクティカルイングリッシュII",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 4,
+    "room": "E-603",
+    "teacher": "(R.Harris)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r12": [
+   {
+    "code": "641121",
+    "label": "A：ドイツ語Ⅰ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-221",
+    "teacher": "長澤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641122",
+    "label": "B：ドイツ語Ⅰ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-402",
+    "teacher": "山本(恵)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r13": [
+   {
+    "code": "641521",
+    "label": "A：ドイツ語Ⅱ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-221",
+    "teacher": "長澤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641522",
+    "label": "B：ドイツ語Ⅱ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "R4-103",
+    "teacher": "山本(恵)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r14": [
+   {
+    "code": "642121",
+    "label": "A：ドイツ語Ⅲ①",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "R4-102",
+    "teacher": "山本(恵)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642122",
+    "label": "B：ドイツ語Ⅲ②",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "Ｅ-702",
+    "teacher": "(村元)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642191",
+    "label": "ドイツ語Ⅲ(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "E-603",
+    "teacher": "長澤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r15": [
+   {
+    "code": "642521",
+    "label": "A：ドイツ語Ⅳ①",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "R4-102",
+    "teacher": "山本(恵)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642522",
+    "label": "B：ドイツ語Ⅳ②",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "Ｅ-702",
+    "teacher": "(村元)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642591",
+    "label": "ドイツ語Ⅳ(再)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "E-603",
+    "teacher": "長澤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r16": [
+   {
+    "code": "641123",
+    "label": "AB：フランス語Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "E-403",
+    "teacher": "(山口(憲))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r17": [
+   {
+    "code": "641523",
+    "label": "AB：フランス語Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "E-403",
+    "teacher": "(山口(憲))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r18": [
+   {
+    "code": "642123",
+    "label": "AB：フランス語Ⅲ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "N-403",
+    "teacher": "(河脇)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r19": [
+   {
+    "code": "642523",
+    "label": "AB：フランス語Ⅳ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "N-403",
+    "teacher": "(河脇)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r20": [
+   {
+    "code": "641125",
+    "label": "AB：中国語Ⅰ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-103",
+    "teacher": "(龍神)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641124",
+    "label": "A：中国語Ⅰ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "S-403",
+    "teacher": "(秋元)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641126",
+    "label": "B：中国語Ⅰ③",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-106",
+    "teacher": "(武田)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r21": [
+   {
+    "code": "641525",
+    "label": "AB：中国語Ⅱ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-306",
+    "teacher": "(龍神)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641524",
+    "label": "A：中国語Ⅱ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "S-403",
+    "teacher": "(秋元)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641526",
+    "label": "B：中国語Ⅱ③",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 2,
+    "room": "N-206",
+    "teacher": "(武田)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r22": [
+   {
+    "code": "642125",
+    "label": "AB：中国語Ⅲ②",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "N-102",
+    "teacher": "(寺澤)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642124",
+    "label": "A：中国語Ⅲ①",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "S-506",
+    "teacher": "(熊谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642126",
+    "label": "B：中国語Ⅲ③",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "Ｎ-405",
+    "teacher": "(何)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r23": [
+   {
+    "code": "642525",
+    "label": "AB：中国語Ⅳ②",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "N-102",
+    "teacher": "(寺澤)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642524",
+    "label": "A：中国語Ⅳ①",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "S-506",
+    "teacher": "(熊谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642526",
+    "label": "B：中国語Ⅳ③",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 1,
+    "room": "Ｎ-405",
+    "teacher": "(何)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r24": [
+   {
+    "code": "641131",
+    "label": "体育科学Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 1,
+    "room": "N-104 N-405 N-401 N-202 S-506",
+    "teacher": "加藤(幸)・鈴木(茂)・遠藤・(内山)・(高山)",
+    "note": "※初回4/15：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641192",
+    "label": "体育科学Ⅰ(再)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 6,
+    "room": "E-201",
+    "teacher": "(内山)",
+    "note": "※初回4/16：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r25": [
+   {
+    "code": "641531",
+    "label": "体育科学Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 1,
+    "room": "N-104 N-405 N-401 N-202 S-506",
+    "teacher": "加藤(幸)・鈴木(茂)・遠藤・(内山)・(高山)",
+    "note": "※初回9/23：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641592",
+    "label": "体育科学Ⅱ(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 6,
+    "room": "E-201",
+    "teacher": "(内山)",
+    "note": "※初回9/17：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r26": [
+   {
+    "code": "642131",
+    "label": "体育科学Ⅲ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 5,
+    "room": "N-307 N-303 S-401 N-406",
+    "teacher": "(門間)・(永田)・(内田)・(高田)",
+    "note": "※初回4/15：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r27": [
+   {
+    "code": "642531",
+    "label": "体育科学Ⅳ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 5,
+    "room": "N-307 N-303 S-401 N-406",
+    "teacher": "(門間)・(永田)・(内田)・(高田)",
+    "note": "※初回9/17：ガイダンス",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r28": [
+   {
+    "code": "641141",
+    "label": "人文科学基礎Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-106",
+    "teacher": "(星)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641142",
+    "label": "人文科学基礎Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "E-201",
+    "teacher": "(河津)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641193",
+    "label": "人文科学基礎Ⅰ（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 6,
+    "room": "N-202",
+    "teacher": "(星)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r29": [
+   {
+    "code": "641532",
+    "label": "人文科学基礎Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-106",
+    "teacher": "(星)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641533",
+    "label": "人文科学基礎Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "E-201",
+    "teacher": "(河津)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641593",
+    "label": "人文科学基礎Ⅱ（再）",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 6,
+    "room": "N-202",
+    "teacher": "(星)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r30": [
+   {
+    "code": "641143",
+    "label": "社会科学基礎Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-323",
+    "teacher": "(早坂)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641144",
+    "label": "社会科学基礎Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-105",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641145",
+    "label": "社会科学基礎Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-204",
+    "teacher": "(賀茂)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641194",
+    "label": "社会科学基礎Ⅰ（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 6,
+    "room": "E-201",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r31": [
+   {
+    "code": "641534",
+    "label": "社会科学基礎Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-103",
+    "teacher": "(早坂)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641535",
+    "label": "社会科学基礎Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-305",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641536",
+    "label": "社会科学基礎Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 1,
+    "room": "N-204",
+    "teacher": "(賀茂)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641594",
+    "label": "社会科学基礎Ⅱ（再）",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 6,
+    "room": "E-201",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r32": [
+   {
+    "code": "642141",
+    "label": "アジア文化論Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-305",
+    "teacher": "(菅沼)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642142",
+    "label": "アジア文化論Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "E-602",
+    "teacher": "（齋藤(滋)）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642143",
+    "label": "アジア文化論Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "Ｎ-105",
+    "teacher": "大知",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r33": [
+   {
+    "code": "642541",
+    "label": "アジア文化論Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-324",
+    "teacher": "(菅沼)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642542",
+    "label": "アジア文化論Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "S-203",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642543",
+    "label": "アジア文化論Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-105",
+    "teacher": "大知",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r34": [
+   {
+    "code": "642144",
+    "label": "欧米文化論Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-205",
+    "teacher": "松本(望)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642145",
+    "label": "欧米文化論Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-202",
+    "teacher": "（小野）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r35": [
+   {
+    "code": "642544",
+    "label": "欧米文化論Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "S-202",
+    "teacher": "長澤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642545",
+    "label": "欧米文化論Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 2,
+    "room": "N-203",
+    "teacher": "(小野)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r36": [
+   {
+    "code": "643541",
+    "label": "国際関係論<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-307",
+    "teacher": "森口",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r37": [
+   {
+    "code": "643542",
+    "label": "文学<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-303",
+    "teacher": "(松浦(由))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r38": [
+   {
+    "code": "643543",
+    "label": "日本国憲法<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-203",
+    "teacher": "(日比)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "643544",
+    "label": "日本国憲法<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-107",
+    "teacher": "(川中)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r39": [
+   {
+    "code": "643141",
+    "label": "国際経済論<抽選>",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-206",
+    "teacher": "名和",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r40": [
+   {
+    "code": "643142",
+    "label": "心理学<抽選>",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "E-404",
+    "teacher": "(吉本)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "643143",
+    "label": "心理学<抽選>",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 2,
+    "room": "N-105",
+    "teacher": "(岡田)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r43": [
+   {
+    "code": "643181",
+    "label": "職業指導論",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 6,
+    "room": "N-203",
+    "teacher": "(鵜飼)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r51": [
+   {
+    "code": "641202",
+    "label": "AB：微分積分Ⅰ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "R4-101",
+    "teacher": "前野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641201",
+    "label": "A：微分積分Ⅰ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "N-304",
+    "teacher": "小澤(哲)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641203",
+    "label": "B：微分積分Ⅰ③",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "N-102",
+    "teacher": "鍜治",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641291",
+    "label": "微分積分Ⅰ（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 6,
+    "room": "E-101",
+    "teacher": "(岡)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r52": [
+   {
+    "code": "641602",
+    "label": "AB：微分積分Ⅱ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "R4-101",
+    "teacher": "柴田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641601",
+    "label": "A：微分積分Ⅱ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "N-304",
+    "teacher": "小澤(哲)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641603",
+    "label": "B：微分積分Ⅱ③",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 2,
+    "room": "E-401",
+    "teacher": "土田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641691",
+    "label": "微分積分Ⅱ(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 6,
+    "room": "E-101",
+    "teacher": "(岡)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r53": [
+   {
+    "code": "641205",
+    "label": "AB：線形代数Ⅰ②",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "N-104",
+    "teacher": "佐藤",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641204",
+    "label": "A：線形代数Ⅰ①",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "12-302",
+    "teacher": "剱持",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641206",
+    "label": "B：線形代数Ⅰ③",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "E-701",
+    "teacher": "(加藤(直))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641292",
+    "label": "線形代数Ⅰ(再)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 6,
+    "room": "Ｅ-301",
+    "teacher": "(片岡(紀))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r54": [
+   {
+    "code": "641605",
+    "label": "AB：線形代数Ⅱ②",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "E-404",
+    "teacher": "内村",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641604",
+    "label": "A：線形代数Ⅱ①",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "12-302",
+    "teacher": "冨田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641606",
+    "label": "B：線形代数Ⅱ③",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 2,
+    "room": "E-701",
+    "teacher": "(加藤(直))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641692",
+    "label": "線形代数Ⅱ(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 6,
+    "room": "E-301",
+    "teacher": "(片岡(紀))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r55": [
+   {
+    "code": "641207",
+    "label": "A：物理学Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "N-321",
+    "teacher": "(小山)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641208",
+    "label": "B：物理学Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "N-321",
+    "teacher": "(小山)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641293",
+    "label": "物理学Ⅰ(再)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 6,
+    "room": "E-201 E-202 E-203 E-204 E-403",
+    "teacher": "坂東・大久保・土屋・小澤(理)・(片岡(啓))",
+    "note": "※初回4/14：クラス分け",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r56": [
+   {
+    "code": "641607",
+    "label": "A：物理学Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "N-105",
+    "teacher": "(小山)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641608",
+    "label": "B：物理学Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 3,
+    "room": "N-105",
+    "teacher": "(小山)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641693",
+    "label": "物理学Ⅱ(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 6,
+    "room": "E-201 E-202 E-203 E-204 E-403",
+    "teacher": "坂東・大久保・土屋・小澤(理)・片岡(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r57": [
+   {
+    "code": "641609",
+    "label": "A：物理学演習",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 4,
+    "room": "E-302",
+    "teacher": "(鈴木(智))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641610",
+    "label": "B：物理学演習",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 3,
+    "room": "E-302",
+    "teacher": "(石田)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641694",
+    "label": "物理学演習(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 5,
+    "room": "E-403",
+    "teacher": "片岡(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r58": [
+   {
+    "code": "641209",
+    "label": "A：物理学実験Ⅰ(隔週A)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-043",
+    "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
+    "note": "※初回4/14：12-304",
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641210",
+    "label": "B：物理学実験Ⅰ(隔週B)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-043",
+    "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
+    "note": "※初回4/21：12-304",
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r59": [
+   {
+    "code": "641611",
+    "label": "A：物理学実験Ⅱ(隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-043",
+    "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
+    "note": "※初回9/29：12-304",
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641612",
+    "label": "B：物理学実験Ⅱ(隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-043",
+    "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
+    "note": "※初回10/6：12-304",
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r60": [
+   {
+    "code": "641211",
+    "label": "化学Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 1,
+    "room": "E-302",
+    "teacher": "（田中）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r61": [
+   {
+    "code": "641613",
+    "label": "化学Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 1,
+    "room": "E-302",
+    "teacher": "（田中）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r62": [
+   {
+    "code": "641212",
+    "label": "A：化学実験Ⅰ(隔週B)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-048",
+    "teacher": "景山・神藤・(村手)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641213",
+    "label": "B：化学実験Ⅰ(隔週A)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-048",
+    "teacher": "景山・神藤・(村手)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r63": [
+   {
+    "code": "641614",
+    "label": "A：化学実験Ⅱ(隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-048",
+    "teacher": "景山・神藤・(村手)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641615",
+    "label": "B：化学実験Ⅱ(隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 3,
+    "room": "R2-048",
+    "teacher": "景山・神藤・(村手)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r64": [
+   {
+    "code": "642201",
+    "label": "地学Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 2,
+    "day": "木",
+    "period": 4,
+    "room": "N-102",
+    "teacher": "(塚腰)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r65": [
+   {
+    "code": "642601",
+    "label": "地学Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 4,
+    "room": "N-102",
+    "teacher": "(塚腰)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r66": [
+   {
+    "code": "643201",
+    "label": "地学実験Ⅰ<抽選>",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 5,
+    "room": "R2-046",
+    "teacher": "齊藤(毅)・(居川)・(平野)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r67": [
+   {
+    "code": "643601",
+    "label": "地学実験Ⅱ<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 5,
+    "room": "R2-046",
+    "teacher": "齊藤(毅)・(平野)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r68": [
+   {
+    "code": "641616",
+    "label": "生物学<抽選>",
+    "semester": "後期",
+    "grade": 1,
+    "day": "土",
+    "period": 2,
+    "room": "Ｎ-321",
+    "teacher": "（寺野）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "土",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r69": [
+   {
+    "code": "642202",
+    "label": "生物学実験",
+    "semester": "前期",
+    "grade": null,
+    "day": null,
+    "period": null,
+    "room": null,
+    "teacher": null,
+    "note": null,
+    "biweekly": null,
+    "slots": []
+   }
+  ],
+  "r70": [
+   {
+    "code": "641214",
+    "label": "理工学概論<抽選>",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "E-203",
+    "teacher": null,
+    "note": "※右欄も参照",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r71": [
+   {
+    "code": "642602",
+    "label": "A：技術者倫理",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 2,
+    "room": "E-602",
+    "teacher": "(齋藤(滋))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642603",
+    "label": "B：技術者倫理",
+    "semester": "後期",
+    "grade": 2,
+    "day": "木",
+    "period": 2,
+    "room": "E-203",
+    "teacher": "(成瀬)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r72": [
+   {
+    "code": "641215",
+    "label": "A：コンピューターリテラシー",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 4,
+    "room": "E-504",
+    "teacher": "(福間)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641216",
+    "label": "B：コンピューターリテラシー",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 3,
+    "room": "E-504",
+    "teacher": "(福間)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r73": [
+   {
+    "code": "641301",
+    "label": "A：情報工学の世界",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 3,
+    "room": "Ｅ-604",
+    "teacher": "情報工学部全教員",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641302",
+    "label": "B：情報工学の世界",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 4,
+    "room": "Ｅ-604",
+    "teacher": "情報工学部全教員",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r74": [
+   {
+    "code": "641303",
+    "label": "A：情報工学基礎演習",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 4,
+    "room": "Ｅ-504",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641304",
+    "label": "B：情報工学基礎演習",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 3,
+    "room": "Ｅ-504",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641791",
+    "label": "情報工学基礎演習(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 6,
+    "room": "T-705",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r75": [
+   {
+    "code": "641701",
+    "label": "A：テクニカルリテラシー",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 1,
+    "room": "N-301",
+    "teacher": "坂野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641702",
+    "label": "B：テクニカルリテラシー",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 2,
+    "room": "N-301",
+    "teacher": "坂野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r76": [
+   {
+    "code": "641703",
+    "label": "A：プラクティカルICT（隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "旭・(神道)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     },
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641704",
+    "label": "B：プラクティカルICT（隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "旭・(神道)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     },
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r77": [
+   {
+    "code": "641491",
+    "label": "情報通信ネットワーク（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 6,
+    "room": "E-302",
+    "teacher": "鈴木(秀)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   },
+   {
+    "code": "641801",
+    "label": "A：情報通信ネットワーク",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 3,
+    "room": "S-203 R3-301",
+    "teacher": "鈴木(秀)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "641802",
+    "label": "B：情報通信ネットワーク",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 4,
+    "room": "S-203 R3-301",
+    "teacher": "鈴木(秀)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r78": [
+   {
+    "code": "642491",
+    "label": "情報理論(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 6,
+    "room": "E-203",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 6
+     }
+    ]
+   },
+   {
+    "code": "642801",
+    "label": "A：情報理論",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 3,
+    "room": "N-321",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642802",
+    "label": "B：情報理論",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 4,
+    "room": "Ｎ-321",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r79": [
+   {
+    "code": "643401",
+    "label": "A：情報セキュリティ",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 2,
+    "room": "N-202",
+    "teacher": "野崎",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "643402",
+    "label": "B：情報セキュリティ",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 1,
+    "room": "N-202",
+    "teacher": "野崎",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r80": [
+   {
+    "code": "643801",
+    "label": "情報通信システム",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "鈴木(秀)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r81": [
+   {
+    "code": "643802",
+    "label": "信号伝送論<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 4,
+    "room": "E-504",
+    "teacher": "旭",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r82": [
+   {
+    "code": "644401",
+    "label": "符号理論",
+    "semester": "前期",
+    "grade": 4,
+    "day": "金",
+    "period": 4,
+    "room": "N-206",
+    "teacher": "宇佐見",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r83": [
+   {
+    "code": "644402",
+    "label": "ワイヤレス通信",
+    "semester": "前期",
+    "grade": 4,
+    "day": "金",
+    "period": 2,
+    "room": "N-203",
+    "teacher": "鈴木(秀)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r84": [
+   {
+    "code": "641492",
+    "label": "コンピュータアーキテクチャⅠ(再)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 5,
+    "room": "E-301",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641803",
+    "label": "A：コンピュータアーキテクチャⅠ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 4,
+    "room": "N-324",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641804",
+    "label": "B：コンピュータアーキテクチャⅠ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 3,
+    "room": "N-324",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r85": [
+   {
+    "code": "643403",
+    "label": "A：コンピュータアーキテクチャII",
+    "semester": "前期",
+    "grade": 3,
+    "day": "金",
+    "period": 4,
+    "room": "N-102",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643404",
+    "label": "B：コンピュータアーキテクチャII",
+    "semester": "前期",
+    "grade": 3,
+    "day": "金",
+    "period": 3,
+    "room": "N-102",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r86": [
+   {
+    "code": "642401",
+    "label": "A：ディジタル回路Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 2,
+    "room": "S-203",
+    "teacher": "山田（宗）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642402",
+    "label": "B：ディジタル回路Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 1,
+    "room": "S-203",
+    "teacher": "山田(宗)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642891",
+    "label": "ディジタル回路Ⅰ(再)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 5,
+    "room": "E-401",
+    "teacher": "山田(宗)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r87": [
+   {
+    "code": "642492",
+    "label": "ディジタル回路Ⅱ(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "E-102",
+    "teacher": "山田(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "642803",
+    "label": "A：ディジタル回路Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 4,
+    "room": "Ｎ-321",
+    "teacher": "山田（啓）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642804",
+    "label": "B：ディジタル回路Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 3,
+    "room": "N-321",
+    "teacher": "山田（啓）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r88": [
+   {
+    "code": "642403",
+    "label": "A：電気電子回路Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "N-205",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642404",
+    "label": "B：電気電子回路Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "Ｎ-205",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642892",
+    "label": "電気電子回路Ⅰ(再)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "E-301",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r89": [
+   {
+    "code": "643405",
+    "label": "A：電気電子回路II",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 1,
+    "room": "N-302",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "643406",
+    "label": "B：電気電子回路II",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 2,
+    "room": "N-302",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r90": [
+   {
+    "code": "642405",
+    "label": "A：ディジタル信号処理Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 1,
+    "room": "N-301",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642406",
+    "label": "B：ディジタル信号処理Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 2,
+    "room": "N-301",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642893",
+    "label": "ディジタル信号処理Ⅰ(再)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 6,
+    "room": "E-404",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r91": [
+   {
+    "code": "642805",
+    "label": "A：ディジタル信号処理Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 4,
+    "room": "Ｎ-305",
+    "teacher": "坂野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642806",
+    "label": "B：ディジタル信号処理Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 3,
+    "room": "Ｎ-305",
+    "teacher": "坂野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r92": [
+   {
+    "code": "643407",
+    "label": "システム制御",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 3,
+    "room": "N-201",
+    "teacher": "小中",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r93": [
+   {
+    "code": "643803",
+    "label": "フィジカルコンピューティング",
+    "semester": "後期",
+    "grade": 3,
+    "day": "金",
+    "period": 4,
+    "room": "N-105",
+    "teacher": "向井",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r94": [
+   {
+    "code": "643804",
+    "label": "ハードウェア記述言語<抽選>",
+    "semester": "後期",
+    "grade": 3,
+    "day": "金",
+    "period": 2,
+    "room": "T-605",
+    "teacher": "竹本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r95": [
+   {
+    "code": "644403",
+    "label": "センサ工学",
+    "semester": "前期",
+    "grade": 4,
+    "day": "月",
+    "period": 2,
+    "room": "E-301",
+    "teacher": "向井",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r96": [
+   {
+    "code": "644404",
+    "label": "集積回路設計",
+    "semester": "前期",
+    "grade": 4,
+    "day": "月",
+    "period": 3,
+    "room": "N-206",
+    "teacher": "吉川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r97": [
+   {
+    "code": "642407",
+    "label": "A：アルゴリズム・データ構造",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 2,
+    "room": "N-107",
+    "teacher": "（山本（修））",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642408",
+    "label": "B：アルゴリズム・データ構造",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 1,
+    "room": "Ｎ-107",
+    "teacher": "（山本（修））",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642894",
+    "label": "アルゴリズム・データ構造（再）",
+    "semester": "後期",
+    "grade": 2,
+    "day": "金",
+    "period": 5,
+    "room": "T-705",
+    "teacher": "（山本（修））",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r98": [
+   {
+    "code": "642409",
+    "label": "A：オペレーティングシステム",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 1,
+    "room": "N-323",
+    "teacher": "亀谷",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642410",
+    "label": "B：オペレーティングシステム",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 2,
+    "room": "N-323",
+    "teacher": "亀谷",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r99": [
+   {
+    "code": "642411",
+    "label": "A：データベース",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 4,
+    "room": "N-104",
+    "teacher": "亀谷",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642412",
+    "label": "B：データベース",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 3,
+    "room": "N-104",
+    "teacher": "亀谷",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r100": [
+   {
+    "code": "642493",
+    "label": "ソフトウェア工学(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 6,
+    "room": "E-101",
+    "teacher": "米澤(弘)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 6
+     }
+    ]
+   },
+   {
+    "code": "642807",
+    "label": "A：ソフトウェア工学",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 3,
+    "room": "N-324",
+    "teacher": "米澤(弘)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642808",
+    "label": "B：ソフトウェア工学",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 4,
+    "room": "Ｎ-324",
+    "teacher": "米澤(弘)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r101": [
+   {
+    "code": "642494",
+    "label": "言語・オートマトン(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 6,
+    "room": "N-203",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 6
+     }
+    ]
+   },
+   {
+    "code": "642809",
+    "label": "A：言語・オートマトン",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 4,
+    "room": "Ｎ-324",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642810",
+    "label": "B：言語・オートマトン",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 3,
+    "room": "Ｎ-324",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r102": [
+   {
+    "code": "643408",
+    "label": "A：人工知能",
+    "semester": "前期",
+    "grade": 3,
+    "day": "金",
+    "period": 3,
+    "room": "N-207",
+    "teacher": "山田(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643409",
+    "label": "B：人工知能",
+    "semester": "前期",
+    "grade": 3,
+    "day": "金",
+    "period": 4,
+    "room": "N-207",
+    "teacher": "山田(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r103": [
+   {
+    "code": "643410",
+    "label": "数値解析",
+    "semester": "前期",
+    "grade": 3,
+    "day": "月",
+    "period": 4,
+    "room": "N-324",
+    "teacher": "（山本（修））",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r104": [
+   {
+    "code": "643411",
+    "label": "A：コンパイラ",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-106",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "643412",
+    "label": "B：コンパイラ",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-106",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r105": [
+   {
+    "code": "643805",
+    "label": "プログラミング言語論",
+    "semester": "後期",
+    "grade": 3,
+    "day": "金",
+    "period": 3,
+    "room": "N-324",
+    "teacher": "（山本（修））",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r106": [
+   {
+    "code": "643806",
+    "label": "パターン認識",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 3,
+    "room": "S-301",
+    "teacher": "山田(啓)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r107": [
+   {
+    "code": "644405",
+    "label": "応用アルゴリズム",
+    "semester": "前期",
+    "grade": 4,
+    "day": "水",
+    "period": 2,
+    "room": "N-302",
+    "teacher": "髙比良",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r108": [
+   {
+    "code": "644406",
+    "label": "数理計画法",
+    "semester": "前期",
+    "grade": 4,
+    "day": "金",
+    "period": 3,
+    "room": "N-303",
+    "teacher": "水沼",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r109": [
+   {
+    "code": "641401",
+    "label": "A：マルチメディア基礎",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 2,
+    "room": "N-102",
+    "teacher": "田中(敏)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641402",
+    "label": "B：マルチメディア基礎",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 1,
+    "room": "N-102",
+    "teacher": "田中(敏)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641891",
+    "label": "マルチメディア基礎（再）",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 5,
+    "room": "E-102",
+    "teacher": "田中（敏）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r110": [
+   {
+    "code": "642495",
+    "label": "画像処理(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "水",
+    "period": 5,
+    "room": "N-204",
+    "teacher": "山田(宗)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "642811",
+    "label": "A：画像処理",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 1,
+    "room": "Ｅ-701",
+    "teacher": "山田(宗)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "642812",
+    "label": "B：画像処理",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 2,
+    "room": "Ｅ-701",
+    "teacher": "山田(宗)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r111": [
+   {
+    "code": "643413",
+    "label": "A：コンピュータグラフィックス",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "N-103",
+    "teacher": "田中(敏)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "643414",
+    "label": "B：コンピュータグラフィックス",
+    "semester": "前期",
+    "grade": 3,
+    "day": "火",
+    "period": 4,
+    "room": "N-103",
+    "teacher": "田中(敏)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r112": [
+   {
+    "code": "643807",
+    "label": "コンピュータビジョン",
+    "semester": "後期",
+    "grade": 3,
+    "day": "月",
+    "period": 2,
+    "room": "E-602",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r113": [
+   {
+    "code": "643808",
+    "label": "感性情報処理",
+    "semester": "後期",
+    "grade": 3,
+    "day": "月",
+    "period": 3,
+    "room": "E-701",
+    "teacher": "川澄",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r114": [
+   {
+    "code": "643809",
+    "label": "音声・音響信号処理",
+    "semester": "後期",
+    "grade": 3,
+    "day": "月",
+    "period": 4,
+    "room": "E-701",
+    "teacher": "坂野",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r115": [
+   {
+    "code": "644407",
+    "label": "バーチャルリアリティ",
+    "semester": "前期",
+    "grade": 4,
+    "day": "火",
+    "period": 3,
+    "room": "N-202",
+    "teacher": "柳田",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r116": [
+   {
+    "code": "644408",
+    "label": "言語情報処理",
+    "semester": "前期",
+    "grade": 4,
+    "day": "水",
+    "period": 3,
+    "room": "E-401",
+    "teacher": "佐川",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     }
+    ]
+   }
+  ],
+  "r117": [
+   {
+    "code": "641403",
+    "label": "A：離散数学",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 1,
+    "room": "E-302",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "641404",
+    "label": "B：離散数学",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 2,
+    "room": "E-302",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641892",
+    "label": "離散数学(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 5,
+    "room": "S-203",
+    "teacher": "倉地",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r118": [
+   {
+    "code": "641493",
+    "label": "確率・統計(再)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 6,
+    "room": "E-302",
+    "teacher": "水沼",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 6
+     }
+    ]
+   },
+   {
+    "code": "641805",
+    "label": "A：確率・統計",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 2,
+    "room": "N-323",
+    "teacher": "水沼",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641806",
+    "label": "B：確率・統計",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 1,
+    "room": "N-323",
+    "teacher": "水沼",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r119": [
+   {
+    "code": "642413",
+    "label": "A：データサイエンス基礎",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 3,
+    "room": "N-205",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642414",
+    "label": "B：データサイエンス基礎",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 4,
+    "room": "N-205",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642895",
+    "label": "データサイエンス基礎（再）",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 5,
+    "room": "E-402",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r120": [
+   {
+    "code": "642813",
+    "label": "A：応用解析",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "N-201",
+    "teacher": "小中",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     }
+    ]
+   },
+   {
+    "code": "642814",
+    "label": "B：応用解析",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 2,
+    "room": "N-322",
+    "teacher": "小中",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r121": [
+   {
+    "code": "642415",
+    "label": "電磁気学",
+    "semester": "前期",
+    "grade": 2,
+    "day": "金",
+    "period": 1,
+    "room": "Ｅ-701",
+    "teacher": "向井",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r122": [
+   {
+    "code": "641405",
+    "label": "A：プログラミング演習Ⅰ(隔週A)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "T-703 T-704 T-705",
+    "teacher": "旭・（徳田）",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641407",
+    "label": "B：プログラミング演習Ⅰ(隔週B)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "T-703 T-704 T-705",
+    "teacher": "旭・（徳田）",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641893",
+    "label": "プログラミング演習Ⅰ(再)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 6,
+    "room": "T-605",
+    "teacher": "旭",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r123": [
+   {
+    "code": "641494",
+    "label": "プログラミング演習Ⅱ（再）",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 5,
+    "room": "Ｔ-705",
+    "teacher": "川澄",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641807",
+    "label": "A：プログラミング演習Ⅱ(隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "T-703 T-704 T-705",
+    "teacher": "川澄・（徳田）",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641809",
+    "label": "B：プログラミング演習Ⅱ(隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "T-703 T-704 T-705",
+    "teacher": "川澄・（徳田）",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r124": [
+   {
+    "code": "642416",
+    "label": "A：プログラミング演習Ⅲ(隔週A)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "T-705",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642417",
+    "label": "B：プログラミング演習Ⅲ(隔週B)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "T-705",
+    "teacher": "寺本",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r125": [
+   {
+    "code": "642815",
+    "label": "A：プログラミング演習Ⅳ（隔週A)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 1,
+    "room": "T-705",
+    "teacher": "竹本",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     },
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642816",
+    "label": "B：プログラミング演習Ⅳ（隔週B)",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 1,
+    "room": "T-705",
+    "teacher": "竹本",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     },
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r126": [
+   {
+    "code": "642418",
+    "label": "A：情報工学実験Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 1,
+    "room": "R3-301 R3-401 R3-403",
+    "teacher": "水沼・寺本・髙比良・川澄・野崎・東條・(藤井)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 1
+     },
+     {
+      "day": "火",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642419",
+    "label": "B：情報工学実験Ⅰ",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 3,
+    "room": "R3-301 R3-401 R3-403",
+    "teacher": "水沼・寺本・髙比良・川澄・野崎・東條・(藤井)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642496",
+    "label": "情報工学実験Ⅰ(再)",
+    "semester": "前期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "R3-301 R3-401 R3-403",
+    "teacher": "水沼・寺本・髙比良・川澄・野崎",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     },
+     {
+      "day": "火",
+      "period": 6
+     }
+    ]
+   }
+  ],
+  "r127": [
+   {
+    "code": "642817",
+    "label": "A：情報工学実験Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 1,
+    "room": "R3-301 R3-401 R3-403",
+    "teacher": "米澤(弘)・髙比良・旭・竹本・(藤井)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 1
+     },
+     {
+      "day": "月",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642818",
+    "label": "B：情報工学実験Ⅱ",
+    "semester": "後期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "R3-301 R3-401 R3-403",
+    "teacher": "米澤(弘)・髙比良・旭・竹本・(藤井)・(山本(真))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r128": [
+   {
+    "code": "643810",
+    "label": "インターンシップ",
+    "semester": "後期",
+    "grade": null,
+    "day": null,
+    "period": null,
+    "room": null,
+    "teacher": null,
+    "note": null,
+    "biweekly": null,
+    "slots": []
+   }
+  ],
+  "r129": [
+   {
+    "code": "641813",
+    "label": "グローバルゼミナール",
+    "semester": "後期",
+    "grade": null,
+    "day": null,
+    "period": null,
+    "room": null,
+    "teacher": null,
+    "note": null,
+    "biweekly": null,
+    "slots": []
+   }
+  ],
+  "r130": [
+   {
+    "code": "643415",
+    "label": "キャリアゼミナール",
+    "semester": "前期",
+    "grade": 3,
+    "day": "金",
+    "period": 5,
+    "room": "E-701",
+    "teacher": "水沼・吉川・川澄・鈴木・野崎・向井・旭",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r131": [
+   {
+    "code": "643811",
+    "label": "研究ゼミナール",
+    "semester": "後期",
+    "grade": 3,
+    "day": "木",
+    "period": 1,
+    "room": "E-701",
+    "teacher": "情報工学部全教員",
+    "note": "※右欄も参照",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r132": [
+   {
+    "code": "643416",
+    "label": "情報工学総合ゼミナール",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 1,
+    "room": "E-604",
+    "teacher": "情報工学部全教員",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     },
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r133": [
+   {
+    "code": "643812",
+    "label": "A：情報技術の応用と職業",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 1,
+    "room": "N-107",
+    "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "643813",
+    "label": "B：情報技術の応用と職業",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 2,
+    "room": "N-107",
+    "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r134": [
+   {
+    "code": "643812",
+    "label": "A：情報技術の応用と職業",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 1,
+    "room": "N-107",
+    "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   },
+   {
+    "code": "643813",
+    "label": "B：情報技術の応用と職業",
+    "semester": "後期",
+    "grade": 3,
+    "day": "水",
+    "period": 2,
+    "room": "N-107",
+    "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r135": [
+   {
+    "code": "641811",
+    "label": "A：創造的思考法（隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "鈴木(秀)・(加藤)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641812",
+    "label": "B：創造的思考法（隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "鈴木(秀)・(加藤)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r136": [
+   {
+    "code": "642420",
+    "label": "A：研究開発リテラシー(隔週B)＜別途抽選＞",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "米澤(弘)・(宮内)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642421",
+    "label": "B：研究開発リテラシー(隔週A)＜別途抽選＞",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "米澤(弘)・(宮内)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r137": [
+   {
+    "code": "642819",
+    "label": "A：アプリケーション開発＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 2,
+    "room": "R3-301",
+    "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642820",
+    "label": "B：アプリケーション開発＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r138": [
+   {
+    "code": "642821",
+    "label": "PBL概論＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "R3-301",
+    "teacher": "亀谷・竹本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "642822",
+    "label": "PBL概論＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 5,
+    "room": "R3-301",
+    "teacher": "亀谷・竹本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r139": [
+   {
+    "code": "643417",
+    "label": "A：先進プロジェクト実験I＜別途抽選＞",
+    "semester": "前期",
+    "grade": 3,
+    "day": "水",
+    "period": 1,
+    "room": "R3-401 R3-403",
+    "teacher": "田中(敏)・米澤(弘)・(神道)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     },
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "643418",
+    "label": "B：先進プロジェクト実験I＜別途抽選＞",
+    "semester": "前期",
+    "grade": 3,
+    "day": "水",
+    "period": 3,
+    "room": "R3-401 R3-403",
+    "teacher": "向井・野崎・(神道)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     },
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r140": [
+   {
+    "code": "643814",
+    "label": "先進プロジェクト実験2",
+    "semester": "後期",
+    "grade": 3,
+    "day": "火",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "柳田・亀谷・小中",
+    "note": "※右欄も参照",
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 3
+     },
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r141": [
+   {
+    "code": "643419",
+    "label": "先進プロジェクトゼミナール",
+    "semester": "前期",
+    "grade": 3,
+    "day": "木",
+    "period": 1,
+    "room": "E-604",
+    "teacher": "情報工学部全教員",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 1
+     },
+     {
+      "day": "木",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r142": [
+   {
+    "code": "641811",
+    "label": "A：創造的思考法（隔週B)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "鈴木(秀)・(加藤)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "641812",
+    "label": "B：創造的思考法（隔週A)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "鈴木(秀)・(加藤)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "金",
+      "period": 1
+     },
+     {
+      "day": "金",
+      "period": 2
+     }
+    ]
+   }
+  ],
+  "r143": [
+   {
+    "code": "642420",
+    "label": "A：研究開発リテラシー(隔週B)＜別途抽選＞",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "米澤(弘)・(宮内)",
+    "note": null,
+    "biweekly": "B",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "642421",
+    "label": "B：研究開発リテラシー(隔週A)＜別途抽選＞",
+    "semester": "前期",
+    "grade": 2,
+    "day": "月",
+    "period": 3,
+    "room": "R3-301",
+    "teacher": "米澤(弘)・(宮内)",
+    "note": null,
+    "biweekly": "A",
+    "slots": [
+     {
+      "day": "月",
+      "period": 3
+     },
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r144": [
+   {
+    "code": "642819",
+    "label": "A：アプリケーション開発＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 2,
+    "room": "R3-301",
+    "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "642820",
+    "label": "B：アプリケーション開発＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 1,
+    "room": "R3-301",
+    "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     }
+    ]
+   }
+  ],
+  "r145": [
+   {
+    "code": "642821",
+    "label": "PBL概論＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "火",
+    "period": 5,
+    "room": "R3-301",
+    "teacher": "亀谷・竹本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "642822",
+    "label": "PBL概論＜別途抽選＞",
+    "semester": "後期",
+    "grade": 2,
+    "day": "水",
+    "period": 5,
+    "room": "R3-301",
+    "teacher": "亀谷・竹本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "r146": [
+   {
+    "code": "643417",
+    "label": "A：先進プロジェクト実験I＜別途抽選＞",
+    "semester": "前期",
+    "grade": 3,
+    "day": "水",
+    "period": 1,
+    "room": "R3-401 R3-403",
+    "teacher": "田中(敏)・米澤(弘)・(神道)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 1
+     },
+     {
+      "day": "水",
+      "period": 2
+     }
+    ]
+   },
+   {
+    "code": "643418",
+    "label": "B：先進プロジェクト実験I＜別途抽選＞",
+    "semester": "前期",
+    "grade": 3,
+    "day": "水",
+    "period": 3,
+    "room": "R3-401 R3-403",
+    "teacher": "向井・野崎・(神道)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 3
+     },
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "r147": [
+   {
+    "code": "644801",
+    "label": "卒業研究",
+    "semester": "通年",
+    "grade": 4,
+    "day": null,
+    "period": null,
+    "room": null,
+    "teacher": null,
+    "note": "研究室ごとに実施（時間割表の全コマに記載）",
+    "biweekly": null,
+    "slots": []
+   }
+  ]
+ }
+}

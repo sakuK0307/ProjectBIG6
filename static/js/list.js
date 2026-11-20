@@ -33,7 +33,7 @@
   })();
 
   // ---- 先進プロジェクトコース／総合コース ----
-  // curriculum.json の hidden の行は、卒業判定 Excel で隠されている総合コース用の行
+  // scripts/data/excel_*.json の hidden の行は、卒業判定 Excel で隠されている総合コース用の行
   //（創造的思考法・PBL概論などは、先進では必修、総合では選必・選択になる）
   const COURSE_TYPES = { advanced: "先進プロジェクトコース", general: "総合コース" };
   const GENERAL_ONLY = new Set(ALL_COURSES.filter((c) => c.hidden).map((c) => c.id));
@@ -59,7 +59,7 @@
   const STORAGE_KEY = "big6.listPlan.v3";
   const OLD_STORAGE_KEYS = ["big6.listPlan.v2", "big6.listPlan.v1"]; // 自動で v3 に移す
   // 名城大学シラバス（Campusmate-J）の詳細ページ。
-  // semekikn・crclumcd は前期・後期とも 1・12205 で開ける（卒業判定アプリ側で確認済み）
+  // semekikn・crclumcd は前期・後期とも 1・12205 で開ける
   const SYLLABUS_URL = (code) =>
     "https://gkmsyllabus.meijo-u.ac.jp/camweb/slbssbdr.do" +
     `?value(risyunen)=${YEAR}&value(semekikn)=1` +
@@ -448,7 +448,7 @@
   }));
 
   // ---- 卒業判定サイドバー ----
-  // 必要単位数は curriculum.json の requirements（プログラムごとに下の9項目の順）
+  // 必要単位数は scripts/data/excel_*.json の requirements（プログラムごとに下の9項目の順）
   const REQS = [
     ["総合基礎 選択必修", "総選"],
     ["総合基礎 合計", "総計"],
@@ -460,7 +460,7 @@
     ["プログラム指定 ○（※含む）", "○"],
     ["専門 合計", "専計"],
   ];
-  // 先進：curriculum.json の requirements。総合：卒業判定 Excel の各プログラムシート O列「総合コース用」
+  // 先進：scripts/data/excel_*.json の requirements。総合：卒業判定 Excel の各プログラムシート O列「総合コース用」
   //（専門必修 21→10、◎ 14→16、○ 15→20。4プログラムとも同じ）
   const REQUIREMENTS = {
     advanced: window.LIST_REQUIREMENTS || {},

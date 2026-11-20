@@ -1,0 +1,142 @@
+﻿id,name,department,group,units.required,units.selReq,units.elective,units.free,marks.PC,marks.DE,marks.HM,marks.NS,slot,categories,infoBasic,dsai,countsInRequiredShortage,listing,hidden,majorForStatus
+r6,英語コミュニケーションⅠ,総合基礎部門,,0,1,0,0,,,,,0,generalSelReq generalTotal,False,False,False,generalSelReq:0,False,False
+r7,英語コミュニケーションⅡ,総合基礎部門,,0,1,0,0,,,,,1,generalSelReq generalTotal,False,False,False,generalSelReq:1,False,False
+r8,英語コミュニケーションⅢ,総合基礎部門,,0,1,0,0,,,,,2,generalSelReq generalTotal,False,False,False,generalSelReq:2,False,False
+r9,英語コミュニケーションⅣ,総合基礎部門,,0,1,0,0,,,,,3,generalSelReq generalTotal,False,False,False,generalSelReq:3,False,False
+r10,プラクティカル・イングリッシュⅠ,総合基礎部門,,0,1,0,0,,,,,4,generalSelReq generalTotal,False,False,False,generalSelReq:4,False,False
+r11,プラクティカル・イングリッシュⅡ,総合基礎部門,,0,1,0,0,,,,,5,generalSelReq generalTotal,False,False,False,generalSelReq:5,False,False
+r12,ドイツ語Ⅰ,総合基礎部門,,0,1,0,0,,,,,0,generalSelReq generalTotal,False,False,False,generalSelReq:0,False,False
+r13,ドイツ語Ⅱ,総合基礎部門,,0,1,0,0,,,,,1,generalSelReq generalTotal,False,False,False,generalSelReq:1,False,False
+r14,ドイツ語Ⅲ,総合基礎部門,,0,1,0,0,,,,,2,generalSelReq generalTotal,False,False,False,generalSelReq:2,False,False
+r15,ドイツ語Ⅳ,総合基礎部門,,0,1,0,0,,,,,3,generalSelReq generalTotal,False,False,False,generalSelReq:3,False,False
+r16,フランス語Ⅰ,総合基礎部門,,0,1,0,0,,,,,0,generalSelReq generalTotal,False,False,False,generalSelReq:0,False,False
+r17,フランス語Ⅱ,総合基礎部門,,0,1,0,0,,,,,1,generalSelReq generalTotal,False,False,False,generalSelReq:1,False,False
+r18,フランス語Ⅲ,総合基礎部門,,0,1,0,0,,,,,2,generalSelReq generalTotal,False,False,False,generalSelReq:2,False,False
+r19,フランス語Ⅳ,総合基礎部門,,0,1,0,0,,,,,3,generalSelReq generalTotal,False,False,False,generalSelReq:3,False,False
+r20,中国語Ⅰ,総合基礎部門,,0,1,0,0,,,,,0,generalSelReq generalTotal,False,False,False,generalSelReq:0,False,False
+r21,中国語Ⅱ,総合基礎部門,,0,1,0,0,,,,,1,generalSelReq generalTotal,False,False,False,generalSelReq:1,False,False
+r22,中国語Ⅲ,総合基礎部門,,0,1,0,0,,,,,2,generalSelReq generalTotal,False,False,False,generalSelReq:2,False,False
+r23,中国語Ⅳ,総合基礎部門,,0,1,0,0,,,,,3,generalSelReq generalTotal,False,False,False,generalSelReq:3,False,False
+r24,体育科学Ⅰ,総合基礎部門,,0,1,0,0,,,,,0,generalSelReq generalTotal,False,False,False,generalSelReq:0,False,False
+r25,体育科学Ⅱ,総合基礎部門,,0,1,0,0,,,,,1,generalSelReq generalTotal,False,False,False,generalSelReq:1,False,False
+r26,体育科学Ⅲ,総合基礎部門,,0,0,1,0,,,,,2,generalTotal,False,False,False,generalElective:2,False,False
+r27,体育科学Ⅳ,総合基礎部門,,0,0,1,0,,,,,3,generalTotal,False,False,False,generalElective:3,False,False
+r28,人文科学基礎Ⅰ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,generalElective:0,False,False
+r29,人文科学基礎Ⅱ,総合基礎部門,,0,0,2,0,,,,,1,generalTotal,False,False,False,generalElective:1,False,False
+r30,社会科学基礎Ⅰ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,generalElective:0,False,False
+r31,社会科学基礎Ⅱ,総合基礎部門,,0,0,2,0,,,,,1,generalTotal,False,False,False,generalElective:1,False,False
+r32,アジア文化論Ⅰ,総合基礎部門,,0,0,2,0,,,,,2,generalTotal,False,False,False,generalElective:2,False,False
+r33,アジア文化論Ⅱ,総合基礎部門,,0,0,2,0,,,,,3,generalTotal,False,False,False,generalElective:3,False,False
+r34,欧米文化論Ⅰ,総合基礎部門,,0,0,2,0,,,,,2,generalTotal,False,False,False,generalElective:2,False,False
+r35,欧米文化論Ⅱ,総合基礎部門,,0,0,2,0,,,,,3,generalTotal,False,False,False,generalElective:3,False,False
+r36,国際関係論,総合基礎部門,,0,0,2,0,,,,,5,generalTotal,False,False,False,generalElective:5,False,False
+r37,文学,総合基礎部門,,0,0,2,0,,,,,5,generalTotal,False,False,False,generalElective:5,False,False
+r38,日本国憲法,総合基礎部門,,0,0,2,0,,,,,5,generalTotal,False,False,False,generalElective:5,False,False
+r39,国際経済論,総合基礎部門,,0,0,2,0,,,,,4,generalTotal,False,False,False,generalElective:4,False,False
+r40,心理学,総合基礎部門,,0,0,2,0,,,,,4,generalTotal,False,False,False,generalElective:4,False,False
+r41,基礎ゼミナールⅠ,総合基礎部門,,0,0,1,0,,,,,0,generalTotal,False,False,False,generalElective:0,False,False
+r42,基礎ゼミナールⅡ,総合基礎部門,,0,0,1,0,,,,,1,generalTotal,False,False,False,generalElective:1,False,False
+r43,職業指導論,総合基礎部門,,0,0,2,0,,,,,4,generalTotal,False,False,False,,False,False
+r45,日本語Ⅰ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,,False,False
+r46,日本語Ⅱ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,,False,False
+r47,日本語Ⅲ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,,False,False
+r48,日本語Ⅳ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,,False,False
+r49,日本語Ⅴ,総合基礎部門,,0,0,2,0,,,,,0,generalTotal,False,False,False,,False,False
+r51,微分積分Ⅰ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,0,scienceDesignated scienceSelReq majorTotal,False,False,False,scienceDesignated:0,False,False
+r52,微分積分Ⅱ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,1,scienceDesignated scienceSelReq majorTotal,False,False,False,scienceDesignated:1,False,False
+r53,線形代数Ⅰ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,0,scienceDesignated scienceSelReq majorTotal,False,False,False,scienceDesignated:0,False,False
+r54,線形代数Ⅱ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,1,scienceDesignated scienceSelReq majorTotal,False,False,False,scienceDesignated:1,False,False
+r55,物理学Ⅰ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,0,scienceSelReq majorTotal,False,False,False,scienceSelReq:0,False,False
+r56,物理学Ⅱ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,1,scienceSelReq majorTotal,False,False,False,scienceSelReq:1,False,False
+r57,物理学演習,専門教育部門,理工学基礎科目,0,1,0,0,,,,,1,scienceSelReq majorTotal,False,False,False,scienceSelReq:1,False,False
+r58,物理学実験Ⅰ,専門教育部門,理工学基礎科目,0,1,0,0,,,,,0,scienceSelReq majorTotal,False,False,False,scienceSelReq:0,False,False
+r59,物理学実験Ⅱ,専門教育部門,理工学基礎科目,0,1,0,0,,,,,1,scienceSelReq majorTotal,False,False,False,scienceSelReq:1,False,False
+r60,化学Ⅰ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,0,scienceSelReq majorTotal,False,False,False,scienceSelReq:0,False,False
+r61,化学Ⅱ,専門教育部門,理工学基礎科目,0,2,0,0,,,,,1,scienceSelReq majorTotal,False,False,False,scienceSelReq:1,False,False
+r62,化学実験Ⅰ,専門教育部門,理工学基礎科目,0,0,1,0,,,,,0,majorTotal,False,False,False,PC.other:0 DE.other:0 HM.other:0 NS.other:0,False,False
+r63,化学実験Ⅱ,専門教育部門,理工学基礎科目,0,0,1,0,,,,,1,majorTotal,False,False,False,PC.other:1 DE.other:1 HM.other:1 NS.other:1,False,False
+r64,地学Ⅰ,専門教育部門,理工学基礎科目,0,0,2,0,,,,,2,majorTotal,False,False,False,,False,False
+r65,地学Ⅱ,専門教育部門,理工学基礎科目,0,0,2,0,,,,,3,majorTotal,False,False,False,,False,False
+r66,地学実験Ⅰ,専門教育部門,理工学基礎科目,0,0,1,0,,,,,4,majorTotal,False,False,False,,False,False
+r67,地学実験Ⅱ,専門教育部門,理工学基礎科目,0,0,1,0,,,,,5,majorTotal,False,False,False,,False,False
+r68,生物学,専門教育部門,理工学基礎科目,0,0,2,0,,,,,1,majorTotal,False,False,False,,False,False
+r69,生物学実験,専門教育部門,理工学基礎科目,0,0,1,0,,,,,2,majorTotal,False,False,False,,False,False
+r70,理工学概論,専門教育部門,理工学基礎科目,0,0,2,0,,,,,0,majorTotal,False,False,False,,False,False
+r71,技術者倫理,専門教育部門,理工学基礎科目,0,2,0,0,,,,,3,scienceSelReq majorTotal,False,False,False,scienceSelReq:3,False,False
+r72,コンピューターリテラシー,専門教育部門,理工学基礎科目,0,2,0,0,,,,,0,scienceSelReq majorTotal,False,False,False,scienceSelReq:0,False,False
+r73,情報工学の世界,専門教育部門,情報工学基礎科目,0,2,0,0,,,,,0,majorTotal,True,False,False,infoBasic:0,False,True
+r74,情報工学基礎演習,専門教育部門,情報工学基礎科目,0,1,0,0,,,,,0,majorTotal,True,False,False,infoBasic:0,False,True
+r75,テクニカルリテラシー,専門教育部門,情報工学基礎科目,0,2,0,0,,,,,1,majorTotal,True,False,False,infoBasic:1,False,True
+r76,プラクティカルICT,専門教育部門,情報工学基礎科目,0,1,0,0,,,,,1,majorTotal,True,False,False,infoBasic:1,False,True
+r77,情報通信ネットワーク,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,◎,1,majorTotal PC.circle DE.circle HM.circle NS.double,False,False,False,PC.circle:1 DE.circle:1 HM.circle:1 NS.double:1,False,True
+r78,情報理論,専門教育部門,情報工学専門科目,0,2,0,0,○,◎,○,◎,3,majorTotal PC.circle DE.double HM.circle NS.double,False,False,False,PC.circle:3 DE.double:3 HM.circle:3 NS.double:3,False,True
+r79,情報セキュリティ,専門教育部門,情報工学専門科目,0,2,0,0,,,,※,4,majorTotal NS.star NS.circle,False,False,False,PC.other:4 DE.other:4 HM.other:4 NS.star:4,False,True
+r80,情報通信システム,専門教育部門,情報工学専門科目,0,2,0,0,,,,※,5,majorTotal NS.star NS.circle,False,False,False,PC.other:5 DE.other:5 HM.other:5 NS.star:5,False,True
+r81,信号伝送論,専門教育部門,情報工学専門科目,0,2,0,0,,,,※,5,majorTotal NS.star NS.circle,False,False,False,PC.other:5 DE.other:5 HM.other:5 NS.star:5,False,True
+r82,符号理論,専門教育部門,情報工学専門科目,0,2,0,0,,,,※,6,majorTotal NS.star NS.circle,False,False,False,PC.other:6 DE.other:6 HM.other:6 NS.star:6,False,True
+r83,ワイヤレス通信,専門教育部門,情報工学専門科目,0,2,0,0,,,,※,6,majorTotal NS.star NS.circle,False,False,False,PC.other:6 DE.other:6 HM.other:6 NS.star:6,False,True
+r84,コンピュータアーキテクチャⅠ,専門教育部門,情報工学専門科目,0,2,0,0,◎,◎,○,◎,1,majorTotal PC.double DE.double HM.circle NS.double,False,False,False,PC.double:1 DE.double:1 HM.circle:1 NS.double:1,False,True
+r85,コンピュータアーキテクチャⅡ,専門教育部門,情報工学専門科目,0,2,0,0,○,,,○,4,majorTotal PC.circle NS.circle,False,False,False,PC.circle:4 DE.other:4 HM.other:4 NS.circle:4,False,True
+r86,ディジタル回路Ⅰ,専門教育部門,情報工学専門科目,0,2,0,0,◎,○,○,◎,2,majorTotal PC.double DE.circle HM.circle NS.double,False,False,False,PC.double:2 DE.circle:2 HM.circle:2 NS.double:2,False,True
+r87,ディジタル回路Ⅱ,専門教育部門,情報工学専門科目,0,2,0,0,◎,,,○,3,majorTotal PC.double NS.circle,False,False,False,PC.double:3 DE.other:3 HM.other:3 NS.circle:3,False,True
+r88,電気電子回路Ⅰ,専門教育部門,情報工学専門科目,0,2,0,0,◎,,,○,2,majorTotal PC.double NS.circle,False,False,False,PC.double:2 DE.other:2 HM.other:2 NS.circle:2,False,True
+r89,電気電子回路Ⅱ,専門教育部門,情報工学専門科目,0,2,0,0,○,,,○,4,majorTotal PC.circle NS.circle,False,False,False,PC.circle:4 DE.other:4 HM.other:4 NS.circle:4,False,True
+r90,ディジタル信号処理Ⅰ,専門教育部門,情報工学専門科目,0,2,0,0,◎,◎,◎,◎,2,majorTotal PC.double DE.double HM.double NS.double,False,False,False,PC.double:2 DE.double:2 HM.double:2 NS.double:2,False,True
+r91,ディジタル信号処理Ⅱ,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,○,3,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,PC.circle:3 DE.circle:3 HM.circle:4 NS.circle:3,False,True
+r92,システム制御,専門教育部門,情報工学専門科目,0,2,0,0,※,,,,4,majorTotal PC.star PC.circle,False,False,False,PC.star:4 DE.other:4 HM.other:4 NS.other:4,False,True
+r93,フィジカルコンピューティング,専門教育部門,情報工学専門科目,0,2,0,0,※,,,,5,majorTotal PC.star PC.circle,False,False,False,PC.star:5 DE.other:5 HM.other:5 NS.other:5,False,True
+r94,ハードウェア記述言語,専門教育部門,情報工学専門科目,0,2,0,0,※,,,,5,majorTotal PC.star PC.circle,False,False,False,PC.star:5 DE.other:5 HM.other:5 NS.other:5,False,True
+r95,センサ工学,専門教育部門,情報工学専門科目,0,2,0,0,※,,,,6,majorTotal PC.star PC.circle,False,False,False,PC.star:6 DE.other:6 HM.other:6 NS.other:6,False,True
+r96,集積回路設計,専門教育部門,情報工学専門科目,0,2,0,0,※,,,,6,majorTotal PC.star PC.circle,False,False,False,PC.star:6 DE.other:6 HM.other:6 NS.other:6,False,True
+r97,アルゴリズム・データ構造,専門教育部門,情報工学専門科目,0,2,0,0,◎,◎,◎,◎,2,majorTotal PC.double DE.double HM.double NS.double,False,True,False,PC.double:2 DE.double:2 HM.double:2 NS.double:2,False,True
+r98,オペレーティングシステム,専門教育部門,情報工学専門科目,0,2,0,0,,○,,,2,majorTotal DE.circle,False,False,False,PC.other:2 DE.circle:2 HM.other:2 NS.other:2,False,True
+r99,データベース,専門教育部門,情報工学専門科目,0,2,0,0,,○,,○,2,majorTotal DE.circle,False,False,False,PC.other:2 DE.circle:2 HM.other:2 NS.other:2,False,True
+r100,ソフトウェア工学,専門教育部門,情報工学専門科目,0,2,0,0,○,◎,◎,○,3,majorTotal PC.circle DE.double HM.double NS.circle,False,False,False,PC.circle:3 DE.double:3 HM.double:3 NS.circle:3,False,True
+r101,言語・オートマトン,専門教育部門,情報工学専門科目,0,2,0,0,,◎,◎,○,3,majorTotal DE.double HM.double NS.circle,False,False,False,PC.other:3 DE.double:3 HM.double:3 NS.circle:3,False,True
+r102,人工知能,専門教育部門,情報工学専門科目,0,2,0,0,,※,○,○,4,majorTotal DE.star DE.circle HM.circle NS.circle,False,False,False,PC.other:4 DE.star:4 HM.circle:4 NS.circle:4,False,True
+r103,数値解析,専門教育部門,情報工学専門科目,0,2,0,0,,○,,,4,majorTotal DE.circle,False,False,False,PC.other:4 DE.circle:4 HM.other:4 NS.other:4,False,True
+r104,コンパイラ,専門教育部門,情報工学専門科目,0,2,0,0,,○,○,,4,majorTotal DE.circle HM.circle,False,False,False,PC.other:4 DE.circle:4 HM.circle:4 NS.other:4,False,True
+r105,プログラミング言語論,専門教育部門,情報工学専門科目,0,2,0,0,,※,,,5,majorTotal DE.star DE.circle,False,False,False,PC.other:5 DE.star:5 HM.other:5 NS.other:5,False,True
+r106,パターン認識,専門教育部門,情報工学専門科目,0,2,0,0,,※,,,5,majorTotal DE.star DE.circle,False,False,False,PC.other:5 DE.star:5 HM.other:5 NS.other:5,False,True
+r107,応用アルゴリズム,専門教育部門,情報工学専門科目,0,2,0,0,,※,,,6,majorTotal DE.star DE.circle,False,False,False,PC.other:6 DE.star:6 HM.other:6 NS.other:6,False,True
+r108,数理計画法,専門教育部門,情報工学専門科目,0,2,0,0,,※,,,6,majorTotal DE.star DE.circle,False,False,False,PC.other:6 DE.star:6 HM.other:6 NS.other:6,False,True
+r109,マルチメディア基礎,専門教育部門,情報工学専門科目,0,2,0,0,,,◎,,0,majorTotal HM.double,False,True,False,PC.other:0 DE.other:0 HM.double:0 NS.other:0,False,True
+r110,画像処理,専門教育部門,情報工学専門科目,0,2,0,0,○,,◎,,3,majorTotal PC.circle HM.double,False,False,False,PC.circle:3 DE.other:3 HM.double:3 NS.other:3,False,True
+r111,コンピュータグラフィックス,専門教育部門,情報工学専門科目,0,2,0,0,,○,※,,4,majorTotal DE.circle HM.star HM.circle,False,False,False,PC.other:4 DE.circle:4 HM.star:4 NS.other:4,False,True
+r112,コンピュータビジョン,専門教育部門,情報工学専門科目,0,2,0,0,○,,○,,5,majorTotal PC.circle HM.circle,False,False,False,PC.circle:5 DE.other:5 HM.circle:5 NS.other:5,False,True
+r113,感性情報処理,専門教育部門,情報工学専門科目,0,2,0,0,,,※,,5,majorTotal HM.star HM.circle,False,False,False,PC.other:5 DE.other:5 HM.star:5 NS.other:5,False,True
+r114,音声・音響信号処理,専門教育部門,情報工学専門科目,0,2,0,0,,,※,,5,majorTotal HM.star HM.circle,False,False,False,PC.other:5 DE.other:5 HM.star:5 NS.other:5,False,True
+r115,バーチャルリアリティ,専門教育部門,情報工学専門科目,0,2,0,0,,,※,,6,majorTotal HM.star HM.circle,False,False,False,PC.other:6 DE.other:6 HM.star:6 NS.other:6,False,True
+r116,言語情報処理,専門教育部門,情報工学専門科目,0,2,0,0,,,※,,6,majorTotal HM.star HM.circle,False,False,False,PC.other:6 DE.other:6 HM.star:6 NS.other:6,False,True
+r117,離散数学,専門教育部門,情報工学専門科目,0,2,0,0,◎,◎,◎,◎,0,majorTotal PC.double DE.double HM.double NS.double,False,False,False,PC.double:0 DE.double:0 HM.double:0 NS.double:0,False,True
+r118,確率・統計,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,○,1,majorTotal PC.circle DE.circle HM.circle NS.circle,False,True,False,PC.circle:1 DE.circle:1 HM.circle:1 NS.circle:1,False,True
+r119,データサイエンス基礎,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,2,required majorTotal,False,True,True,required:2,False,True
+r120,応用解析,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,○,3,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,PC.circle:3 DE.circle:3 HM.circle:3 NS.circle:3,False,True
+r121,電磁気学,専門教育部門,情報工学専門科目,0,0,2,0,,,,,2,majorTotal,False,False,False,PC.other:2 DE.other:2 HM.other:2 NS.other:2,False,True
+r122,プログラミング演習Ⅰ,専門教育部門,情報工学専門科目,1,0,0,0,必修,必修,必修,必修,0,required majorTotal,False,True,True,required:0,False,True
+r123,プログラミング演習Ⅱ,専門教育部門,情報工学専門科目,1,0,0,0,必修,必修,必修,必修,1,required majorTotal,False,True,True,required:1,False,True
+r124,プログラミング演習Ⅲ,専門教育部門,情報工学専門科目,0,1,0,0,○,○,○,○,2,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,PC.circle:2 DE.circle:2 HM.circle:2 NS.circle:2,False,True
+r125,プログラミング演習Ⅳ,専門教育部門,情報工学専門科目,0,1,0,0,※,※,※,※,3,majorTotal PC.star PC.circle DE.star DE.circle HM.star HM.circle NS.star NS.circle,False,False,False,PC.star:3 DE.star:3 HM.star:3 NS.star:3,False,True
+r126,情報工学実験Ⅰ,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,2,required majorTotal,False,True,True,required:2,False,True
+r127,情報工学実験Ⅱ,専門教育部門,情報工学専門科目,0,2,0,0,※,※,※,※,3,majorTotal PC.star PC.circle DE.star DE.circle HM.star HM.circle NS.star NS.circle,False,False,False,PC.star:3 DE.star:3 HM.star:3 NS.star:3,False,True
+r128,インターンシップ,専門教育部門,情報工学専門科目,0,0,1,0,,,,,5,majorTotal,False,False,False,PC.other:5 DE.other:5 HM.other:5 NS.other:5,False,True
+r129,グローバルゼミナール,専門教育部門,情報工学専門科目,0,0,1,0,,,,,1,majorTotal,False,False,False,PC.other:1 DE.other:1 HM.other:1 NS.other:1,False,True
+r130,キャリアゼミナール,専門教育部門,情報工学専門科目,0,1,0,0,○,○,○,○,4,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,PC.circle:4 DE.circle:4 HM.circle:4 NS.circle:4,False,True
+r131,研究ゼミナール,専門教育部門,情報工学専門科目,0,1,0,0,※,※,※,※,5,majorTotal PC.star PC.circle DE.star DE.circle HM.star HM.circle NS.star NS.circle,False,False,False,PC.star:5 DE.star:5 HM.star:5 NS.star:5,False,True
+r132,情報工学総合ゼミナール,専門教育部門,情報工学専門科目,0,1,0,0,※,※,※,※,4,majorTotal PC.star PC.circle DE.star DE.circle HM.star HM.circle NS.star NS.circle,False,False,False,,True,True
+r133,情報技術の応用と職業,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,○,5,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,,True,True
+r134,情報技術の応用と職業,専門教育部門,情報工学専門科目,0,0,2,0,,,,,5,majorTotal,False,False,False,PC.other:5 DE.other:5 HM.other:5 NS.other:5,False,True
+r135,創造的思考法,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,1,required majorTotal,False,False,True,required:1,False,True
+r136,研究開発リテラシー,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,2,required majorTotal,False,False,True,required:2,False,True
+r137,アプリケーション開発,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,3,required majorTotal,False,False,True,required:3,False,True
+r138,PBL概論,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,3,required majorTotal,False,False,True,required:3,False,True
+r139,先進プロジェクト実験Ⅰ,専門教育部門,情報工学専門科目,2,0,0,0,必修,必修,必修,必修,4,required majorTotal,False,False,True,required:4,False,True
+r140,先進プロジェクト実験Ⅱ,専門教育部門,情報工学専門科目,0,2,0,0,※,※,※,※,5,majorTotal PC.star PC.circle DE.star DE.circle HM.star HM.circle NS.star NS.circle,False,False,False,PC.star:5 DE.star:5 HM.star:5 NS.star:5,False,True
+r141,先進プロジェクトゼミナール,専門教育部門,情報工学専門科目,1,0,0,0,必修,必修,必修,必修,4,required majorTotal,False,False,True,required:4,False,True
+r142,創造的思考法,専門教育部門,情報工学専門科目,0,2,0,0,◎,◎,◎,◎,1,majorTotal PC.double DE.double HM.double NS.double,False,False,False,,True,True
+r143,研究開発リテラシー,専門教育部門,情報工学専門科目,0,0,2,0,,,,,2,majorTotal,False,False,False,,True,True
+r144,アプリケーション開発,専門教育部門,情報工学専門科目,0,0,2,0,,,,,3,majorTotal,False,False,False,,True,True
+r145,PBL概論,専門教育部門,情報工学専門科目,0,0,2,0,,,,,3,majorTotal,False,False,False,,True,True
+r146,先進プロジェクト実験Ⅰ,専門教育部門,情報工学専門科目,0,2,0,0,○,○,○,○,4,majorTotal PC.circle DE.circle HM.circle NS.circle,False,False,False,,True,True
+r147,卒業研究,専門教育部門,情報工学専門科目,4,0,0,0,必修,必修,必修,必修,6,required majorTotal,False,False,True,required:7,False,True
+r148,データサイエンス・AI入門,他学部,専門他,0,0,2,0,,,,,0,majorTotal,False,False,False,,False,False
