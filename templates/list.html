@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProjectBIG6 | 履修リスト</title>
-  <link rel="stylesheet" href="../static/css/list.css">
-  <script src="../static/js/course-data.js" defer></script>
-  <script src="../static/js/pdf-import.js" defer></script>
-  <script src="../static/js/list.js" defer></script>
+  <link rel="stylesheet" href="css/list.css">
+  <!-- データはサーバーの API から受け取る（Flask で開く）。
+       list.js は ES モジュール。list-api.js（サーバーとのやり取り）と list-rules.js（判定の計算）は list.js が import する。
+       pdf-import.js は普通のスクリプト（window.PdfImport）。defer とモジュールは、書いた順に実行される -->
+  <script src="js/pdf-import.js" defer></script>
+  <script type="module" src="js/list.js"></script>
 </head>
 <body>
   <div class="app" id="app">

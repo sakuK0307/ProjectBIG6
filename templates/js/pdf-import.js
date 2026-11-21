@@ -16,7 +16,6 @@ window.PdfImport = (() => {
   const WORKER_URL = PDFJS_BASE + "build/pdf.worker.min.js";
   const CMAP_URL = PDFJS_BASE + "cmaps/";
   const FONT_URL = PDFJS_BASE + "standard_fonts/";
-  const TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"];
   const PERIOD = "(前期集中|後期集中|通年集中|前期|後期|通年|集中)";
   const KIND = "(必修|選必|選択|自由)";
 
@@ -31,7 +30,10 @@ window.PdfImport = (() => {
         window.pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_URL;
         resolve(window.pdfjsLib);
       };
-      s.onerror = () => { loading = null; reject(new Error("PDF を読むための部品（pdf.js）を読み込めませんでした")); };
+      s.onerror = () => {
+        loading = null;
+        reject(new Error("PDF を読むための部品（pdf.js）を読み込めませんでした"));
+      };
       document.head.appendChild(s);
     });
     return loading;
@@ -44,20 +46,33 @@ window.PdfImport = (() => {
     const doc = await lib.getDocument({
       data: await file.arrayBuffer(),
       // 日本語のフォント（CID フォント）の文字を読むための対応表
-      cMapUrl: CMAP_URL, cMapPacked: true, standardFontDataUrl: FONT_URL,
+      cMapUrl: CMAP_URL,
+      cMapPacked: true,
+      standardFontDataUrl: FONT_URL,
     }).promise;
     const pages = [];
     for (let i = 1; i <= doc.numPages; i++) {
       const content = await (await doc.getPage(i)).getTextContent();
-      const items = content.items.filter((it) => it.str && it.str.trim())
+      const items = content.items
+        .filter((it) => it.str && it.str.trim())
         .map((it) => ({ s: it.str, x: it.transform[4], y: it.transform[5] }));
       const lines = [];
       for (const it of items) {
         const line = lines.find((l) => Math.abs(l.y - it.y) < 2.5);
-        if (line) line.items.push(it); else lines.push({ y: it.y, items: [it] });
+        if (line) line.items.push(it);
+        else lines.push({ y: it.y, items: [it] });
       }
       lines.sort((a, b) => b.y - a.y);
-      pages.push(lines.map((l) => l.items.sort((a, b) => a.x - b.x).map((it) => it.s).join(" ")).join("\n"));
+      pages.push(
+        lines
+          .map((l) =>
+            l.items
+              .sort((a, b) => a.x - b.x)
+              .map((it) => it.s)
+              .join(" "),
+          )
+          .join("\n"),
+      );
     }
     return pages.join("\n");
   }
@@ -66,15 +81,25 @@ window.PdfImport = (() => {
   const flatten = (t) => t.normalize("NFKC").replace(/\s+/g, " ");
 
   // 科目名の照合用：「英語コミュニケーション１」と「英語コミュニケーションⅠ」を同じにする
-  const ROMAN = [["IV", "4"], ["III", "3"], ["II", "2"], ["I", "1"], ["V", "5"]];
+  const ROMAN = [
+    ["IV", "4"],
+    ["III", "3"],
+    ["II", "2"],
+    ["I", "1"],
+    ["V", "5"],
+  ];
   function normName(s) {
-    let t = String(s).normalize("NFKC")
+    let t = String(s)
+      .normalize("NFKC")
       .replace(/^\[遠\]/, "")
       .replace(/\*+$/, "") // 後期の履修登録通知書では、前期の科目に * が付く
-      .replace(/[<(\[].*?[>)\]]/g, "")
+      .replace(/[<([].*?[>)\]]/g, "")
       .replace(/[\s・･]/g, "");
     for (const [r, a] of ROMAN) {
-      if (t.endsWith(r)) { t = t.slice(0, -r.length) + a; break; }
+      if (t.endsWith(r)) {
+        t = t.slice(0, -r.length) + a;
+        break;
+      }
     }
     return t;
   }
@@ -118,17 +143,31 @@ window.PdfImport = (() => {
     let m;
     while ((m = re.exec(text))) {
       // 単位の前にある語のうち、科目表にある名前を科目名とみなす（そのあとは担当教員）
-      const before = text.slice(Math.max(0, m.index - 120), m.index).trim().split(" ").slice(-6);
-      let course = null, pdfName = before.slice(-3, -2)[0] || before[0] || "";
+      const before = text
+        .slice(Math.max(0, m.index - 120), m.index)
+        .trim()
+        .split(" ")
+        .slice(-6);
+      let course = null,
+        pdfName = before.slice(-3, -2)[0] || before[0] || "";
       for (let k = before.length - 1; k >= 0; k--) {
         const hit = find(before[k]);
-        if (hit) { course = hit; pdfName = before[k]; break; }
+        if (hit) {
+          course = hit;
+          pdfName = before[k];
+          break;
+        }
       }
       const year = Number(m[2]);
       const s = scoreOf(m[5]);
       const term = course && meta.entrance ? toTerm(year - meta.entrance + 1, m[4], course) : null;
       rows.push({
-        pdfName: pdfName.replace(/^\[遠\]/, "").replace(/\*+$/, ""), course, term, year, period: m[4], units: Number(m[1]),
+        pdfName: pdfName.replace(/^\[遠\]/, "").replace(/\*+$/, ""),
+        course,
+        term,
+        year,
+        period: m[4],
+        units: Number(m[1]),
         ...s,
         problem: !course ? "科目表にない科目です" : !term ? "学期を決められませんでした" : s.problem,
       });
@@ -151,8 +190,15 @@ window.PdfImport = (() => {
       const grade = year && meta.entrance ? year - meta.entrance + 1 : meta.grade;
       const term = course ? toTerm(grade, m[2], course) : null;
       rows.push({
-        pdfName: m[5].replace(/^\[遠\]/, "").replace(/\*+$/, ""), course, term, year, period: m[2], units: Number(m[4]),
-        code: m[1], score: null, result: "登録",
+        pdfName: m[5].replace(/^\[遠\]/, "").replace(/\*+$/, ""),
+        course,
+        term,
+        year,
+        period: m[2],
+        units: Number(m[4]),
+        code: m[1],
+        score: null,
+        result: "登録",
         problem: !course ? "科目表にない科目です" : !term ? "学期を決められませんでした" : null,
       });
     }
@@ -175,7 +221,8 @@ window.PdfImport = (() => {
     }
     const find = (name) => index.get(normName(name)) || null;
 
-    let kind = null, rows = [];
+    let kind = null,
+      rows = [];
     const compact = text.replace(/ /g, "");
     if (compact.includes("試験成績一覧表")) {
       kind = "grades";
