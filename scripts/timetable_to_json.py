@@ -12,6 +12,7 @@
     （この CSV は確かめる用で、JSON を作るときには読まない。手で補う分は timetable_extra.csv に書く）
 
 手で確かめた講義コード（PDF から読み取れない科目）は scripts/data/timetable_extra.csv に書く。
+科目の一覧は excel_*.json（Excel に無い自由科目も excel_to_json.py が入れてある）。
 科目名をそろえて（「A：」などのクラス記号、<抽選>・(隔週A) などの注記、①② を除く）科目 JSON の科目と照らし合わせる。
 
 必要なもの: pip install pdfplumber

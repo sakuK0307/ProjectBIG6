@@ -1,11 +1,49 @@
 {
- "source": ["scripts/data/excel_2025.json", "scripts/data/timetable_2026.json"],
- "year": 2026,
- "requirements": {
-  "PC": [10, 20, 8, 12, 21, 14, 9, 15, 104],
-  "DE": [10, 20, 8, 12, 21, 14, 9, 15, 104],
-  "HM": [10, 20, 8, 12, 21, 14, 9, 15, 104],
-  "NS": [10, 20, 8, 12, 21, 14, 9, 15, 104]
+ "meta": {
+  "source": ["scripts/data/excel_2025.json", "scripts/data/timetable_2026.json", "scripts/data/rules.json"]
+ },
+ "timetableYear": 2026,
+ "rules": {
+  "requirements": {
+   "advanced": {
+    "PC": [10, 20, 8, 12, 21, 14, 9, 15, 104],
+    "DE": [10, 20, 8, 12, 21, 14, 9, 15, 104],
+    "HM": [10, 20, 8, 12, 21, 14, 9, 15, 104],
+    "NS": [10, 20, 8, 12, 21, 14, 9, 15, 104]
+   },
+   "general": {
+    "PC": [10, 20, 8, 12, 10, 16, 9, 20, 104],
+    "DE": [10, 20, 8, 12, 10, 16, 9, 20, 104],
+    "HM": [10, 20, 8, 12, 10, 16, 9, 20, 104],
+    "NS": [10, 20, 8, 12, 10, 16, 9, 20, 104]
+   }
+  },
+  "notCounted": [
+   {
+    "entrance": [2023],
+    "courseType": "advanced",
+    "name": "情報技術の応用と職業"
+   }
+  ],
+  "judgments": {
+   "advance": {
+    "upto": "2後",
+    "infoBasic": 3,
+    "units": 62
+   },
+   "seminar": {
+    "upto": "3前",
+    "units": 85,
+    "thesisBlockedFrom": 2024
+   },
+   "thesis": {
+    "upto": "3後",
+    "maxRemaining": 10
+   },
+   "dsai": {
+    "courses": 7
+   }
+  }
  },
  "courses": [
   {
@@ -197,7 +235,8 @@
      "teacher": "（尾関）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r7",
@@ -388,7 +427,8 @@
      "teacher": "（尾関）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r8",
@@ -560,7 +600,8 @@
      "teacher": "(平野(尚))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r9",
@@ -732,7 +773,8 @@
      "teacher": "(平野(尚))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r10",
@@ -923,7 +965,8 @@
      "teacher": "(R.Harris)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r11",
@@ -1114,7 +1157,8 @@
      "teacher": "(R.Harris)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r12",
@@ -1172,7 +1216,8 @@
      "teacher": "山本(恵)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r13",
@@ -1230,7 +1275,8 @@
      "teacher": "山本(恵)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r14",
@@ -1307,7 +1353,8 @@
      "teacher": "長澤",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r15",
@@ -1384,7 +1431,8 @@
      "teacher": "長澤",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r16",
@@ -1423,7 +1471,8 @@
      "teacher": "(山口(憲))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r17",
@@ -1462,7 +1511,8 @@
      "teacher": "(山口(憲))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r18",
@@ -1501,7 +1551,8 @@
      "teacher": "(河脇)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r19",
@@ -1540,7 +1591,8 @@
      "teacher": "(河脇)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r20",
@@ -1617,7 +1669,8 @@
      "teacher": "(武田)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r21",
@@ -1694,7 +1747,8 @@
      "teacher": "(武田)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r22",
@@ -1771,7 +1825,8 @@
      "teacher": "(何)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r23",
@@ -1848,7 +1903,8 @@
      "teacher": "(何)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r24",
@@ -1906,7 +1962,8 @@
      "teacher": "(内山)",
      "note": "※初回4/16：ガイダンス"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r25",
@@ -1964,7 +2021,8 @@
      "teacher": "(内山)",
      "note": "※初回9/17：ガイダンス"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r26",
@@ -2003,7 +2061,8 @@
      "teacher": "(門間)・(永田)・(内田)・(高田)",
      "note": "※初回4/15：ガイダンス"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r27",
@@ -2042,7 +2101,8 @@
      "teacher": "(門間)・(永田)・(内田)・(高田)",
      "note": "※初回9/17：ガイダンス"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r28",
@@ -2119,7 +2179,8 @@
      "teacher": "(星)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r29",
@@ -2196,7 +2257,8 @@
      "teacher": "(星)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r30",
@@ -2292,7 +2354,8 @@
      "teacher": "(齋藤(滋))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r31",
@@ -2388,7 +2451,8 @@
      "teacher": "(齋藤(滋))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r32",
@@ -2465,7 +2529,8 @@
      "teacher": "大知",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r33",
@@ -2542,7 +2607,8 @@
      "teacher": "大知",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r34",
@@ -2600,7 +2666,8 @@
      "teacher": "（小野）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r35",
@@ -2658,7 +2725,8 @@
      "teacher": "(小野)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r36",
@@ -2697,7 +2765,8 @@
      "teacher": "森口",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r37",
@@ -2736,7 +2805,8 @@
      "teacher": "(松浦(由))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r38",
@@ -2794,7 +2864,8 @@
      "teacher": "(川中)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r39",
@@ -2833,7 +2904,8 @@
      "teacher": "名和",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r40",
@@ -2891,7 +2963,8 @@
      "teacher": "(岡田)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r41",
@@ -2910,7 +2983,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r42",
@@ -2929,7 +3003,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r43",
@@ -2968,7 +3043,8 @@
      "teacher": "(鵜飼)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r45",
@@ -2987,7 +3063,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r46",
@@ -3006,7 +3083,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r47",
@@ -3025,7 +3103,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r48",
@@ -3044,7 +3123,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r49",
@@ -3063,7 +3143,8 @@
    "req": ["総計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   },
   {
    "id": "r51",
@@ -3159,7 +3240,8 @@
      "teacher": "(岡)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r52",
@@ -3255,7 +3337,8 @@
      "teacher": "(岡)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r53",
@@ -3351,7 +3434,8 @@
      "teacher": "(片岡(紀))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r54",
@@ -3447,7 +3531,8 @@
      "teacher": "(片岡(紀))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r55",
@@ -3524,7 +3609,8 @@
      "teacher": "坂東・大久保・土屋・小澤(理)・(片岡(啓))",
      "note": "※初回4/14：クラス分け"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r56",
@@ -3601,7 +3687,8 @@
      "teacher": "坂東・大久保・土屋・小澤(理)・片岡(啓)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r57",
@@ -3678,7 +3765,8 @@
      "teacher": "片岡(啓)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r58",
@@ -3744,7 +3832,8 @@
      "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
      "note": "※初回4/21：12-304"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r59",
@@ -3810,7 +3899,8 @@
      "teacher": "田中(崇)・土屋・(神野)・(中野(拓))・（徳永）",
      "note": "※初回10/6：12-304"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r60",
@@ -3849,7 +3939,8 @@
      "teacher": "（田中）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r61",
@@ -3888,7 +3979,8 @@
      "teacher": "（田中）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r62",
@@ -3954,7 +4046,8 @@
      "teacher": "景山・神藤・(村手)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r63",
@@ -4020,7 +4113,8 @@
      "teacher": "景山・神藤・(村手)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r64",
@@ -4059,7 +4153,8 @@
      "teacher": "(塚腰)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r65",
@@ -4098,7 +4193,8 @@
      "teacher": "(塚腰)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r66",
@@ -4137,7 +4233,8 @@
      "teacher": "齊藤(毅)・(居川)・(平野)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r67",
@@ -4176,7 +4273,8 @@
      "teacher": "齊藤(毅)・(平野)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r68",
@@ -4215,7 +4313,8 @@
      "teacher": "（寺野）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r69",
@@ -4249,7 +4348,8 @@
      "teacher": null,
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r70",
@@ -4288,7 +4388,8 @@
      "teacher": null,
      "note": "※右欄も参照"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r71",
@@ -4346,7 +4447,8 @@
      "teacher": "(成瀬)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r72",
@@ -4404,7 +4506,488 @@
      "teacher": "(福間)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
+  },
+  {
+   "id": "x_math1",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "数学基礎演習Ⅰ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1前"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641251",
+     "label": "数学基礎演習Ⅰ",
+     "sem": "前期",
+     "day": "水",
+     "period": 5,
+     "slots": [
+      {
+       "day": "水",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-301",
+     "teacher": "(片岡(紀))",
+     "note": null
+    },
+    {
+     "code": "641252",
+     "label": "数学基礎演習Ⅰ",
+     "sem": "前期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-101",
+     "teacher": "(岡)",
+     "note": null
+    },
+    {
+     "code": "641253",
+     "label": "数学基礎演習Ⅰ(advanced)",
+     "sem": "前期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "遠隔授業",
+     "teacher": "橋本",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_math2",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "数学基礎演習Ⅱ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1後"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641651",
+     "label": "数学基礎演習Ⅱ",
+     "sem": "後期",
+     "day": "水",
+     "period": 4,
+     "slots": [
+      {
+       "day": "水",
+       "period": 4
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-301",
+     "teacher": "(片岡(紀))",
+     "note": null
+    },
+    {
+     "code": "641652",
+     "label": "数学基礎演習Ⅱ",
+     "sem": "後期",
+     "day": "金",
+     "period": 4,
+     "slots": [
+      {
+       "day": "金",
+       "period": 4
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-101",
+     "teacher": "(岡)",
+     "note": null
+    },
+    {
+     "code": "641653",
+     "label": "数学基礎演習Ⅱ(advanced)",
+     "sem": "後期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "遠隔授業",
+     "teacher": "橋本",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_phys1",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "物理学基礎演習Ⅰ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1前"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641254",
+     "label": "物理学基礎演習Ⅰ",
+     "sem": "前期",
+     "day": "木",
+     "period": 5,
+     "slots": [
+      {
+       "day": "木",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-102",
+     "teacher": "（片岡）",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_phys2",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "物理学基礎演習Ⅱ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1後"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641654",
+     "label": "物理学基礎演習Ⅱ",
+     "sem": "後期",
+     "day": "木",
+     "period": 4,
+     "slots": [
+      {
+       "day": "木",
+       "period": 4
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-102",
+     "teacher": "（片岡）",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_chem1",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "化学基礎演習Ⅰ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1前"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641255",
+     "label": "化学基礎演習Ⅰ",
+     "sem": "前期",
+     "day": "火",
+     "period": 5,
+     "slots": [
+      {
+       "day": "火",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-302",
+     "teacher": "(村手)",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_chem2",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "化学基礎演習Ⅱ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1後"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641655",
+     "label": "化学基礎演習Ⅱ",
+     "sem": "後期",
+     "day": "火",
+     "period": 4,
+     "slots": [
+      {
+       "day": "火",
+       "period": 4
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-101",
+     "teacher": "(村手)",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_eng1",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "英語基礎演習Ⅰ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1前"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641256",
+     "label": "英語基礎演習Ⅰ",
+     "sem": "前期",
+     "day": "月",
+     "period": 5,
+     "slots": [
+      {
+       "day": "月",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-202",
+     "teacher": "(岩塚)",
+     "note": null
+    },
+    {
+     "code": "641257",
+     "label": "英語基礎演習Ⅰ(advanced)",
+     "sem": "前期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "S-406",
+     "teacher": "(蟹江)",
+     "note": null
+    },
+    {
+     "code": "641258",
+     "label": "英語基礎演習Ⅰ(advanced)",
+     "sem": "前期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "S-303",
+     "teacher": "榎本",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
+  },
+  {
+   "id": "x_eng2",
+   "dept": "専門教育部門",
+   "group": "理工学基礎科目",
+   "name": "英語基礎演習Ⅱ",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["1後"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [
+    {
+     "code": "641656",
+     "label": "英語基礎演習Ⅱ",
+     "sem": "後期",
+     "day": "月",
+     "period": 4,
+     "slots": [
+      {
+       "day": "月",
+       "period": 4
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "E-202",
+     "teacher": "(岩塚)",
+     "note": null
+    },
+    {
+     "code": "641657",
+     "label": "英語基礎演習Ⅱ(advanced)",
+     "sem": "後期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "S-406",
+     "teacher": "(蟹江)",
+     "note": null
+    },
+    {
+     "code": "641658",
+     "label": "英語基礎演習Ⅱ(advanced)",
+     "sem": "後期",
+     "day": "金",
+     "period": 5,
+     "slots": [
+      {
+       "day": "金",
+       "period": 5
+      }
+     ],
+     "cls": "",
+     "retake": false,
+     "biweekly": null,
+     "room": "S-303",
+     "teacher": "榎本",
+     "note": null
+    }
+   ],
+   "extra": true,
+   "courseType": "both"
   },
   {
    "id": "r73",
@@ -4462,7 +5045,8 @@
      "teacher": "情報工学部全教員",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r74",
@@ -4539,7 +5123,8 @@
      "teacher": "宇佐見",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r75",
@@ -4597,7 +5182,8 @@
      "teacher": "坂野",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r76",
@@ -4663,7 +5249,8 @@
      "teacher": "旭・(神道)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r77",
@@ -4740,7 +5327,8 @@
      "teacher": "鈴木(秀)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r78",
@@ -4817,7 +5405,8 @@
      "teacher": "宇佐見",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r79",
@@ -4875,7 +5464,8 @@
      "teacher": "野崎",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r80",
@@ -4914,7 +5504,8 @@
      "teacher": "鈴木(秀)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r81",
@@ -4953,7 +5544,8 @@
      "teacher": "旭",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r82",
@@ -4992,7 +5584,8 @@
      "teacher": "宇佐見",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r83",
@@ -5031,7 +5624,8 @@
      "teacher": "鈴木(秀)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r84",
@@ -5108,7 +5702,8 @@
      "teacher": "吉川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r85",
@@ -5166,7 +5761,8 @@
      "teacher": "吉川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r86",
@@ -5243,7 +5839,8 @@
      "teacher": "山田(宗)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r87",
@@ -5320,7 +5917,8 @@
      "teacher": "山田（啓）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r88",
@@ -5397,7 +5995,8 @@
      "teacher": "倉地",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r89",
@@ -5455,7 +6054,8 @@
      "teacher": "柳田",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r90",
@@ -5532,7 +6132,8 @@
      "teacher": "柳田",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r91",
@@ -5590,7 +6191,8 @@
      "teacher": "坂野",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r92",
@@ -5629,7 +6231,8 @@
      "teacher": "小中",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r93",
@@ -5668,7 +6271,8 @@
      "teacher": "向井",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r94",
@@ -5707,7 +6311,8 @@
      "teacher": "竹本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r95",
@@ -5746,7 +6351,8 @@
      "teacher": "向井",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r96",
@@ -5785,7 +6391,8 @@
      "teacher": "吉川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r97",
@@ -5862,7 +6469,8 @@
      "teacher": "（山本（修））",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r98",
@@ -5920,7 +6528,8 @@
      "teacher": "亀谷",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r99",
@@ -5978,7 +6587,8 @@
      "teacher": "亀谷",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r100",
@@ -6055,7 +6665,8 @@
      "teacher": "米澤(弘)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r101",
@@ -6132,7 +6743,8 @@
      "teacher": "佐川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r102",
@@ -6190,7 +6802,8 @@
      "teacher": "山田(啓)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r103",
@@ -6229,7 +6842,8 @@
      "teacher": "（山本（修））",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r104",
@@ -6287,7 +6901,8 @@
      "teacher": "佐川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r105",
@@ -6326,7 +6941,8 @@
      "teacher": "（山本（修））",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r106",
@@ -6365,7 +6981,8 @@
      "teacher": "山田(啓)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r107",
@@ -6404,7 +7021,8 @@
      "teacher": "髙比良",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r108",
@@ -6443,7 +7061,8 @@
      "teacher": "水沼",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r109",
@@ -6520,7 +7139,8 @@
      "teacher": "田中（敏）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r110",
@@ -6597,7 +7217,8 @@
      "teacher": "山田(宗)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r111",
@@ -6655,7 +7276,8 @@
      "teacher": "田中(敏)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r112",
@@ -6694,7 +7316,8 @@
      "teacher": "寺本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r113",
@@ -6733,7 +7356,8 @@
      "teacher": "川澄",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r114",
@@ -6772,7 +7396,8 @@
      "teacher": "坂野",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r115",
@@ -6811,7 +7436,8 @@
      "teacher": "柳田",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r116",
@@ -6850,7 +7476,8 @@
      "teacher": "佐川",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r117",
@@ -6927,7 +7554,8 @@
      "teacher": "倉地",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r118",
@@ -7004,7 +7632,8 @@
      "teacher": "水沼",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r119",
@@ -7081,7 +7710,8 @@
      "teacher": "寺本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r120",
@@ -7139,7 +7769,8 @@
      "teacher": "小中",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r121",
@@ -7178,7 +7809,8 @@
      "teacher": "向井",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r122",
@@ -7263,7 +7895,8 @@
      "teacher": "旭",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r123",
@@ -7348,7 +7981,8 @@
      "teacher": "川澄・（徳田）",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r124",
@@ -7414,7 +8048,8 @@
      "teacher": "寺本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r125",
@@ -7480,7 +8115,8 @@
      "teacher": "竹本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r126",
@@ -7569,7 +8205,8 @@
      "teacher": "水沼・寺本・髙比良・川澄・野崎",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r127",
@@ -7635,7 +8272,8 @@
      "teacher": "米澤(弘)・髙比良・旭・竹本・(藤井)・(山本(真))",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r128",
@@ -7669,7 +8307,8 @@
      "teacher": null,
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r129",
@@ -7703,7 +8342,8 @@
      "teacher": null,
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r130",
@@ -7742,7 +8382,8 @@
      "teacher": "水沼・吉川・川澄・鈴木・野崎・向井・旭",
      "note": null
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r131",
@@ -7781,7 +8422,8 @@
      "teacher": "情報工学部全教員",
      "note": "※右欄も参照"
     }
-   ]
+   ],
+   "courseType": "both"
   },
   {
    "id": "r132",
@@ -7824,7 +8466,8 @@
      "teacher": "情報工学部全教員",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r133",
@@ -7882,7 +8525,8 @@
      "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r134",
@@ -7940,7 +8584,8 @@
      "teacher": "寺本・髙比良・宇佐見・田中(敏)・(北野)・(伊藤)・(佐々木)・(平野(智))・(古橋)・(石原)・(塩谷)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r135",
@@ -8006,7 +8651,8 @@
      "teacher": "鈴木(秀)・(加藤)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r136",
@@ -8072,7 +8718,8 @@
      "teacher": "米澤(弘)・(宮内)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r137",
@@ -8130,7 +8777,8 @@
      "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r138",
@@ -8188,7 +8836,8 @@
      "teacher": "亀谷・竹本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r139",
@@ -8254,7 +8903,8 @@
      "teacher": "向井・野崎・(神道)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r140",
@@ -8297,7 +8947,8 @@
      "teacher": "柳田・亀谷・小中",
      "note": "※右欄も参照"
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r141",
@@ -8340,7 +8991,8 @@
      "teacher": "情報工学部全教員",
      "note": null
     }
-   ]
+   ],
+   "courseType": "advanced"
   },
   {
    "id": "r142",
@@ -8406,7 +9058,8 @@
      "teacher": "鈴木(秀)・(加藤)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r143",
@@ -8472,7 +9125,8 @@
      "teacher": "米澤(弘)・(宮内)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r144",
@@ -8530,7 +9184,8 @@
      "teacher": "野崎・吉川・(神道(圭))・(上田)・(片野)・(石黒)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r145",
@@ -8588,7 +9243,8 @@
      "teacher": "亀谷・竹本",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r146",
@@ -8654,7 +9310,8 @@
      "teacher": "向井・野崎・(神道)",
      "note": null
     }
-   ]
+   ],
+   "courseType": "general"
   },
   {
    "id": "r147",
@@ -8688,7 +9345,55 @@
      "teacher": null,
      "note": "研究室ごとに実施（時間割表の全コマに記載）"
     }
-   ]
+   ],
+   "courseType": "both"
+  },
+  {
+   "id": "x_mobileA",
+   "dept": "専門教育部門",
+   "group": "情報工学専門科目",
+   "name": "モバイルアプリ開発A",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["2後"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [],
+   "extra": true,
+   "note": "夏期集中",
+   "courseType": "both"
+  },
+  {
+   "id": "x_mobileB",
+   "dept": "専門教育部門",
+   "group": "情報工学専門科目",
+   "name": "モバイルアプリ開発B",
+   "kind": "自由",
+   "credits": 1,
+   "terms": ["2前"],
+   "prog": {
+    "PC": "",
+    "DE": "",
+    "HM": "",
+    "NS": ""
+   },
+   "req": [],
+   "hidden": false,
+   "dsai": false,
+   "offers": [],
+   "extra": true,
+   "termsByYear": {
+    "2023": ["2後"]
+   },
+   "note": "夏期集中",
+   "courseType": "both"
   },
   {
    "id": "r148",
@@ -8707,7 +9412,8 @@
    "req": ["専計"],
    "hidden": false,
    "dsai": false,
-   "offers": []
+   "offers": [],
+   "courseType": "both"
   }
  ]
 }

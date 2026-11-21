@@ -3060,6 +3060,310 @@
     ]
    }
   ],
+  "x_math1": [
+   {
+    "code": "641251",
+    "label": "数学基礎演習Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "水",
+    "period": 5,
+    "room": "E-301",
+    "teacher": "(片岡(紀))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641252",
+    "label": "数学基礎演習Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "E-101",
+    "teacher": "(岡)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641253",
+    "label": "数学基礎演習Ⅰ(advanced)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "遠隔授業",
+    "teacher": "橋本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "x_math2": [
+   {
+    "code": "641651",
+    "label": "数学基礎演習Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "水",
+    "period": 4,
+    "room": "E-301",
+    "teacher": "(片岡(紀))",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "水",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641652",
+    "label": "数学基礎演習Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 4,
+    "room": "E-101",
+    "teacher": "(岡)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641653",
+    "label": "数学基礎演習Ⅱ(advanced)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "遠隔授業",
+    "teacher": "橋本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "x_phys1": [
+   {
+    "code": "641254",
+    "label": "物理学基礎演習Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "木",
+    "period": 5,
+    "room": "E-102",
+    "teacher": "（片岡）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "x_phys2": [
+   {
+    "code": "641654",
+    "label": "物理学基礎演習Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "木",
+    "period": 4,
+    "room": "E-102",
+    "teacher": "（片岡）",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "木",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "x_chem1": [
+   {
+    "code": "641255",
+    "label": "化学基礎演習Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "火",
+    "period": 5,
+    "room": "E-302",
+    "teacher": "(村手)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "x_chem2": [
+   {
+    "code": "641655",
+    "label": "化学基礎演習Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "火",
+    "period": 4,
+    "room": "E-101",
+    "teacher": "(村手)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "火",
+      "period": 4
+     }
+    ]
+   }
+  ],
+  "x_eng1": [
+   {
+    "code": "641256",
+    "label": "英語基礎演習Ⅰ",
+    "semester": "前期",
+    "grade": 1,
+    "day": "月",
+    "period": 5,
+    "room": "E-202",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641257",
+    "label": "英語基礎演習Ⅰ(advanced)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "S-406",
+    "teacher": "(蟹江)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641258",
+    "label": "英語基礎演習Ⅰ(advanced)",
+    "semester": "前期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "S-303",
+    "teacher": "榎本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
+  "x_eng2": [
+   {
+    "code": "641656",
+    "label": "英語基礎演習Ⅱ",
+    "semester": "後期",
+    "grade": 1,
+    "day": "月",
+    "period": 4,
+    "room": "E-202",
+    "teacher": "(岩塚)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "月",
+      "period": 4
+     }
+    ]
+   },
+   {
+    "code": "641657",
+    "label": "英語基礎演習Ⅱ(advanced)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "S-406",
+    "teacher": "(蟹江)",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   },
+   {
+    "code": "641658",
+    "label": "英語基礎演習Ⅱ(advanced)",
+    "semester": "後期",
+    "grade": 1,
+    "day": "金",
+    "period": 5,
+    "room": "S-303",
+    "teacher": "榎本",
+    "note": null,
+    "biweekly": null,
+    "slots": [
+     {
+      "day": "金",
+      "period": 5
+     }
+    ]
+   }
+  ],
   "r73": [
    {
     "code": "641301",

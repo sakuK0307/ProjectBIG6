@@ -2142,6 +2142,222 @@
    "majorForStatus": false
   },
   {
+   "id": "x_math1",
+   "name": "数学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_math2",
+   "name": "数学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_phys1",
+   "name": "物理学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_phys2",
+   "name": "物理学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_chem1",
+   "name": "化学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_chem2",
+   "name": "化学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_eng1",
+   "name": "英語基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_eng2",
+   "name": "英語基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
    "id": "r73",
    "name": "情報工学の世界",
    "department": "専門教育部門",
@@ -5397,6 +5613,67 @@
    "majorForStatus": true
   },
   {
+   "id": "x_mobileA",
+   "name": "モバイルアプリ開発A",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true,
+   "note": "夏期集中"
+  },
+  {
+   "id": "x_mobileB",
+   "name": "モバイルアプリ開発B",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true,
+   "termsByYear": {
+    "2023": [
+     "2後"
+    ]
+   },
+   "note": "夏期集中"
+  },
+  {
    "id": "r148",
    "name": "データサイエンス・AI入門",
    "department": "他学部",
@@ -5426,50 +5703,98 @@
   }
  ],
  "requirements": {
-  "PC": [
-   10,
-   20,
-   8,
-   12,
-   21,
-   14,
-   9,
-   15,
-   104
-  ],
-  "DE": [
-   10,
-   20,
-   8,
-   12,
-   21,
-   14,
-   9,
-   15,
-   104
-  ],
-  "HM": [
-   10,
-   20,
-   8,
-   12,
-   21,
-   14,
-   9,
-   15,
-   104
-  ],
-  "NS": [
-   10,
-   20,
-   8,
-   12,
-   21,
-   14,
-   9,
-   15,
-   104
-  ]
+  "advanced": {
+   "PC": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "DE": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "HM": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "NS": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ]
+  },
+  "general": {
+   "PC": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "DE": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "HM": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "NS": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ]
+  }
  },
  "gpTable": [
   [

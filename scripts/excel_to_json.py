@@ -13,6 +13,10 @@
 読むのは科目の構造（単位数・区分・プログラム指定・集計区分・必要単位数など）だけで、
 成績・学籍番号・氏名は読み出さない。個人情報を抜いた Excel を渡しても同じ結果になる。
 
+Excel に無い科目（学生便覧の自由科目など）は scripts/data/excel_extra.csv に書いておき、ここで Excel の科目と一緒に入れる。
+（列：id,name,dept,group,kind,credits,terms,termsByYear,note。同じ部門・科目群の最後の科目のうしろに入れる）
+これより後のスクリプト（timetable_to_json.py・build_course_data.py）は、excel_*.json の科目をそのまま使えばよい。
+
 必要なもの: pip install openpyxl
 """
 import csv
@@ -28,6 +32,9 @@ HERE = Path(__file__).resolve().parent
 MATERIALS = HERE / "materials"  # 元の資料（Excel・時間割表・便覧）
 DATA = HERE / "data"            # できあがったデータ
 PROGRAMS = ["PC", "DE", "HM", "NS"]
+TERMS = ["1前", "1後", "2前", "2後", "3前", "3後", "4前", "4後"]  # slot の番号（0=1年前期 … 7=4年後期）
+# 区分 → units のキー
+KIND_UNITS = {"必修": "required", "選必": "selReq", "選択": "elective", "自由": "free"}
 
 # 成績表シートの集計列 → 区分（その列に数式がある科目が、その区分に数えられる）
 AGG = {"AI": "generalSelReq", "AJ": "generalTotal", "AK": "scienceDesignated", "AL": "scienceSelReq",
@@ -62,6 +69,38 @@ def write_csv(courses, path):
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
+
+
+def read_excel_extra(path):
+    """excel_extra.csv（Excel に無い科目）を、Excel から読んだ科目と同じ形にする。
+    便覧の自由科目なので、プログラム指定・集計区分は空（卒業要件に数えない）"""
+    out = []
+    for r in csv.DictReader(open(path, encoding="utf-8-sig")):  # utf-8-sig：Excel で保存しても読めるように
+        units = {k: 0 for k in ("required", "selReq", "elective", "free")}
+        units[KIND_UNITS[r["kind"]]] = int(r["credits"])
+        terms = r["terms"].split()
+        c = {
+            "id": r["id"], "name": r["name"], "department": r["dept"], "group": r["group"] or None,
+            "units": units, "marks": {p: None for p in PROGRAMS},
+            "slot": TERMS.index(terms[0]) if terms else None,
+            "categories": [], "infoBasic": False, "dsai": False, "countsInRequiredShortage": False,
+            "listing": [], "hidden": False, "majorForStatus": False,
+            "extra": True,  # Excel に無く、excel_extra.csv から足した科目
+        }
+        # 入学年度で標準の学期が違うとき：「2023=2後」（年度=学期。複数は ; で区切る）
+        if r.get("termsByYear"):
+            c["termsByYear"] = {y: t.split() for y, t in (x.split("=") for x in r["termsByYear"].split(";"))}
+        if r.get("note"):
+            c["note"] = r["note"]
+        out.append(c)
+    return out
+
+
+def insert_after_group(courses, c):
+    """同じ部門・科目群の最後の科目のうしろに差し込む（一覧の見出しが分かれないように）"""
+    at = max((i for i, x in enumerate(courses) if x["department"] == c["department"] and x["group"] == c["group"]),
+             default=len(courses) - 1)
+    courses.insert(at + 1, c)
 
 
 def main():
@@ -114,8 +153,23 @@ def main():
             "majorForStatus": 73 <= r <= 147,
         })
 
-    # 必要単位数：各プログラムシートの B19:B27（数値の入力。先進プロジェクトコース用）
-    requirements = {p: [wb[p].cell(r, 2).value for r in range(19, 28)] for p in PROGRAMS}
+    # Excel に無い科目（学生便覧の自由科目など）を excel_extra.csv から足す
+    extra_path = DATA / "excel_extra.csv"
+    if extra_path.exists():
+        for c in read_excel_extra(extra_path):
+            insert_after_group(courses, c)
+
+    # 必要単位数（9 項目）：コースごと・プログラムごと
+    #   advanced（先進プロジェクトコース）：各プログラムシートの B19:B27
+    #   general（総合コース）：同じシートの O19:O27「総合コース用」。O が空の行は先進と同じ（B の値）
+    #   （総合は専門必修 21→10、◎ 14→16、○ 15→20。先進プロジェクトの必修科目がない分、◎・○ が多い）
+    def requirement(p, col):
+        return [wb[p].cell(r, col).value if wb[p].cell(r, col).value is not None else wb[p].cell(r, 2).value
+                for r in range(19, 28)]
+    requirements = {
+        "advanced": {p: requirement(p, 2) for p in PROGRAMS},
+        "general": {p: requirement(p, 15) for p in PROGRAMS},
+    }
 
     # 成績概況の基準（成績表 1595〜1597行目の数式から読む）
     status_rules = []
