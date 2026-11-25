@@ -61,28 +61,33 @@ if (timetable) {
 
   for (const day of ["時限", ...Object.values(days)]) {
     const cell = document.createElement("div");
-    cell.className = "cell header";
+    cell.className = "cell timetable-heading";
     cell.textContent = day;
     timetable.appendChild(cell);
   }
 
   for (const period of periods) {
     const periodCell = document.createElement("div");
-    periodCell.className = "cell header";
+    periodCell.className = "cell timetable-heading";
     periodCell.textContent = `${period}限`;
     timetable.appendChild(periodCell);
 
     for (const day of Object.keys(days)) {
+      const key = slotKey({ day, period });
       const cell = document.createElement("button");
       cell.type = "button";
       cell.className = "cell empty";
+      cell.disabled = !candidatesBySlot.has(key);
       cell.dataset.day = days[day];
       cell.dataset.dayCode = day;
       cell.dataset.period = String(period);
-      cell.setAttribute("aria-label", slotLabel({ day, period }));
-      cell.setAttribute("aria-controls", picker.id);
-      cell.setAttribute("aria-expanded", "false");
-      cells.set(slotKey({ day, period }), cell);
+      const label = slotLabel({ day, period });
+      cell.setAttribute("aria-label", cell.disabled ? `${label} 講義候補なし` : label);
+      if (!cell.disabled) {
+        cell.setAttribute("aria-controls", picker.id);
+        cell.setAttribute("aria-expanded", "false");
+      }
+      cells.set(key, cell);
 
       timetable.appendChild(cell);
     }
@@ -142,7 +147,7 @@ if (timetable) {
 
   timetable.addEventListener("click", (event) => {
     const cell = event.target.closest("button.cell");
-    if (!cell) return;
+    if (!cell || cell.disabled) return;
 
     if (selectedCell) closePicker(false);
     selectedCell = cell;
