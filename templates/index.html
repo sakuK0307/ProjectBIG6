@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProjectBIG6 | 履修下書き</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./src/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   
+    <title>ProjectBIG6 | 履修下書き</title>
 
     <!-- CSSの読み込み -->
     <link rel="stylesheet"
@@ -16,121 +13,14 @@
     <!-- JavaScriptの読み込み -->
     <script src="{{ url_for('static', filename='src/main.js') }}" defer></script>
 </head>
+
 <body>
-  <main class="container">
-    <div class="page-layout">
-      <section class="draft-section">
-        <header>
-          <h1>履修下書き</h1>
-          <p>時間割を作成しましょう</p>
-        </header>
-        <div class="timetable">
-          <div class="timetable-grid" id="timetable"></div>
-        </div>
-      </section>
-      
-      <!-- 卒業要件カード -->
-    <aside class="requirements-card">
-      <div class="requirements-header">
-        <h2>卒業要件</h2>
-        <p>データエンジニアリング（DE）プログラム</p>
-      </div>
 
-      <div class="requirements-status">
-        <span>プログラム修了判定</span>
-        <span class="status-badge">未充足</span>
-      </div>
-
-      <h3>総合基礎部門</h3>
-      <div class="credit-list">
-        <div class="credit-item">
-          <div class="credit-label">選択必修科目</div>
-          <progress value="10" max="10" aria-label="選択必修科目"></progress>
-          <span class="credit-count">12 / 10</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label">合計単位数</div>
-          <progress value="20" max="20" aria-label="合計単位数"></progress>
-          <span class="credit-count">20 / 20</span>
-        </div>
-      </div>
-
-      <h3>専門教育部門</h3>
-      <div class="credit-list">
-        <div class="credit-item">
-          <div class="credit-label"><span class="credit-label-group">理工基礎</span><span class="credit-label-separator">・</span><span class="credit-label-detail">指定科目</span></div>
-          <progress value="8" max="8" aria-label="理工基礎・指定科目"></progress>
-          <span class="credit-count">8 / 8</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label"><span class="credit-label-group">理工基礎</span><span class="credit-label-separator">・</span><span class="credit-label-detail">選択必修科目</span></div>
-          <progress value="12" max="12" aria-label="理工基礎・選択必修科目"></progress>
-          <span class="credit-count">19 / 12</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label">必修科目</div>
-          <progress value="10" max="10" aria-label="必修科目"></progress>
-          <span class="credit-count">21 / 10</span>
-        </div>
-
-        <div class="credit-item is-short">
-          <div class="credit-label"><span class="credit-label-group">プログラム指定</span><span class="credit-label-separator">・</span><span class="credit-label-detail">◎科目</span></div>
-          <progress value="14" max="16" aria-label="プログラム指定・◎科目"></progress>
-          <span class="credit-count">14 / 16</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label"><span class="credit-label-group">プログラム指定</span><span class="credit-label-separator">・</span><span class="credit-label-detail">※科目</span></div>
-          <progress value="9" max="9" aria-label="プログラム指定・※科目"></progress>
-          <span class="credit-count">15 / 9</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label"><span class="credit-label-group">プログラム指定</span><span class="credit-label-separator">・</span><span class="credit-label-detail">○科目（※含む）</span></div>
-          <progress value="20" max="20" aria-label="プログラム指定・○科目（※含む）"></progress>
-          <span class="credit-count">33 / 20</span>
-        </div>
-
-        <div class="credit-item">
-          <div class="credit-label">合計単位数</div>
-          <progress value="104" max="104" aria-label="合計単位数"></progress>
-          <span class="credit-count">119 / 104</span>
-        </div>
-      </div>
-
-      <div class="requirements-footer">
-        <div>
-          <strong>不足単位数</strong>
-          <p>プログラム指定・◎科目</p>
-        </div>
-        <strong class="missing-credits">2 単位</strong>
-      </div>
-
-      <p class="sample-note">※ DEプログラムのサンプルデータ</p>
-    </aside>
-
-    </div>
-  </main>
-
-  <section id="course-picker" aria-labelledby="course-picker-title" hidden>
-    <h2 id="course-picker-title"></h2>
-    <ul id="course-options"></ul>
-    <div class="course-picker-actions">
-      <button type="button" id="close-course-picker">閉じる</button>
-      <button type="button" id="remove-course" hidden>登録を削除</button>
-    </div>
-  </section>
-  
-    <!-- ヘッダー -->
+    <!-- ① ヘッダー -->
     <header class="header">
 
-        <!-- サイト名 -->
         <h1 class="logo">MY WEBSITE</h1>
 
-        <!-- ページ移動ボタン -->
         <nav class="navigation">
             <a href="{{ url_for('home') }}">HOME</a>
             <a href="{{ url_for('list_page') }}">LIST</a>
@@ -148,7 +38,31 @@
 
     </header>
 
-    <!-- 右側のサイドバー -->
+
+    <!-- ② 履修下書き・時間割 -->
+    <main class="container">
+
+        <div class="page-layout">
+
+            <section class="draft-section">
+
+                <header>
+                    <h1>履修下書き</h1>
+                    <p>時間割を作成しましょう</p>
+                </header>
+
+                <div class="timetable">
+                    <div class="timetable-grid" id="timetable"></div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ③ 右側のサイドバー -->
     <aside
         id="sidebar"
         class="sidebar"
@@ -156,16 +70,144 @@
 
         <!-- 閉じるボタン -->
         <button
+            type="button"
             id="closeButton"
             class="close-button"
             aria-label="メニューを閉じる">
             ×
         </button>
 
-        <h2>MENU</h2>
 
-        <!-- サイドバーの内容は後から追加 -->
+        <!-- 卒業要件カード -->
+        <div class="requirements-card">
+
+            <div class="requirements-header">
+                <h2>卒業要件</h2>
+                <p>データエンジニアリング（DE）プログラム</p>
+            </div>
+
+            <div class="requirements-status">
+                <span>プログラム修了判定</span>
+                <span class="status-badge">未充足</span>
+            </div>
+
+            <h3>総合基礎部門</h3>
+
+            <div class="credit-list">
+
+                <div class="credit-item">
+                    <div class="credit-label">選択必修科目</div>
+                    <progress value="10" max="10" aria-label="選択必修科目"></progress>
+                    <span class="credit-count">12 / 10</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">合計単位数</div>
+                    <progress value="20" max="20" aria-label="合計単位数"></progress>
+                    <span class="credit-count">20 / 20</span>
+                </div>
+
+            </div>
+
+
+            <h3>専門教育部門</h3>
+
+            <div class="credit-list">
+
+                <div class="credit-item">
+                    <div class="credit-label">
+                        <span class="credit-label-group">理工基礎</span>
+                        <span class="credit-label-separator">・</span>
+                        <span class="credit-label-detail">指定科目</span>
+                    </div>
+                    <progress value="8" max="8" aria-label="理工基礎・指定科目"></progress>
+                    <span class="credit-count">8 / 8</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">
+                        <span class="credit-label-group">理工基礎</span>
+                        <span class="credit-label-separator">・</span>
+                        <span class="credit-label-detail">選択必修科目</span>
+                    </div>
+                    <progress value="12" max="12" aria-label="理工基礎・選択必修科目"></progress>
+                    <span class="credit-count">19 / 12</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">必修科目</div>
+                    <progress value="10" max="10" aria-label="必修科目"></progress>
+                    <span class="credit-count">21 / 10</span>
+                </div>
+
+                <div class="credit-item is-short">
+                    <div class="credit-label">
+                        <span class="credit-label-group">プログラム指定</span>
+                        <span class="credit-label-separator">・</span>
+                        <span class="credit-label-detail">◎科目</span>
+                    </div>
+                    <progress value="14" max="16" aria-label="プログラム指定・◎科目"></progress>
+                    <span class="credit-count">14 / 16</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">
+                        <span class="credit-label-group">プログラム指定</span>
+                        <span class="credit-label-separator">・</span>
+                        <span class="credit-label-detail">※科目</span>
+                    </div>
+                    <progress value="9" max="9" aria-label="プログラム指定・※科目"></progress>
+                    <span class="credit-count">15 / 9</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">
+                        <span class="credit-label-group">プログラム指定</span>
+                        <span class="credit-label-separator">・</span>
+                        <span class="credit-label-detail">○科目（※含む）</span>
+                    </div>
+                    <progress value="20" max="20" aria-label="プログラム指定・○科目（※含む）"></progress>
+                    <span class="credit-count">33 / 20</span>
+                </div>
+
+                <div class="credit-item">
+                    <div class="credit-label">合計単位数</div>
+                    <progress value="104" max="104" aria-label="合計単位数"></progress>
+                    <span class="credit-count">119 / 104</span>
+                </div>
+
+            </div>
+
+
+            <div class="requirements-footer">
+                <div>
+                    <strong>不足単位数</strong>
+                    <p>プログラム指定・◎科目</p>
+                </div>
+
+                <strong class="missing-credits">2 単位</strong>
+            </div>
+
+            <p class="sample-note">※ DEプログラムのサンプルデータ</p>
+
+        </div>
 
     </aside>
+
+
+    <!-- ④ 科目選択画面 -->
+    <section id="course-picker" aria-labelledby="course-picker-title" hidden>
+
+        <h2 id="course-picker-title"></h2>
+
+        <ul id="course-options"></ul>
+
+        <div class="course-picker-actions">
+            <button type="button" id="close-course-picker">閉じる</button>
+            <button type="button" id="remove-course" hidden>登録を削除</button>
+        </div>
+
+    </section>
+
 </body>
 </html>

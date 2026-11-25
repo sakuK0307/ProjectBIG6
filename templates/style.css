@@ -1,479 +1,16 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: #f5f7fb;
-  color: #263248;
-  font-family: system-ui, sans-serif;
-}
-
-.container {
-  max-width: 1440px;
-  margin: 48px auto;
-  padding: 0 24px;
-}
-
-header {
-  margin-bottom: 24px;
-}
-
-header h1 {
-  margin-bottom: 8px;
-}
-
-header p {
-  color: #64748b;
-}
-
-.timetable {
-  padding: 4px;
-  overflow-x: auto;
-}
-
-.timetable-grid {
-  display: grid;
-  grid-template-columns: 56px repeat(6, minmax(100px, 1fr));
-  gap: 4px;
-  min-width: 700px;
-}
-
-.cell {
-  min-height: 90px;
-  padding: 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  background: #fff;
-}
-
-.cell.timetable-heading {
-  min-height: auto;
-  text-align: center;
-  font-weight: bold;
-  color: #000;
-  background: #dce4ef;
-  border-color: transparent;
-}
-
-/* セルをクリックできるように */
-button.cell {
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-button.cell.empty:enabled {
-  background: #edf4ff;
-  border-color: #afc4df;
-  color: #315e91;
-}
-
-button.cell.empty:enabled:hover {
-  background: #e2eeff;
-  border-color: #7198cb;
-}
-
-button.cell.empty:enabled::before {
-  content: "+" / "";
-  font-size: 20px;
-  line-height: 1;
-}
-
-button.cell:disabled {
-  background: #e9edf2;
-  border-color: transparent;
-  cursor: default;
-}
-
-/* 選択中のセル */
-button.cell.selected,
-button.cell.empty:enabled.selected {
-  background: #dbeafe;
-  border: 2px solid #3b82f6;
-}
-
-.cell.registered:not(.selected) {
-  background: #d6efe3;
-  border-color: #83bda2;
-  color: #183f31;
-}
-
-.cell.registered:not(.selected):hover {
-  background: #c5e8d7;
-  border-color: #548b72;
-}
-
-#course-picker {
-  position: fixed;
-  z-index: 1;
-  top: var(--picker-top, 8px);
-  left: var(--picker-left, 8px);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: min(320px, calc(100% - 16px));
-  max-height: min(360px, calc(100dvh - 16px));
-  padding: 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 4px 16px #0002;
-}
-
-#course-picker[hidden] {
-  display: none;
-}
-
-@media (max-width: 768px), (pointer: coarse) {
-  #course-picker {
-    inset: auto 0 0;
-    width: 100%;
-    max-height: 50dvh;
-    padding-bottom: max(12px, env(safe-area-inset-bottom));
-  }
-}
-
-#course-picker-title {
-  margin: 0;
-  font-size: 18px;
-}
-
-#course-options {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-#course-picker button {
-  min-height: 44px;
-  padding: 8px 12px;
-  font: inherit;
-  border-radius: 4px;
-  overflow-wrap: anywhere;
-}
-
-#course-options button {
-  width: 100%;
-  text-align: left;
-}
-
-.course-picker-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 4px;
-}
-
-/* キーボード操作時 */
-button.cell:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 2px;
-}
-/* ページレイアウト*/
-
-.page-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 4px;
-  align-items: start;
-}
-
-.draft-section {
-  min-width: 0;
-}
-
-.requirements-card {
-  padding: 24px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 4px 24px #0000000d;
-}
-
-.requirements-card h2 {
-  margin-top: 0;
-}
-
-.credit-summary strong {
-  display: block;
-  margin: 12px 0;
-  font-size: 28px;
-}
-
-.credit-summary small {
-  font-size: 14px;
-  font-weight: normal;
-  color: #64748b;
-}
-
-.credit-summary progress {
-  width: 100%;
-  height: 10px;
-  accent-color: #3b82f6;
-}
-
-.credit-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 4px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-/* ===== 2カラムレイアウト ===== */
-
-.container {
-  max-width: 1440px;
-}
-
-.page-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 4px;
-  align-items: start;
-}
-
-.draft-section {
-  min-width: 0;
-}
-
-/* ===== 卒業要件カード ===== */
-
-.requirements-card {
-  padding: 24px;
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 24px #0000000d;
-}
-
-.requirements-header h2 {
-  margin: 0;
-  font-size: 20px;
-}
-
-.requirements-header p {
-  margin: 8px 0 20px;
-  font-size: 12px;
-  color: #64748b;
-}
-
-.requirements-status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.status-badge {
-  flex-shrink: 0;
-  padding: 5px 10px;
-  border-radius: 4px;
-  background: #fff3dc;
-  color: #a16207;
-  font-size: 12px;
-}
-
-.requirements-card h3 {
-  margin: 24px 0 16px;
-  font-size: 15px;
-}
-
-/* ===== 単位進捗 ===== */
-
-.credit-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.credit-label {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.credit-count {
-  justify-self: end;
-  min-width: 9ch;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: #d6efe3;
-  color: #183f31;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
-.credit-item.is-short .credit-count {
-  background: #ffebc6;
-  color: #713c0e;
-}
-
-.credit-item progress {
-  display: block;
-  width: 100%;
-  height: 6px;
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.credit-item progress::-webkit-progress-bar {
-  background: #e2e8f0;
-  border-radius: 4px;
-}
-
-.credit-item progress::-webkit-progress-value {
-  background: #279c75;
-  border-radius: 4px;
-}
-
-.credit-item.is-short progress::-webkit-progress-value {
-  background: #d58a30;
-}
-
-/* ===== 不足単位数 ===== */
-
-.requirements-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
-  font-size: 13px;
-}
-
-.requirements-footer p {
-  margin: 6px 0 0;
-  font-size: 11px;
-  color: #64748b;
-}
-
-.missing-credits {
-  flex-shrink: 0;
-  font-size: 20px;
-}
-
-.sample-note {
-  margin: 20px 0 0;
-  font-size: 11px;
-  color: #94a3b8;
-}
-
-/* ===== レスポンシブ対応 ===== */
-
-/* タブレット・スマホでは縦並び */
-@media (max-width: 1024px) {
-  .page-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .requirements-card {
-    width: 100%;
-  }
-
-  .credit-item {
-    grid-template-columns: minmax(0, 1fr) clamp(96px, 42%, 240px);
-    align-items: center;
-  }
-
-  .credit-label-separator {
-    display: none;
-  }
-
-  .credit-label-group {
-    display: block;
-    color: #475569;
-    font-size: 12px;
-    font-weight: 400;
-  }
-
-  .credit-label-detail {
-    display: block;
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .credit-item progress {
-    height: 10px;
-  }
-
-  .credit-count {
-    grid-column: 2;
-  }
-}
-
-/* スマホでは余白を縮小 */
-@media (max-width: 480px) {
-  .requirements-card {
-    padding: 16px;
-  }
-
-  .requirements-header h2 {
-    font-size: 18px;
-  }
-}
-
-
-
-/* タブレット・スマホ */
-@media (max-width: 1024px) {
-  .page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .requirements-card {
-    width: 100%;
-  }
-}
-/* タブレット */
-@media (max-width: 768px) {
-  .container {
-    margin: 24px auto;
-    padding: 0 16px;
-  }
-
-  .cell {
-    min-height: 75px;
-    padding: 8px;
-  }
-}
-
-/* スマートフォン */
-@media (max-width: 480px) {
-  .container {
-    margin: 16px auto;
-    padding: 0 12px;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
-}
-
 /* =========================
-   ページ全体
+   基本設定
 ========================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    background: #f5f7fb;
+    color: #263248;
+    font-family: system-ui, sans-serif;
     overflow-x: hidden;
 }
 
@@ -482,10 +19,15 @@ body {
 ========================= */
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    width: 100%;
     padding: 15px 30px;
 
     background-color: #172554;
@@ -499,9 +41,7 @@ body {
     margin: 0;
 }
 
-/* =========================
-   ページ移動ボタン
-========================= */
+/* ページ移動ボタン */
 
 .navigation {
     display: flex;
@@ -511,81 +51,245 @@ body {
 .navigation a {
     color: white;
     text-decoration: none;
-
     padding: 8px 12px;
 }
-
-/* マウスを乗せたとき */
 
 .navigation a:hover {
     background-color: #334155;
     border-radius: 4px;
 }
 
-/* =========================
-   メニューボタン
-========================= */
+/* メニューボタン */
 
 .menu-button {
     font-size: 25px;
-
     background: none;
     color: white;
     border: none;
-
     cursor: pointer;
 }
 
 /* =========================
-   メイン画面
-   ========================= */
+   履修下書き画面
+========================= */
 
-main {
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 30px;
-
-    transition: width 0.3s ease;
+.container {
+    max-width: 1440px;
+    margin: 48px auto;
+    padding: 0 24px;
 }
 
-/* サイドバーを開いたとき */
+.draft-section {
+    min-width: 0;
+}
 
-body.menu-open main {
-    width: calc(100% - var(--sidebar-width));
+/* 履修下書きの見出し */
+
+.draft-section header {
+    margin-bottom: 24px;
+}
+
+.draft-section header h1 {
+    margin-bottom: 8px;
+}
+
+.draft-section header p {
+    color: #64748b;
+}
+
+/* =========================
+   時間割表
+   ※元のデザインを維持
+========================= */
+
+.timetable {
+    padding: 4px;
+    overflow-x: auto;
+}
+
+.timetable-grid {
+    display: grid;
+    grid-template-columns: 56px repeat(6, minmax(100px, 1fr));
+    gap: 4px;
+    min-width: 700px;
+}
+
+.cell {
+    min-height: 90px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.cell.timetable-heading {
+    min-height: auto;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    background: #dce4ef;
+    border-color: transparent;
+}
+
+/* セルをクリックできるように */
+
+button.cell {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+button.cell.empty:enabled {
+    background: #edf4ff;
+    border-color: #afc4df;
+    color: #315e91;
+}
+
+button.cell.empty:enabled:hover {
+    background: #e2eeff;
+    border-color: #7198cb;
+}
+
+button.cell.empty:enabled::before {
+    content: "+";
+    font-size: 20px;
+    line-height: 1;
+}
+
+button.cell:disabled {
+    background: #e9edf2;
+    border-color: transparent;
+    cursor: default;
+}
+
+/* 選択中のセル */
+
+button.cell.selected,
+button.cell.empty:enabled.selected {
+    background: #dbeafe;
+    border: 2px solid #3b82f6;
+}
+
+.cell.registered:not(.selected) {
+    background: #d6efe3;
+    border-color: #83bda2;
+    color: #183f31;
+}
+
+.cell.registered:not(.selected):hover {
+    background: #c5e8d7;
+    border-color: #548b72;
+}
+
+/* キーボード操作時 */
+
+button.cell:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* =========================
+   科目選択画面
+========================= */
+
+#course-picker {
+    position: fixed;
+    z-index: 1002;
+    top: var(--picker-top, 8px);
+    left: var(--picker-left, 8px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: min(320px, calc(100% - 16px));
+    max-height: min(360px, calc(100dvh - 16px));
+
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+
+    background: #fff;
+    box-shadow: 0 4px 16px #0002;
+}
+
+#course-picker[hidden] {
+    display: none;
+}
+
+#course-picker-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+#course-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#course-picker button {
+    min-height: 44px;
+    padding: 8px 12px;
+    font: inherit;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+}
+
+#course-options button {
+    width: 100%;
+    text-align: left;
+}
+
+.course-picker-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px;
 }
 
 /* =========================
    右側のサイドバー
-   ========================= */
+========================= */
 
 :root {
-    --sidebar-width: clamp(200px, 20vw, 320px);
+    --sidebar-width: 30vw;
 }
 
 .sidebar {
     position: fixed;
-
     top: 0;
     right: 0;
 
     width: var(--sidebar-width);
+    min-width: 320px;
+    max-width: 480px;
     height: 100vh;
 
     box-sizing: border-box;
     padding: 25px;
 
-    background-color: white;
-
+    background-color: #f5f7fb;
     box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
 
-    /* 最初は右側に隠しておく */
+    /* 最初は画面の右側に隠す */
     transform: translateX(100%);
 
     transition: transform 0.3s ease;
 
     z-index: 1001;
-    
+
+    /* 卒業要件が長い場合はスクロール */
+    overflow-y: auto;
 }
 
 /* サイドバーを表示 */
@@ -594,13 +298,10 @@ body.menu-open main {
     transform: translateX(0);
 }
 
-/* =========================
-   サイドバーの閉じるボタン
-   ========================= */
+/* 閉じるボタン */
 
 .close-button {
     display: block;
-
     margin-left: auto;
 
     font-size: 30px;
@@ -612,47 +313,276 @@ body.menu-open main {
 }
 
 /* =========================
-   画面幅600px以下
-   ========================= */
+   卒業要件カード
+========================= */
 
-@media screen and (max-width: 600px) {
+.requirements-card {
+    width: 100%;
+    padding: 24px;
 
-    /* ヘッダーを折り返す */
+    background: #fff;
+    border-radius: 4px;
+
+    box-shadow: 0 4px 24px #0000000d;
+}
+
+.requirements-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.requirements-header p {
+    margin: 8px 0 20px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.requirements-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-badge {
+    flex-shrink: 0;
+    padding: 5px 10px;
+
+    border-radius: 4px;
+    background: #fff3dc;
+    color: #a16207;
+
+    font-size: 12px;
+}
+
+.requirements-card h3 {
+    margin: 24px 0 16px;
+    font-size: 15px;
+}
+
+/* =========================
+   単位進捗
+========================= */
+
+.credit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.credit-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.credit-count {
+    justify-self: end;
+    min-width: 9ch;
+
+    padding: 2px 8px;
+    border-radius: 4px;
+
+    background: #d6efe3;
+    color: #183f31;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.credit-item.is-short .credit-count {
+    background: #ffebc6;
+    color: #713c0e;
+}
+
+.credit-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.credit-item progress {
+    display: block;
+    width: 100%;
+    height: 6px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.credit-item progress::-webkit-progress-bar {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.credit-item progress::-webkit-progress-value {
+    background: #279c75;
+    border-radius: 4px;
+}
+
+.credit-item.is-short progress::-webkit-progress-value {
+    background: #d58a30;
+}
+
+/* =========================
+   不足単位数
+========================= */
+
+.requirements-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+.requirements-footer p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.missing-credits {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.sample-note {
+    margin: 20px 0 0;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* =========================
+   タブレット対応
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .cell {
+        min-height: 75px;
+        padding: 8px;
+    }
+
+    .credit-item {
+        grid-template-columns: minmax(0, 1fr) clamp(96px, 42%, 240px);
+        align-items: center;
+    }
+
+    .credit-label-separator {
+        display: none;
+    }
+
+    .credit-label-group {
+        display: block;
+        color: #475569;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .credit-label-detail {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .credit-item progress {
+        height: 10px;
+    }
+
+    .credit-count {
+        grid-column: 2;
+    }
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 600px) {
 
     .header {
         flex-wrap: wrap;
         padding: 12px 15px;
     }
 
-    /* サイト名 */
-
     .logo {
         font-size: 20px;
     }
-
-    /* メニューボタンを右上に配置 */
 
     .menu-button {
         order: 2;
     }
 
-    /* ページ移動ボタンを下の段に配置 */
-
     .navigation {
         order: 3;
-
         width: 100%;
-
         justify-content: center;
-
         margin-top: 10px;
         gap: 15px;
     }
 
-    /* スマートフォンではサイドバーを広めにする */
-
     :root {
-        --sidebar-width: clamp(180px, 80vw, 300px);
+        --sidebar-width: 85vw;
     }
 
+    .sidebar {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        margin: 16px auto;
+        padding: 0 12px;
+    }
+
+    .draft-section header h1 {
+        font-size: 24px;
+    }
+
+    .requirements-card {
+        padding: 16px;
+    }
+
+    .requirements-header h2 {
+        font-size: 18px;
+    }
+}
+
+/* タッチ操作端末の科目選択画面 */
+
+@media (max-width: 768px), (pointer: coarse) {
+
+    #course-picker {
+        inset: auto 0 0;
+        width: 100%;
+        max-height: 50dvh;
+        padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
 }
