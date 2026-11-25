@@ -130,10 +130,12 @@ if (timetable) {
     const gap = 8;
     const right = document.documentElement.clientWidth - picker.offsetWidth - gap;
     const bottom = document.documentElement.clientHeight - picker.offsetHeight - gap;
-    const side = cell.right + gap <= right ? cell.right + gap : cell.left - picker.offsetWidth - gap;
+    const fitsOnRight = cell.right + gap <= right;
+    const side = fitsOnRight ? cell.right + gap : cell.left - picker.offsetWidth - gap;
     // セルの右に収まらないときは左を使い、画面内に収める。
     picker.style.setProperty("--picker-left", `${Math.max(gap, Math.min(side, right))}px`);
     picker.style.setProperty("--picker-top", `${Math.max(gap, Math.min(cell.top, bottom))}px`);
+    picker.style.setProperty("--picker-enter-side", fitsOnRight ? "-8px" : "8px");
   }
 
   function closePicker(restoreFocus) {
@@ -149,7 +151,11 @@ if (timetable) {
     const cell = event.target.closest("button.cell");
     if (!cell || cell.disabled) return;
 
-    if (selectedCell) closePicker(false);
+    if (selectedCell) {
+      closePicker(false);
+      // 非表示を先に反映し、PCでは別のセルを開くときもアニメーションを再生する。
+      if (!bottomPanel.matches) getComputedStyle(picker).display;
+    }
     selectedCell = cell;
     cell.classList.add("selected");
     cell.setAttribute("aria-expanded", "true");
@@ -165,12 +171,25 @@ if (timetable) {
       const item = document.createElement("li");
       const button = document.createElement("button");
       const conflicts = conflictsWithDraft(course, currentId);
+      const registered = course.id === currentId;
+      const name = document.createElement("span");
+      const credits = document.createElement("span");
       button.type = "button";
       button.dataset.courseId = course.id;
-      button.disabled = conflicts || course.id === currentId;
-      button.textContent = `${course.name}（${course.credits}単位）`;
-      if (conflicts) button.textContent += " · 他の登録講義と重複";
-      if (course.id === currentId) button.textContent += " · 登録済み";
+      button.disabled = conflicts || registered;
+      button.classList.toggle("is-registered", registered);
+      name.className = "course-option-name";
+      name.textContent = course.name;
+      credits.className = "course-option-credits";
+      credits.textContent = `${course.credits}単位`;
+      button.append(name, credits);
+
+      if (button.disabled) {
+        const status = document.createElement("span");
+        status.className = "course-option-status";
+        status.textContent = registered ? "登録済み" : "他の登録講義と重複";
+        button.appendChild(status);
+      }
       item.appendChild(button);
       options.appendChild(item);
     }
