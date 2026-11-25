@@ -28,10 +28,7 @@ header p {
 }
 
 .timetable {
-  padding: 20px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 4px 24px #0000000d;
+  padding: 4px;
   overflow-x: auto;
 }
 
@@ -55,11 +52,8 @@ header p {
   text-align: center;
   font-weight: bold;
   color: #000;
-  background: #edf2ff;
-}
-
-.cell.empty {
-  background: #f8fafc;
+  background: #dce4ef;
+  border-color: transparent;
 }
 
 /* セルをクリックできるように */
@@ -71,26 +65,45 @@ button.cell {
   overflow-wrap: anywhere;
 }
 
-/* マウスを重ねたとき */
-button.cell:not(:disabled):hover {
-  background: #eaf0ff;
-  border-color: #9ab6ff;
+button.cell.empty:enabled {
+  background: #edf4ff;
+  border-color: #afc4df;
+  color: #315e91;
+}
+
+button.cell.empty:enabled:hover {
+  background: #e2eeff;
+  border-color: #7198cb;
+}
+
+button.cell.empty:enabled::before {
+  content: "+" / "";
+  font-size: 20px;
+  line-height: 1;
 }
 
 button.cell:disabled {
-  background: #e2e8f0;
-  border-color: #cbd5e1;
+  background: #e9edf2;
+  border-color: transparent;
   cursor: default;
 }
 
 /* 選択中のセル */
-.cell.selected {
+button.cell.selected,
+button.cell.empty:enabled.selected {
   background: #dbeafe;
   border: 2px solid #3b82f6;
 }
 
 .cell.registered:not(.selected) {
-  background: #edf2ff;
+  background: #d6efe3;
+  border-color: #83bda2;
+  color: #183f31;
+}
+
+.cell.registered:not(.selected):hover {
+  background: #c5e8d7;
+  border-color: #548b72;
 }
 
 #course-picker {
@@ -207,8 +220,8 @@ button.cell:focus-visible {
 }
 
 .credit-item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 4px;
   padding: 12px 0;
   border-bottom: 1px solid #e2e8f0;
@@ -285,18 +298,26 @@ button.cell:focus-visible {
 }
 
 .credit-label {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 4px;
-  margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.credit-label span:last-child {
-  flex-shrink: 0;
-  color: #64748b;
+.credit-count {
+  justify-self: end;
+  min-width: 9ch;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #d6efe3;
+  color: #183f31;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
+}
+
+.credit-item.is-short .credit-count {
+  background: #ffebc6;
+  color: #713c0e;
 }
 
 .credit-item progress {
@@ -365,6 +386,36 @@ button.cell:focus-visible {
   .requirements-card {
     width: 100%;
   }
+
+  .credit-item {
+    grid-template-columns: minmax(0, 1fr) clamp(96px, 42%, 240px);
+    align-items: center;
+  }
+
+  .credit-label-separator {
+    display: none;
+  }
+
+  .credit-label-group {
+    display: block;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .credit-label-detail {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .credit-item progress {
+    height: 10px;
+  }
+
+  .credit-count {
+    grid-column: 2;
+  }
 }
 
 /* スマホでは余白を縮小 */
@@ -395,10 +446,6 @@ button.cell:focus-visible {
   .container {
     margin: 24px auto;
     padding: 0 16px;
-  }
-
-  .timetable {
-    padding: 12px;
   }
 
   .cell {

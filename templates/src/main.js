@@ -82,7 +82,7 @@ if (timetable) {
       cell.dataset.dayCode = day;
       cell.dataset.period = String(period);
       const label = slotLabel({ day, period });
-      cell.setAttribute("aria-label", cell.disabled ? `${label} 講義候補なし` : label);
+      cell.setAttribute("aria-label", `${label} ${cell.disabled ? "講義候補なし" : "講義を追加"}`);
       if (!cell.disabled) {
         cell.setAttribute("aria-controls", picker.id);
         cell.setAttribute("aria-expanded", "false");
@@ -107,7 +107,7 @@ if (timetable) {
       cell.classList.toggle("registered", registered);
       cell.classList.toggle("empty", !registered);
       const label = slotLabel(schedule);
-      cell.setAttribute("aria-label", registered ? `${label} ${course.name}` : label);
+      cell.setAttribute("aria-label", `${label} ${registered ? course.name : "講義を追加"}`);
     }
   }
 
