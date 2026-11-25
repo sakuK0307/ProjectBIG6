@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProjectBIG6 | 履修リスト</title>
+  <link rel="stylesheet" href="./css/list.css">
+  <script src="./src/course-data.js" defer></script>
+  <script src="./src/list.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- 上部バー：表示切替・送信・読込・学年学期・サイドバー -->
+    <header class="topbar">
+      <nav class="view-tabs">
+        <button class="view-tab is-active" aria-current="page">表示A</button>
+        <button class="view-tab" data-stub="表示B">表示B</button>
+        <button class="view-tab" data-stub="表示C">表示C</button>
+      </nav>
+      <div class="topbar-actions">
+        <button class="pill" data-stub="送信">送信</button>
+        <button class="pill" data-stub="PDF読み込み">PDF読込</button>
+        <button class="pill" data-stub="Excel読み込み">Excel読込</button>
+        <select class="grade-select" id="entranceYear" aria-label="入学年度">
+          <option value="2023">2023年度入学</option>
+          <option value="2024">2024年度入学</option>
+          <option value="2025" selected>2025年度入学</option>
+          <option value="2026">2026年度入学</option>
+        </select>
+        <select class="grade-select" id="courseType" aria-label="コース">
+          <option value="advanced" selected>先進プロジェクトコース</option>
+          <option value="general">総合コース</option>
+        </select>
+        <select class="grade-select" id="headerTerm" aria-label="現在の学年・学期">
+          <option value="1前">1年前期</option>
+          <option value="1後">1年後期</option>
+          <option value="2前">2年前期</option>
+          <option value="2後">2年後期</option>
+          <option value="3前" selected>3年前期</option>
+          <option value="3後">3年後期</option>
+          <option value="4前">4年前期</option>
+          <option value="4後">4年後期</option>
+        </select>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" title="卒業判定を表示">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+            <rect x="2" y="3" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <rect x="12" y="3" width="6" height="14" rx="1" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 履修リスト（学期プルダウン＋点数入力） -->
+    <section class="pane pane-list">
+      <div class="list-toolbar">
+        <input type="search" id="search" placeholder="科目名で検索">
+        <select id="deptFilter" aria-label="部門">
+          <option value="">すべての部門</option>
+        </select>
+        <select id="progFilter" aria-label="プログラム">
+          <option value="">プログラム：すべて</option>
+          <option value="PC">PC</option>
+          <option value="DE">DE</option>
+          <option value="HM">HM</option>
+          <option value="NS">NS</option>
+        </select>
+        <select id="showFilter" aria-label="表示">
+          <option value="">すべて表示</option>
+          <option value="planned">登録済みのみ</option>
+          <option value="unplanned">未登録のみ</option>
+          <option value="grade">選択学期の標準科目</option>
+        </select>
+        <span class="list-total" id="sheetTotal"></span>
+      </div>
+      <div class="list-scroll" id="sheetScroll">
+        <div class="course-list" id="sheetBody"></div>
+      </div>
+    </section>
+
+    <!-- 右上ボタンで開く卒業判定サイドバー -->
+    <aside class="sidebar" id="sidebar" hidden aria-label="卒業判定">
+      <div class="sidebar-head">
+        <h2>卒業判定 <small id="sidebarCourse"></small></h2>
+        <button class="sidebar-close" id="sidebarClose" aria-label="閉じる">×</button>
+      </div>
+      <table class="year-table" id="yearTable"></table>
+      <div id="progList"></div>
+      <h3 class="judge-head">進級・卒業の判定</h3>
+      <ul class="judge-list" id="judgeList"></ul>
+      <p class="sidebar-note">※ 学期を選んだ科目のうち、60点以上と点数未入力（予定）を数えます。59点以下は数えません</p>
+    </aside>
+  </div>
+
+  <div class="popover" id="popover" hidden></div>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

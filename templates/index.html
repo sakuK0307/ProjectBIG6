@@ -123,5 +123,93 @@
 
     </div>
   </main>
+
+  <section id="course-picker" aria-labelledby="course-picker-title" hidden>
+    <h2 id="course-picker-title"></h2>
+    <ul id="course-options"></ul>
+    <div class="course-picker-actions">
+      <button type="button" id="close-course-picker">閉じる</button>
+      <button type="button" id="remove-course" hidden>登録を削除</button>
+    </div>
+  </section>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOME</title>
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- JavaScriptの読み込み -->
+    <script src="{{ url_for('static', filename='src/main.js') }}" defer></script>
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+
+        <!-- サイト名 -->
+        <h1 class="logo">MY WEBSITE</h1>
+
+        <!-- ページ移動ボタン -->
+        <nav class="navigation">
+            <a href="{{ url_for('home') }}">HOME</a>
+            <a href="{{ url_for('list_page') }}">LIST</a>
+            <a href="{{ url_for('check_page') }}">CHECK</a>
+        </nav>
+
+        <!-- サイドバーを開くボタン -->
+        <button
+            id="menuButton"
+            class="menu-button"
+            aria-label="メニューを開く"
+            aria-expanded="false">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- メイン画面 -->
+    <main>
+
+        <h2>HOME</h2>
+
+        <p>ホームページです。</p>
+
+        <!-- ホーム画面の内容はここに追加 -->
+
+    </main>
+
+
+    <!-- 右側のサイドバー -->
+    <aside
+        id="sidebar"
+        class="sidebar"
+        aria-hidden="true">
+
+        <!-- 閉じるボタン -->
+        <button
+            id="closeButton"
+            class="close-button"
+            aria-label="メニューを閉じる">
+            ×
+        </button>
+
+        <h2>MENU</h2>
+
+        <!-- サイドバーの内容は後から追加 -->
+
+    </aside>
+
 </body>
 </html>

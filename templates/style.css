@@ -66,7 +66,8 @@ button.cell {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* マウスを重ねたとき */
@@ -79,6 +80,73 @@ button.cell:hover {
 .cell.selected {
   background: #dbeafe;
   border: 2px solid #3b82f6;
+}
+
+.cell.registered:not(.selected) {
+  background: #edf2ff;
+}
+
+#course-picker {
+  position: fixed;
+  z-index: 1;
+  top: var(--picker-top, 8px);
+  left: var(--picker-left, 8px);
+  display: flex;
+  flex-direction: column;
+  width: min(320px, calc(100% - 16px));
+  max-height: min(360px, calc(100dvh - 16px));
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 16px #0002;
+}
+
+#course-picker[hidden] {
+  display: none;
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  #course-picker {
+    inset: auto 0 0;
+    width: 100%;
+    max-height: 50dvh;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}
+
+#course-picker-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+#course-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#course-picker button {
+  min-height: 44px;
+  padding: 8px 12px;
+  font: inherit;
+  overflow-wrap: anywhere;
+}
+
+#course-options button {
+  width: 100%;
+  text-align: left;
+}
+
+.course-picker-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* キーボード操作時 */
@@ -343,4 +411,193 @@ button.cell:focus-visible {
   .timetable-grid {
     gap: 4px;
   }
+}
+
+/* =========================
+   ページ全体
+========================= */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background-color: #172554;
+    color: white;
+}
+
+/* サイト名 */
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* =========================
+   ページ移動ボタン
+========================= */
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 12px;
+}
+
+/* マウスを乗せたとき */
+
+.navigation a:hover {
+    background-color: #334155;
+    border-radius: 5px;
+}
+
+/* =========================
+   メニューボタン
+========================= */
+
+.menu-button {
+    font-size: 25px;
+
+    background: none;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   メイン画面
+========================= */
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    transition: width 0.3s ease;
+}
+
+/* サイドバーを開いたとき */
+
+body.menu-open main {
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* =========================
+   右側のサイドバー
+========================= */
+
+:root {
+    --sidebar-width: clamp(200px, 20vw, 320px);
+}
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    box-sizing: border-box;
+    padding: 25px;
+
+    background-color: white;
+
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+
+    /* 最初は右側に隠しておく */
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease;
+
+    z-index: 1001;
+}
+
+/* サイドバーを表示 */
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* =========================
+   サイドバーの閉じるボタン
+========================= */
+
+.close-button {
+    display: block;
+
+    margin-left: auto;
+
+    font-size: 30px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   画面幅600px以下
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    /* ヘッダーを折り返す */
+
+    .header {
+        flex-wrap: wrap;
+        padding: 12px 15px;
+    }
+
+    /* サイト名 */
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* メニューボタンを右上に配置 */
+
+    .menu-button {
+        order: 2;
+    }
+
+    /* ページ移動ボタンを下の段に配置 */
+
+    .navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    /* スマートフォンではサイドバーを広めにする */
+
+    :root {
+        --sidebar-width: clamp(180px, 80vw, 300px);
+    }
+
 }
