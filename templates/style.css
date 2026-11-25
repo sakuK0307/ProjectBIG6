@@ -28,17 +28,14 @@ header p {
 }
 
 .timetable {
-  padding: 20px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 4px 24px #0000000d;
+  padding: 4px;
   overflow-x: auto;
 }
 
 .timetable-grid {
   display: grid;
   grid-template-columns: 56px repeat(6, minmax(100px, 1fr));
-  gap: 6px;
+  gap: 4px;
   min-width: 700px;
 }
 
@@ -46,19 +43,17 @@ header p {
   min-height: 90px;
   padding: 12px;
   border: 1px solid #e2e8f0;
-  border-radius: 3px;
+  border-radius: 4px;
   background: #fff;
 }
 
-.cell.header {
+.cell.timetable-heading {
   min-height: auto;
   text-align: center;
   font-weight: bold;
-  background: #edf2ff;
-}
-
-.cell.empty {
-  background: #f8fafc;
+  color: #000;
+  background: #dce4ef;
+  border-color: transparent;
 }
 
 /* セルをクリックできるように */
@@ -70,20 +65,45 @@ button.cell {
   overflow-wrap: anywhere;
 }
 
-/* マウスを重ねたとき */
-button.cell:hover {
-  background: #eaf0ff;
-  border-color: #9ab6ff;
+button.cell.empty:enabled {
+  background: #edf4ff;
+  border-color: #afc4df;
+  color: #315e91;
+}
+
+button.cell.empty:enabled:hover {
+  background: #e2eeff;
+  border-color: #7198cb;
+}
+
+button.cell.empty:enabled::before {
+  content: "+" / "";
+  font-size: 20px;
+  line-height: 1;
+}
+
+button.cell:disabled {
+  background: #e9edf2;
+  border-color: transparent;
+  cursor: default;
 }
 
 /* 選択中のセル */
-.cell.selected {
+button.cell.selected,
+button.cell.empty:enabled.selected {
   background: #dbeafe;
   border: 2px solid #3b82f6;
 }
 
 .cell.registered:not(.selected) {
-  background: #edf2ff;
+  background: #d6efe3;
+  border-color: #83bda2;
+  color: #183f31;
+}
+
+.cell.registered:not(.selected):hover {
+  background: #c5e8d7;
+  border-color: #548b72;
 }
 
 #course-picker {
@@ -93,11 +113,12 @@ button.cell:hover {
   left: var(--picker-left, 8px);
   display: flex;
   flex-direction: column;
+  gap: 4px;
   width: min(320px, calc(100% - 16px));
   max-height: min(360px, calc(100dvh - 16px));
   padding: 12px;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #fff;
   box-shadow: 0 4px 16px #0002;
 }
@@ -123,8 +144,9 @@ button.cell:hover {
 #course-options {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   padding: 0;
+  margin: 0;
   list-style: none;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -134,6 +156,7 @@ button.cell:hover {
   min-height: 44px;
   padding: 8px 12px;
   font: inherit;
+  border-radius: 4px;
   overflow-wrap: anywhere;
 }
 
@@ -146,7 +169,7 @@ button.cell:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 4px;
 }
 
 /* キーボード操作時 */
@@ -159,7 +182,7 @@ button.cell:focus-visible {
 .page-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 24px;
+  gap: 4px;
   align-items: start;
 }
 
@@ -197,9 +220,9 @@ button.cell:focus-visible {
 }
 
 .credit-item {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
   padding: 12px 0;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -213,7 +236,7 @@ button.cell:focus-visible {
 .page-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 24px;
+  gap: 4px;
   align-items: start;
 }
 
@@ -226,7 +249,7 @@ button.cell:focus-visible {
 .requirements-card {
   padding: 24px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: 0 4px 24px #0000000d;
 }
 
@@ -245,7 +268,7 @@ button.cell:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e2e8f0;
   font-size: 13px;
@@ -255,7 +278,7 @@ button.cell:focus-visible {
 .status-badge {
   flex-shrink: 0;
   padding: 5px 10px;
-  border-radius: 6px;
+  border-radius: 4px;
   background: #fff3dc;
   color: #a16207;
   font-size: 12px;
@@ -271,22 +294,30 @@ button.cell:focus-visible {
 .credit-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
 .credit-label {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.credit-label span:last-child {
-  flex-shrink: 0;
-  color: #64748b;
+.credit-count {
+  justify-self: end;
+  min-width: 9ch;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #d6efe3;
+  color: #183f31;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
+}
+
+.credit-item.is-short .credit-count {
+  background: #ffebc6;
+  color: #713c0e;
 }
 
 .credit-item progress {
@@ -296,18 +327,18 @@ button.cell:focus-visible {
   appearance: none;
   -webkit-appearance: none;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .credit-item progress::-webkit-progress-bar {
   background: #e2e8f0;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .credit-item progress::-webkit-progress-value {
   background: #279c75;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .credit-item.is-short progress::-webkit-progress-value {
@@ -320,7 +351,7 @@ button.cell:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   margin-top: 24px;
   padding-top: 20px;
   border-top: 1px solid #e2e8f0;
@@ -355,6 +386,36 @@ button.cell:focus-visible {
   .requirements-card {
     width: 100%;
   }
+
+  .credit-item {
+    grid-template-columns: minmax(0, 1fr) clamp(96px, 42%, 240px);
+    align-items: center;
+  }
+
+  .credit-label-separator {
+    display: none;
+  }
+
+  .credit-label-group {
+    display: block;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .credit-label-detail {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .credit-item progress {
+    height: 10px;
+  }
+
+  .credit-count {
+    grid-column: 2;
+  }
 }
 
 /* スマホでは余白を縮小 */
@@ -387,10 +448,6 @@ button.cell:focus-visible {
     padding: 0 16px;
   }
 
-  .timetable {
-    padding: 12px;
-  }
-
   .cell {
     min-height: 75px;
     padding: 8px;
@@ -408,7 +465,185 @@ button.cell:focus-visible {
     font-size: 24px;
   }
 
-  .timetable-grid {
-    gap: 4px;
-  }
+}
+
+/* =========================
+   ページ全体
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ヘッダー
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background-color: #172554;
+    color: white;
+}
+
+/* サイト名 */
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* =========================
+   ページ移動ボタン
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 12px;
+}
+
+/* マウスを乗せたとき */
+
+.navigation a:hover {
+    background-color: #334155;
+    border-radius: 4px;
+}
+
+/* =========================
+   メニューボタン
+
+.menu-button {
+    font-size: 25px;
+
+    background: none;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   メイン画面
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    transition: width 0.3s ease;
+}
+
+/* サイドバーを開いたとき */
+
+body.menu-open main {
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* =========================
+   右側のサイドバー
+
+:root {
+    --sidebar-width: clamp(200px, 20vw, 320px);
+}
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    box-sizing: border-box;
+    padding: 25px;
+
+    background-color: white;
+
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+
+    /* 最初は右側に隠しておく */
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease;
+
+    z-index: 1001;
+}
+
+/* サイドバーを表示 */
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* =========================
+   サイドバーの閉じるボタン
+
+.close-button {
+    display: block;
+
+    margin-left: auto;
+
+    font-size: 30px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   画面幅600px以下
+
+@media screen and (max-width: 600px) {
+
+    /* ヘッダーを折り返す */
+
+    .header {
+        flex-wrap: wrap;
+        padding: 12px 15px;
+    }
+
+    /* サイト名 */
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* メニューボタンを右上に配置 */
+
+    .menu-button {
+        order: 2;
+    }
+
+    /* ページ移動ボタンを下の段に配置 */
+
+    .navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    /* スマートフォンではサイドバーを広めにする */
+
+    :root {
+        --sidebar-width: clamp(180px, 80vw, 300px);
+    }
+
 }
