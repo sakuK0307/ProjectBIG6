@@ -1,0 +1,6737 @@
+{
+ "courses": [
+  {
+   "id": "r6",
+   "name": "英語コミュニケーションⅠ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r7",
+   "name": "英語コミュニケーションⅡ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r8",
+   "name": "英語コミュニケーションⅢ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r9",
+   "name": "英語コミュニケーションⅣ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r10",
+   "name": "プラクティカル・イングリッシュⅠ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r11",
+   "name": "プラクティカル・イングリッシュⅡ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r12",
+   "name": "ドイツ語Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r13",
+   "name": "ドイツ語Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r14",
+   "name": "ドイツ語Ⅲ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r15",
+   "name": "ドイツ語Ⅳ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r16",
+   "name": "フランス語Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r17",
+   "name": "フランス語Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r18",
+   "name": "フランス語Ⅲ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r19",
+   "name": "フランス語Ⅳ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r20",
+   "name": "中国語Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r21",
+   "name": "中国語Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r22",
+   "name": "中国語Ⅲ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r23",
+   "name": "中国語Ⅳ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r24",
+   "name": "体育科学Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r25",
+   "name": "体育科学Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalSelReq",
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r26",
+   "name": "体育科学Ⅲ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r27",
+   "name": "体育科学Ⅳ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r28",
+   "name": "人文科学基礎Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r29",
+   "name": "人文科学基礎Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r30",
+   "name": "社会科学基礎Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r31",
+   "name": "社会科学基礎Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r32",
+   "name": "アジア文化論Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r33",
+   "name": "アジア文化論Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r34",
+   "name": "欧米文化論Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r35",
+   "name": "欧米文化論Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r36",
+   "name": "国際関係論",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r37",
+   "name": "文学",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r38",
+   "name": "日本国憲法",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r39",
+   "name": "国際経済論",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r40",
+   "name": "心理学",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r41",
+   "name": "基礎ゼミナールⅠ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r42",
+   "name": "基礎ゼミナールⅡ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "generalElective",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r43",
+   "name": "職業指導論",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r45",
+   "name": "日本語Ⅰ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r46",
+   "name": "日本語Ⅱ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r47",
+   "name": "日本語Ⅲ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r48",
+   "name": "日本語Ⅳ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r49",
+   "name": "日本語Ⅴ",
+   "department": "総合基礎部門",
+   "group": null,
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "generalTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r51",
+   "name": "微分積分Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceDesignated",
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceDesignated",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r52",
+   "name": "微分積分Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceDesignated",
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceDesignated",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r53",
+   "name": "線形代数Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceDesignated",
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceDesignated",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r54",
+   "name": "線形代数Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceDesignated",
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceDesignated",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r55",
+   "name": "物理学Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r56",
+   "name": "物理学Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r57",
+   "name": "物理学演習",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r58",
+   "name": "物理学実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r59",
+   "name": "物理学実験Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r60",
+   "name": "化学Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r61",
+   "name": "化学Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r62",
+   "name": "化学実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 0
+    },
+    {
+     "category": "DE.other",
+     "slot": 0
+    },
+    {
+     "category": "HM.other",
+     "slot": 0
+    },
+    {
+     "category": "NS.other",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r63",
+   "name": "化学実験Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 1
+    },
+    {
+     "category": "DE.other",
+     "slot": 1
+    },
+    {
+     "category": "HM.other",
+     "slot": 1
+    },
+    {
+     "category": "NS.other",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r64",
+   "name": "地学Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r65",
+   "name": "地学Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r66",
+   "name": "地学実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r67",
+   "name": "地学実験Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r68",
+   "name": "生物学",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r69",
+   "name": "生物学実験",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r70",
+   "name": "理工学概論",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r71",
+   "name": "技術者倫理",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "r72",
+   "name": "コンピューターリテラシー",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "scienceSelReq",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "scienceSelReq",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": false
+  },
+  {
+   "id": "x_math1",
+   "name": "数学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_math2",
+   "name": "数学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_phys1",
+   "name": "物理学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_phys2",
+   "name": "物理学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_chem1",
+   "name": "化学基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_chem2",
+   "name": "化学基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_eng1",
+   "name": "英語基礎演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "x_eng2",
+   "name": "英語基礎演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "理工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true
+  },
+  {
+   "id": "r73",
+   "name": "情報工学の世界",
+   "department": "専門教育部門",
+   "group": "情報工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": true,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "infoBasic",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r74",
+   "name": "情報工学基礎演習",
+   "department": "専門教育部門",
+   "group": "情報工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": true,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "infoBasic",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r75",
+   "name": "テクニカルリテラシー",
+   "department": "専門教育部門",
+   "group": "情報工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": true,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "infoBasic",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r76",
+   "name": "プラクティカルICT",
+   "department": "専門教育部門",
+   "group": "情報工学基礎科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": true,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "infoBasic",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r77",
+   "name": "情報通信ネットワーク",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "◎"
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 1
+    },
+    {
+     "category": "DE.circle",
+     "slot": 1
+    },
+    {
+     "category": "HM.circle",
+     "slot": 1
+    },
+    {
+     "category": "NS.double",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r78",
+   "name": "情報理論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "◎",
+    "HM": "○",
+    "NS": "◎"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.double",
+    "HM.circle",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 3
+    },
+    {
+     "category": "DE.double",
+     "slot": 3
+    },
+    {
+     "category": "HM.circle",
+     "slot": 3
+    },
+    {
+     "category": "NS.double",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r79",
+   "name": "情報セキュリティ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": "※"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 4
+    },
+    {
+     "category": "DE.other",
+     "slot": 4
+    },
+    {
+     "category": "HM.other",
+     "slot": 4
+    },
+    {
+     "category": "NS.star",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r80",
+   "name": "情報通信システム",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": "※"
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.star",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r81",
+   "name": "信号伝送論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": "※"
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.star",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r82",
+   "name": "符号理論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": "※"
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.star",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r83",
+   "name": "ワイヤレス通信",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": "※"
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.star",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r84",
+   "name": "コンピュータアーキテクチャⅠ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "◎",
+    "HM": "○",
+    "NS": "◎"
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.double",
+    "HM.circle",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 1
+    },
+    {
+     "category": "DE.double",
+     "slot": 1
+    },
+    {
+     "category": "HM.circle",
+     "slot": 1
+    },
+    {
+     "category": "NS.double",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r85",
+   "name": "コンピュータアーキテクチャⅡ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": null,
+    "HM": null,
+    "NS": "○"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 4
+    },
+    {
+     "category": "DE.other",
+     "slot": 4
+    },
+    {
+     "category": "HM.other",
+     "slot": 4
+    },
+    {
+     "category": "NS.circle",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r86",
+   "name": "ディジタル回路Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "○",
+    "HM": "○",
+    "NS": "◎"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.circle",
+    "HM.circle",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 2
+    },
+    {
+     "category": "DE.circle",
+     "slot": 2
+    },
+    {
+     "category": "HM.circle",
+     "slot": 2
+    },
+    {
+     "category": "NS.double",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r87",
+   "name": "ディジタル回路Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": null,
+    "HM": null,
+    "NS": "○"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 3
+    },
+    {
+     "category": "DE.other",
+     "slot": 3
+    },
+    {
+     "category": "HM.other",
+     "slot": 3
+    },
+    {
+     "category": "NS.circle",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r88",
+   "name": "電気電子回路Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": null,
+    "HM": null,
+    "NS": "○"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 2
+    },
+    {
+     "category": "DE.other",
+     "slot": 2
+    },
+    {
+     "category": "HM.other",
+     "slot": 2
+    },
+    {
+     "category": "NS.circle",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r89",
+   "name": "電気電子回路Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": null,
+    "HM": null,
+    "NS": "○"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 4
+    },
+    {
+     "category": "DE.other",
+     "slot": 4
+    },
+    {
+     "category": "HM.other",
+     "slot": 4
+    },
+    {
+     "category": "NS.circle",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r90",
+   "name": "ディジタル信号処理Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "◎"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.double",
+    "HM.double",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 2
+    },
+    {
+     "category": "DE.double",
+     "slot": 2
+    },
+    {
+     "category": "HM.double",
+     "slot": 2
+    },
+    {
+     "category": "NS.double",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r91",
+   "name": "ディジタル信号処理Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 3
+    },
+    {
+     "category": "DE.circle",
+     "slot": 3
+    },
+    {
+     "category": "HM.circle",
+     "slot": 4
+    },
+    {
+     "category": "NS.circle",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r92",
+   "name": "システム制御",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 4
+    },
+    {
+     "category": "DE.other",
+     "slot": 4
+    },
+    {
+     "category": "HM.other",
+     "slot": 4
+    },
+    {
+     "category": "NS.other",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r93",
+   "name": "フィジカルコンピューティング",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r94",
+   "name": "ハードウェア記述言語",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r95",
+   "name": "センサ工学",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r96",
+   "name": "集積回路設計",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r97",
+   "name": "アルゴリズム・データ構造",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "◎"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.double",
+    "HM.double",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 2
+    },
+    {
+     "category": "DE.double",
+     "slot": 2
+    },
+    {
+     "category": "HM.double",
+     "slot": 2
+    },
+    {
+     "category": "NS.double",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r98",
+   "name": "オペレーティングシステム",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "○",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 2
+    },
+    {
+     "category": "DE.circle",
+     "slot": 2
+    },
+    {
+     "category": "HM.other",
+     "slot": 2
+    },
+    {
+     "category": "NS.other",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r99",
+   "name": "データベース",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "○",
+    "HM": null,
+    "NS": "○"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 2
+    },
+    {
+     "category": "DE.circle",
+     "slot": 2
+    },
+    {
+     "category": "HM.other",
+     "slot": 2
+    },
+    {
+     "category": "NS.other",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r100",
+   "name": "ソフトウェア工学",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "○"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.double",
+    "HM.double",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 3
+    },
+    {
+     "category": "DE.double",
+     "slot": 3
+    },
+    {
+     "category": "HM.double",
+     "slot": 3
+    },
+    {
+     "category": "NS.circle",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r101",
+   "name": "言語・オートマトン",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "○"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "DE.double",
+    "HM.double",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 3
+    },
+    {
+     "category": "DE.double",
+     "slot": 3
+    },
+    {
+     "category": "HM.double",
+     "slot": 3
+    },
+    {
+     "category": "NS.circle",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r102",
+   "name": "人工知能",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "※",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "DE.star",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 4
+    },
+    {
+     "category": "DE.star",
+     "slot": 4
+    },
+    {
+     "category": "HM.circle",
+     "slot": 4
+    },
+    {
+     "category": "NS.circle",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r103",
+   "name": "数値解析",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "○",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 4
+    },
+    {
+     "category": "DE.circle",
+     "slot": 4
+    },
+    {
+     "category": "HM.other",
+     "slot": 4
+    },
+    {
+     "category": "NS.other",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r104",
+   "name": "コンパイラ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "○",
+    "HM": "○",
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "DE.circle",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 4
+    },
+    {
+     "category": "DE.circle",
+     "slot": 4
+    },
+    {
+     "category": "HM.circle",
+     "slot": 4
+    },
+    {
+     "category": "NS.other",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r105",
+   "name": "プログラミング言語論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "※",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "DE.star",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.star",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r106",
+   "name": "パターン認識",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "※",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "DE.star",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.star",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r107",
+   "name": "応用アルゴリズム",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "※",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "DE.star",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.star",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r108",
+   "name": "数理計画法",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "※",
+    "HM": null,
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "DE.star",
+    "DE.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.star",
+     "slot": 6
+    },
+    {
+     "category": "HM.other",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r109",
+   "name": "マルチメディア基礎",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": "◎",
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal",
+    "HM.double"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 0
+    },
+    {
+     "category": "DE.other",
+     "slot": 0
+    },
+    {
+     "category": "HM.double",
+     "slot": 0
+    },
+    {
+     "category": "NS.other",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r110",
+   "name": "画像処理",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": null,
+    "HM": "◎",
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "HM.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 3
+    },
+    {
+     "category": "DE.other",
+     "slot": 3
+    },
+    {
+     "category": "HM.double",
+     "slot": 3
+    },
+    {
+     "category": "NS.other",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r111",
+   "name": "コンピュータグラフィックス",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": "○",
+    "HM": "※",
+    "NS": null
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "DE.circle",
+    "HM.star",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 4
+    },
+    {
+     "category": "DE.circle",
+     "slot": 4
+    },
+    {
+     "category": "HM.star",
+     "slot": 4
+    },
+    {
+     "category": "NS.other",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r112",
+   "name": "コンピュータビジョン",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": null,
+    "HM": "○",
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.circle",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r113",
+   "name": "感性情報処理",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": "※",
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "HM.star",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.star",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r114",
+   "name": "音声・音響信号処理",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": "※",
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "HM.star",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.star",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r115",
+   "name": "バーチャルリアリティ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": "※",
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "HM.star",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.star",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r116",
+   "name": "言語情報処理",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": "※",
+    "NS": null
+   },
+   "slot": 6,
+   "categories": [
+    "majorTotal",
+    "HM.star",
+    "HM.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 6
+    },
+    {
+     "category": "DE.other",
+     "slot": 6
+    },
+    {
+     "category": "HM.star",
+     "slot": 6
+    },
+    {
+     "category": "NS.other",
+     "slot": 6
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r117",
+   "name": "離散数学",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "◎"
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.double",
+    "HM.double",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.double",
+     "slot": 0
+    },
+    {
+     "category": "DE.double",
+     "slot": 0
+    },
+    {
+     "category": "HM.double",
+     "slot": 0
+    },
+    {
+     "category": "NS.double",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r118",
+   "name": "確率・統計",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 1
+    },
+    {
+     "category": "DE.circle",
+     "slot": 1
+    },
+    {
+     "category": "HM.circle",
+     "slot": 1
+    },
+    {
+     "category": "NS.circle",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r119",
+   "name": "データサイエンス基礎",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 2,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r120",
+   "name": "応用解析",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 3
+    },
+    {
+     "category": "DE.circle",
+     "slot": 3
+    },
+    {
+     "category": "HM.circle",
+     "slot": 3
+    },
+    {
+     "category": "NS.circle",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r121",
+   "name": "電磁気学",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 2
+    },
+    {
+     "category": "DE.other",
+     "slot": 2
+    },
+    {
+     "category": "HM.other",
+     "slot": 2
+    },
+    {
+     "category": "NS.other",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r122",
+   "name": "プログラミング演習Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 1,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 0,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 0
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r123",
+   "name": "プログラミング演習Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 1,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 1,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r124",
+   "name": "プログラミング演習Ⅲ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 2
+    },
+    {
+     "category": "DE.circle",
+     "slot": 2
+    },
+    {
+     "category": "HM.circle",
+     "slot": 2
+    },
+    {
+     "category": "NS.circle",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r125",
+   "name": "プログラミング演習Ⅳ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": "※",
+    "HM": "※",
+    "NS": "※"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle",
+    "DE.star",
+    "DE.circle",
+    "HM.star",
+    "HM.circle",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 3
+    },
+    {
+     "category": "DE.star",
+     "slot": 3
+    },
+    {
+     "category": "HM.star",
+     "slot": 3
+    },
+    {
+     "category": "NS.star",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r126",
+   "name": "情報工学実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 2,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": true,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r127",
+   "name": "情報工学実験Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": "※",
+    "HM": "※",
+    "NS": "※"
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle",
+    "DE.star",
+    "DE.circle",
+    "HM.star",
+    "HM.circle",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 3
+    },
+    {
+     "category": "DE.star",
+     "slot": 3
+    },
+    {
+     "category": "HM.star",
+     "slot": 3
+    },
+    {
+     "category": "NS.star",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r128",
+   "name": "インターンシップ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r129",
+   "name": "グローバルゼミナール",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 1,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 1
+    },
+    {
+     "category": "DE.other",
+     "slot": 1
+    },
+    {
+     "category": "HM.other",
+     "slot": 1
+    },
+    {
+     "category": "NS.other",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r130",
+   "name": "キャリアゼミナール",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.circle",
+     "slot": 4
+    },
+    {
+     "category": "DE.circle",
+     "slot": 4
+    },
+    {
+     "category": "HM.circle",
+     "slot": 4
+    },
+    {
+     "category": "NS.circle",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r131",
+   "name": "研究ゼミナール",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": "※",
+    "HM": "※",
+    "NS": "※"
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle",
+    "DE.star",
+    "DE.circle",
+    "HM.star",
+    "HM.circle",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 5
+    },
+    {
+     "category": "DE.star",
+     "slot": 5
+    },
+    {
+     "category": "HM.star",
+     "slot": 5
+    },
+    {
+     "category": "NS.star",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r132",
+   "name": "情報工学総合ゼミナール",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 1,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": "※",
+    "HM": "※",
+    "NS": "※"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle",
+    "DE.star",
+    "DE.circle",
+    "HM.star",
+    "HM.circle",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r133",
+   "name": "情報技術の応用と職業",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r134",
+   "name": "情報技術の応用と職業",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.other",
+     "slot": 5
+    },
+    {
+     "category": "DE.other",
+     "slot": 5
+    },
+    {
+     "category": "HM.other",
+     "slot": 5
+    },
+    {
+     "category": "NS.other",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r135",
+   "name": "創造的思考法",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 1,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 1
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r136",
+   "name": "研究開発リテラシー",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 2,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 2
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r137",
+   "name": "アプリケーション開発",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 3,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r138",
+   "name": "PBL概論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 3,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 3
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r139",
+   "name": "先進プロジェクト実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 2,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 4,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r140",
+   "name": "先進プロジェクト実験Ⅱ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "※",
+    "DE": "※",
+    "HM": "※",
+    "NS": "※"
+   },
+   "slot": 5,
+   "categories": [
+    "majorTotal",
+    "PC.star",
+    "PC.circle",
+    "DE.star",
+    "DE.circle",
+    "HM.star",
+    "HM.circle",
+    "NS.star",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [
+    {
+     "category": "PC.star",
+     "slot": 5
+    },
+    {
+     "category": "DE.star",
+     "slot": 5
+    },
+    {
+     "category": "HM.star",
+     "slot": 5
+    },
+    {
+     "category": "NS.star",
+     "slot": 5
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r141",
+   "name": "先進プロジェクトゼミナール",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 1,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 4,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 4
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "r142",
+   "name": "創造的思考法",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "◎",
+    "DE": "◎",
+    "HM": "◎",
+    "NS": "◎"
+   },
+   "slot": 1,
+   "categories": [
+    "majorTotal",
+    "PC.double",
+    "DE.double",
+    "HM.double",
+    "NS.double"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r143",
+   "name": "研究開発リテラシー",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r144",
+   "name": "アプリケーション開発",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r145",
+   "name": "PBL概論",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r146",
+   "name": "先進プロジェクト実験Ⅰ",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 2,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "○",
+    "DE": "○",
+    "HM": "○",
+    "NS": "○"
+   },
+   "slot": 4,
+   "categories": [
+    "majorTotal",
+    "PC.circle",
+    "DE.circle",
+    "HM.circle",
+    "NS.circle"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": true,
+   "majorForStatus": true
+  },
+  {
+   "id": "r147",
+   "name": "卒業研究",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 4,
+    "selReq": 0,
+    "elective": 0,
+    "free": 0
+   },
+   "marks": {
+    "PC": "必修",
+    "DE": "必修",
+    "HM": "必修",
+    "NS": "必修"
+   },
+   "slot": 6,
+   "categories": [
+    "required",
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": true,
+   "listing": [
+    {
+     "category": "required",
+     "slot": 7
+    }
+   ],
+   "hidden": false,
+   "majorForStatus": true
+  },
+  {
+   "id": "x_mobileA",
+   "name": "モバイルアプリ開発A",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 3,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true,
+   "note": "夏期集中"
+  },
+  {
+   "id": "x_mobileB",
+   "name": "モバイルアプリ開発B",
+   "department": "専門教育部門",
+   "group": "情報工学専門科目",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 0,
+    "free": 1
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 2,
+   "categories": [],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false,
+   "extra": true,
+   "termsByYear": {
+    "2023": [
+     "2後"
+    ]
+   },
+   "note": "夏期集中"
+  },
+  {
+   "id": "r148",
+   "name": "データサイエンス・AI入門",
+   "department": "他学部",
+   "group": "専門他",
+   "units": {
+    "required": 0,
+    "selReq": 0,
+    "elective": 2,
+    "free": 0
+   },
+   "marks": {
+    "PC": null,
+    "DE": null,
+    "HM": null,
+    "NS": null
+   },
+   "slot": 0,
+   "categories": [
+    "majorTotal"
+   ],
+   "infoBasic": false,
+   "dsai": false,
+   "countsInRequiredShortage": false,
+   "listing": [],
+   "hidden": false,
+   "majorForStatus": false
+  }
+ ],
+ "requirements": {
+  "advanced": {
+   "PC": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "DE": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "HM": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ],
+   "NS": [
+    10,
+    20,
+    8,
+    12,
+    21,
+    14,
+    9,
+    15,
+    104
+   ]
+  },
+  "general": {
+   "PC": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "DE": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "HM": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ],
+   "NS": [
+    10,
+    20,
+    8,
+    12,
+    10,
+    16,
+    9,
+    20,
+    104
+   ]
+  }
+ },
+ "gpTable": [
+  [
+   0,
+   0
+  ],
+  [
+   1,
+   0
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   3,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   5,
+   0
+  ],
+  [
+   6,
+   0
+  ],
+  [
+   7,
+   0
+  ],
+  [
+   8,
+   0
+  ],
+  [
+   9,
+   0
+  ],
+  [
+   10,
+   0
+  ],
+  [
+   11,
+   0
+  ],
+  [
+   12,
+   0
+  ],
+  [
+   13,
+   0
+  ],
+  [
+   14,
+   0
+  ],
+  [
+   15,
+   0
+  ],
+  [
+   16,
+   0
+  ],
+  [
+   17,
+   0
+  ],
+  [
+   18,
+   0
+  ],
+  [
+   19,
+   0
+  ],
+  [
+   20,
+   0
+  ],
+  [
+   21,
+   0
+  ],
+  [
+   22,
+   0
+  ],
+  [
+   23,
+   0
+  ],
+  [
+   24,
+   0
+  ],
+  [
+   25,
+   0
+  ],
+  [
+   26,
+   0
+  ],
+  [
+   27,
+   0
+  ],
+  [
+   28,
+   0
+  ],
+  [
+   29,
+   0
+  ],
+  [
+   30,
+   0
+  ],
+  [
+   31,
+   0
+  ],
+  [
+   32,
+   0
+  ],
+  [
+   33,
+   0
+  ],
+  [
+   34,
+   0
+  ],
+  [
+   35,
+   0
+  ],
+  [
+   36,
+   0
+  ],
+  [
+   37,
+   0
+  ],
+  [
+   38,
+   0
+  ],
+  [
+   39,
+   0
+  ],
+  [
+   40,
+   0
+  ],
+  [
+   41,
+   0
+  ],
+  [
+   42,
+   0
+  ],
+  [
+   43,
+   0
+  ],
+  [
+   44,
+   0
+  ],
+  [
+   45,
+   0
+  ],
+  [
+   46,
+   0
+  ],
+  [
+   47,
+   0
+  ],
+  [
+   48,
+   0
+  ],
+  [
+   49,
+   0
+  ],
+  [
+   50,
+   0
+  ],
+  [
+   51,
+   0
+  ],
+  [
+   52,
+   0
+  ],
+  [
+   53,
+   0
+  ],
+  [
+   54,
+   0
+  ],
+  [
+   55,
+   0
+  ],
+  [
+   56,
+   0
+  ],
+  [
+   57,
+   0
+  ],
+  [
+   58,
+   0
+  ],
+  [
+   59,
+   0
+  ],
+  [
+   60,
+   1
+  ],
+  [
+   61,
+   1
+  ],
+  [
+   62,
+   1
+  ],
+  [
+   63,
+   1.3
+  ],
+  [
+   64,
+   1.3
+  ],
+  [
+   65,
+   1.3
+  ],
+  [
+   66,
+   1.3
+  ],
+  [
+   67,
+   1.7
+  ],
+  [
+   68,
+   1.7
+  ],
+  [
+   69,
+   1.7
+  ],
+  [
+   70,
+   2
+  ],
+  [
+   71,
+   2
+  ],
+  [
+   72,
+   2
+  ],
+  [
+   73,
+   2.3
+  ],
+  [
+   74,
+   2.3
+  ],
+  [
+   75,
+   2.3
+  ],
+  [
+   76,
+   2.3
+  ],
+  [
+   77,
+   2.7
+  ],
+  [
+   78,
+   2.7
+  ],
+  [
+   79,
+   2.7
+  ],
+  [
+   80,
+   3
+  ],
+  [
+   81,
+   3
+  ],
+  [
+   82,
+   3
+  ],
+  [
+   83,
+   3.3
+  ],
+  [
+   84,
+   3.3
+  ],
+  [
+   85,
+   3.3
+  ],
+  [
+   86,
+   3.3
+  ],
+  [
+   87,
+   3.7
+  ],
+  [
+   88,
+   3.7
+  ],
+  [
+   89,
+   3.7
+  ],
+  [
+   90,
+   4
+  ],
+  [
+   91,
+   4
+  ],
+  [
+   92,
+   4
+  ],
+  [
+   93,
+   4
+  ],
+  [
+   94,
+   4
+  ],
+  [
+   95,
+   4.3
+  ],
+  [
+   96,
+   4.3
+  ],
+  [
+   97,
+   4.3
+  ],
+  [
+   98,
+   4.3
+  ],
+  [
+   99,
+   4.3
+  ],
+  [
+   100,
+   4.3
+  ]
+ ],
+ "statusRules": [
+  [
+   {
+    "thresholds": [
+     [
+      21,
+      8
+     ],
+     [
+      17,
+      6
+     ],
+     [
+      13,
+      4
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      66,
+      33
+     ],
+     [
+      57,
+      27
+     ],
+     [
+      48,
+      19
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      106,
+      62
+     ],
+     [
+      96,
+      53
+     ],
+     [
+      85,
+      45
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      45,
+      17
+     ],
+     [
+      40,
+      14
+     ],
+     [
+      33,
+      10
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      87,
+      48
+     ],
+     [
+      79,
+      42
+     ],
+     [
+      71,
+      36
+     ]
+    ],
+    "eBelow": 62
+   },
+   {
+    "thresholds": [
+     [
+      120,
+      75
+     ],
+     [
+      112,
+      66
+     ],
+     [
+      102,
+      56
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      21,
+      8
+     ],
+     [
+      17,
+      6
+     ],
+     [
+      13,
+      4
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      66,
+      33
+     ],
+     [
+      57,
+      27
+     ],
+     [
+      48,
+      19
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      106,
+      62
+     ],
+     [
+      96,
+      53
+     ],
+     [
+      85,
+      45
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      45,
+      17
+     ],
+     [
+      40,
+      14
+     ],
+     [
+      33,
+      10
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      87,
+      48
+     ],
+     [
+      79,
+      42
+     ],
+     [
+      71,
+      36
+     ]
+    ],
+    "eBelow": 62
+   },
+   {
+    "thresholds": [
+     [
+      120,
+      75
+     ],
+     [
+      112,
+      66
+     ],
+     [
+      102,
+      56
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      21,
+      8
+     ],
+     [
+      17,
+      6
+     ],
+     [
+      13,
+      4
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      66,
+      33
+     ],
+     [
+      57,
+      27
+     ],
+     [
+      48,
+      19
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      106,
+      62
+     ],
+     [
+      96,
+      53
+     ],
+     [
+      85,
+      45
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      45,
+      17
+     ],
+     [
+      40,
+      14
+     ],
+     [
+      33,
+      10
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      87,
+      48
+     ],
+     [
+      79,
+      42
+     ],
+     [
+      71,
+      36
+     ]
+    ],
+    "eBelow": 62
+   },
+   {
+    "thresholds": [
+     [
+      120,
+      75
+     ],
+     [
+      112,
+      66
+     ],
+     [
+      102,
+      56
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      21,
+      8
+     ],
+     [
+      17,
+      6
+     ],
+     [
+      13,
+      4
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      66,
+      33
+     ],
+     [
+      57,
+      27
+     ],
+     [
+      48,
+      19
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      106,
+      62
+     ],
+     [
+      96,
+      53
+     ],
+     [
+      85,
+      45
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      45,
+      17
+     ],
+     [
+      40,
+      14
+     ],
+     [
+      33,
+      10
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      87,
+      48
+     ],
+     [
+      79,
+      42
+     ],
+     [
+      71,
+      36
+     ]
+    ],
+    "eBelow": 62
+   },
+   {
+    "thresholds": [
+     [
+      120,
+      75
+     ],
+     [
+      112,
+      66
+     ],
+     [
+      102,
+      56
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      21,
+      8
+     ],
+     [
+      17,
+      6
+     ],
+     [
+      13,
+      4
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      66,
+      33
+     ],
+     [
+      57,
+      27
+     ],
+     [
+      48,
+      19
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      106,
+      62
+     ],
+     [
+      96,
+      53
+     ],
+     [
+      85,
+      45
+     ]
+    ],
+    "eBelow": null
+   }
+  ],
+  [
+   {
+    "thresholds": [
+     [
+      45,
+      17
+     ],
+     [
+      40,
+      14
+     ],
+     [
+      33,
+      10
+     ]
+    ],
+    "eBelow": null
+   },
+   {
+    "thresholds": [
+     [
+      87,
+      48
+     ],
+     [
+      79,
+      42
+     ],
+     [
+      71,
+      36
+     ]
+    ],
+    "eBelow": 62
+   },
+   {
+    "thresholds": [
+     [
+      120,
+      75
+     ],
+     [
+      112,
+      66
+     ],
+     [
+      102,
+      56
+     ]
+    ],
+    "eBelow": null
+   }
+  ]
+ ]
+}
