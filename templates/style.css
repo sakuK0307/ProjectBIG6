@@ -399,6 +399,11 @@ button.cell:focus-visible {
   font-size: 12px;
 }
 
+.status-badge.is-complete {
+  background: #d6efe3;
+  color: #183f31;
+}
+
 .requirements-card h3 {
   margin: 24px 0 16px;
   font-size: 15px;
@@ -473,21 +478,46 @@ button.cell:focus-visible {
   font-size: 13px;
 }
 
-.requirements-footer p {
-  margin: 6px 0 0;
-  font-size: 11px;
-  color: #64748b;
+.requirements-footer select {
+  min-width: 0;
+  max-width: 72%;
+  min-height: 36px;
+  padding: 4px;
+  border: 1px solid #cdd9e8;
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
 }
 
-.missing-credits {
-  flex-shrink: 0;
-  font-size: 20px;
+.credit-subjects {
+  grid-column: 1 / -1;
+  color: #315e91;
+  font-size: 13px;
+}
+
+.credit-subjects summary {
+  cursor: pointer;
+}
+
+.credit-subjects ul {
+  margin: 4px 0;
+  padding-inline-start: 20px;
+  color: #263248;
+}
+
+.requirements-shortfalls {
+  margin-top: 12px;
 }
 
 .sample-note {
   margin: 20px 0 0;
   font-size: 11px;
   color: #94a3b8;
+}
+
+.sample-note:empty {
+  display: none;
 }
 
 /* ===== レスポンシブ対応 ===== */
