@@ -1,0 +1,29 @@
+{
+  "advancedOnly": ["r140", "r141"],
+  "notCounted": [
+    {
+      "entrance": [2023],
+      "courseType": "advanced",
+      "name": "情報技術の応用と職業"
+    }
+  ],
+  "judgments": {
+    "advance": {
+      "upto": "2後",
+      "infoBasic": 3,
+      "units": 62
+    },
+    "seminar": {
+      "upto": "3前",
+      "units": 85,
+      "thesisBlockedFrom": 2024
+    },
+    "thesis": {
+      "upto": "3後",
+      "maxRemaining": 10
+    },
+    "dsai": {
+      "courses": 7
+    }
+  }
+}

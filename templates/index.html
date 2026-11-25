@@ -6,6 +6,15 @@
   <title>ProjectBIG6 | 履修下書き</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./src/main.js" defer></script>
+
+   
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- JavaScriptの読み込み -->
+    <script src="{{ url_for('static', filename='src/main.js') }}" defer></script>
 </head>
 <body>
   <main class="container">
@@ -114,28 +123,7 @@
       <button type="button" id="remove-course" hidden>登録を削除</button>
     </div>
   </section>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>HOME</title>
-
-    <!-- CSSの読み込み -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
-    <!-- JavaScriptの読み込み -->
-    <script src="{{ url_for('static', filename='src/main.js') }}" defer></script>
-</head>
-
-<body>
-
+  
     <!-- ヘッダー -->
     <header class="header">
 
@@ -160,19 +148,6 @@
 
     </header>
 
-
-    <!-- メイン画面 -->
-    <main>
-
-        <h2>HOME</h2>
-
-        <p>ホームページです。</p>
-
-        <!-- ホーム画面の内容はここに追加 -->
-
-    </main>
-
-
     <!-- 右側のサイドバー -->
     <aside
         id="sidebar"
@@ -192,6 +167,5 @@
         <!-- サイドバーの内容は後から追加 -->
 
     </aside>
-
 </body>
 </html>

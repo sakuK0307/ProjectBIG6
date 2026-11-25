@@ -221,3 +221,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# scripts の元資料（大学の配布資料。コミットしない）
+scripts/materials/
