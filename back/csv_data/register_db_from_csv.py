@@ -64,7 +64,9 @@ def main() -> None:
                 subject_id = int(row["subject_id"])
                 subject = db.session.get(Subject, subject_id)
                 if subject is None:
-                    subject = Subject(subject_id=subject_id)
+                    subject = Subject(
+                        subject_id=subject_id,  # type: ignore[reportCallIssue]
+                    )
                     db.session.add(subject)
                 subject.subject_name = row["subject_name"]
 
@@ -75,7 +77,9 @@ def main() -> None:
                 credit = db.session.get(Credit, (subject_id, course, program))
                 if credit is None:
                     credit = Credit(
-                        subject_id=subject_id, course=course, program=program
+                        subject_id=subject_id,  # type: ignore[reportCallIssue]
+                        course=course,  # type: ignore[reportCallIssue]
+                        program=program,  # type: ignore[reportCallIssue]
                     )
                     db.session.add(credit)
                 credit.credit_type = as_enum(CreditType, row["credit_type"])
@@ -96,7 +100,9 @@ def main() -> None:
                 lecture_id = int(row["lecture_id"])
                 lecture = db.session.get(Lecture, lecture_id)
                 if lecture is None:
-                    lecture = Lecture(lecture_id=lecture_id)
+                    lecture = Lecture(
+                        lecture_id=lecture_id,  # type: ignore[reportCallIssue]
+                    )
                     db.session.add(lecture)
                 lecture.subject_id = int(row["subject_id"])
                 lecture.year = int(row["year"])
@@ -118,11 +124,11 @@ def main() -> None:
                     lecture_time = db.session.get(LectureTime, key)
                     if lecture_time is None:
                         lecture_time = LectureTime(
-                            lecture_id=key[0],
-                            weekday=key[1],
-                            start_period=key[2],
-                            parity=key[3],
-                            class_group=key[4],
+                            lecture_id=key[0],  # type: ignore[reportCallIssue]
+                            weekday=key[1],  # type: ignore[reportCallIssue]
+                            start_period=key[2],  # type: ignore[reportCallIssue]
+                            parity=key[3],  # type: ignore[reportCallIssue]
+                            class_group=key[4],  # type: ignore[reportCallIssue]
                         )
                         db.session.add(lecture_time)
                     lecture_time.end_period = int(row["end_period"])
