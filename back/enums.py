@@ -1,6 +1,5 @@
-
+"""DBなどで使う列挙型の定義"""
 from enum import IntEnum, Enum
-
 
 # ========================================
 # コース
@@ -24,14 +23,29 @@ class Program(Enum):
     NS = "ns"      # ネットワークシステム
 
 
-# ========================================
-# 単位種
-# ========================================
 class CreditType(Enum):
-    """単位の区分 必修や選択必修など"""
-    REQUIRED = "required"                # 必修
-    ELECTIVE = "elective"                # 選択
-    REQUIRED_ELECTIVE = "required_elective"  # 選択必修
+    """必修・選択必修などの区分"""
+    REQUIRED = "required"
+    """必修"""
+    REQUIRED_ELECTIVE = "required_elective"
+    """選択必修"""
+    ELECTIVE = "elective"
+    """選択"""
+    FREE = "free"
+    """なし"""
+
+class ProgramDesignation(Enum):
+    """プログラム欄の〇・◎などの区分"""
+    REQUIRED = "required"          # プログラム欄の「必修」
+    """プログラムでの必修"""
+    DOUBLE_CIRCLE = "double_circle"  # ◎
+    """◎"""
+    REFERENCE = "reference"        # ※
+    """※"""
+    CIRCLE = "circle"              # ○
+    """〇"""
+    NONE = "none"                  # 空欄
+    """空欄"""
 
 
 # ========================================
@@ -70,3 +84,10 @@ class Parity(IntEnum):
     """奇数週"""
     EVEN = 2  # 偶数週
     """偶数週"""
+
+class CurriculumArea(Enum):
+    """科目の部門"""
+    GENERAL_FOUNDATION = "general_foundation"
+    """総合基礎部門"""
+    PROFESSIONAL_EDUCATION = "professional_education"
+    """専門教育部門"""

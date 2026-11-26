@@ -1,3 +1,5 @@
+"""db初期化など"""
+
 from flask_sqlalchemy import SQLAlchemy
 
 db=SQLAlchemy()

@@ -224,3 +224,10 @@ __marimo__/
 
 # scripts の元資料（大学の配布資料。コミットしない）
 scripts/materials/
+
+
+# データベースの読み込み元、念のため
+back/csv_data/*.csv
+
+# データベース
+*.db
